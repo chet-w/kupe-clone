@@ -24,7 +24,7 @@ const StyledHeaderLinks = styled.div`
 
 const HeaderLink = styled.div`
   color: ${props => props.theme.darkGrey};
-  font-size: 14px;
+  font-size: 12px;
 `;
 
 const Header = ({ siteTitle }) => (

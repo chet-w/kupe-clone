@@ -1,19 +1,14 @@
 import React from 'react';
 import styled from "styled-components";
 import Container from "./ui/container";
+import TopicCard from "./topiccard";
 
 const CardsContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
-    margin-top: 15px;
+    margin: 15px 0;
 `;
 
-const TopicCard = styled.div`
-    width: 300px;
-    height: 150px;
-    background: #0080a4;
-    margin: 15px;
-`;
 
 const TopicCards = () => {
 
@@ -33,9 +28,7 @@ const TopicCards = () => {
             <CardsContainer>
                 {topics.map(topic => {
                     return (
-                        <TopicCard>
-                            {topic.name}
-                        </TopicCard>
+                        <TopicCard topic={topic}/>
                     )
                 })}
             </CardsContainer>
