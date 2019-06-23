@@ -13,6 +13,7 @@ import { ThemeProvider } from "styled-components";
 import Header from "./header"
 import Footer from "./footer"
 import "./layout.css"
+import Nav from "./nav";
 
 
 const theme = {
@@ -50,6 +51,7 @@ const Layout = ({ children }) => {
       <ThemeProvider theme={theme}>
         <>
           <Header siteTitle={data.site.siteMetadata.title} />
+          <Nav/>
           <main>{children}</main>
           <Footer />
         </>

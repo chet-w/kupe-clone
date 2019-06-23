@@ -1,0 +1,90 @@
+indicator,subtopic,topic,shortDescription
+ind_1,Gambling participation,Gambling,Any gambling activities
+ind_10,Gambling participation frequency,Gambling,Non-continuous forms of gambling - at least weekly
+ind_100,Te reo M\u0101ori,M\u0101ori cultural identity,Ability to speak te reo M\u0101ori in day-to-day conversation – not very well
+ind_101,Te reo M\u0101ori,M\u0101ori cultural identity,Ability to speak te reo M\u0101ori in day-to-day conversation – just a few words/phrases
+ind_11,Gambling participation frequency,Gambling,Four or more activities
+ind_12,Gambling participation frequency,Gambling,Average number of activities
+ind_13,Gambling harm,Gambling,Gamblers (PGSI) - non-problem
+ind_14,Gambling harm,Gambling,Gamblers (PGSI) - low risk
+ind_15,Gambling harm,Gambling,Gamblers (PGSI) - moderate risk and problem
+ind_16,Gambling harm,Gambling,Gambled more than intended
+ind_17,Gambling harm,Gambling,Household-level gambling harm
+ind_18,Gambling harm,Gambling,Friend/family member gambled more than intended
+ind_19,Attitudes to gambling harm,Gambling,Pokies in pubs/clubs are more harmful than other gambling activities
+ind_2,Gambling participation,Gambling,Pokies at pub/club/casino
+ind_20,Attitudes to gambling harm,Gambling,Know what to do to help a friend or family member
+ind_21,Attitudes to gambling harm,Gambling,Concern with the level of gambling in the community
+ind_22,Gambling harm,Gambling,‘Checked in’ about gambling
+ind_26,Gaming machines and pokies,Gambling,Spent more than $25 on playing gaming machines/pokies
+ind_3,Gambling participation,Gambling,Any NZ Lotto products
+ind_31,Gaming machines and pokies,Gambling,Pokies at either pubs/clubs
+ind_32,Gaming machines and pokies,Gambling,Pokies at casinos
+ind_33,Attitudes to tobacco,Tobacco,Banning smoking in cars when children under 18 years old are present
+ind_34,Attitudes to tobacco,Tobacco,Banning smoking in all public outdoor dining areas
+ind_35,Attitudes to tobacco,Tobacco,Reduce number of places allowed to sell cigarettes and tobacco
+ind_36,Attitudes to tobacco,Tobacco,Increase price to decrease affordability for young people
+ind_37,Attitudes to tobacco,Tobacco,Perceived proportion of smokers in NZ
+ind_38,Attitudes to tobacco,Tobacco,Awareness of Smokefree 2025
+ind_4,Gambling participation,Gambling,Online gambling on overseas website
+ind_41,Quit smoking,Tobacco,Quit attempts - none
+ind_42,Quit smoking,Tobacco,Quit attempts - one
+ind_43,Quit smoking,Tobacco,Quit attempts - 2 or more
+ind_44,Current smoking,Tobacco,Ever smoked tobacco
+ind_45,Current smoking,Tobacco,Age of first try
+ind_46,Current smoking,Tobacco,Age of starting smoking daily
+ind_47,Current smoking,Tobacco,Smoker - current
+ind_48,Current smoking,Tobacco,Smoker - past experimental
+ind_49,Current smoking,Tobacco,Smoker - recent/past quitter
+ind_5,Gambling participation,Gambling,Any horse/dog races/sports events (NZ)
+ind_50,Current smoking,Tobacco,Never smoker
+ind_51,Current smoking,Tobacco,Average number of cigarettes smoked per day
+ind_52,Current smoking,Tobacco,Addiction to tobacco
+ind_55,Current smoking,Tobacco,Smoker - current daily
+ind_56,Vaping / e-cigarettes,Tobacco,Ever tried an e-cigarette
+ind_57,Vaping / e-cigarettes,Tobacco,Current e-cigarette users in the population
+ind_58,Vaping / e-cigarettes,Tobacco,Use at least daily (of those who have tried vaping)
+ind_59,Vaping / e-cigarettes,Tobacco,Use at least once a week (of those who have tried vaping)
+ind_6,Gambling participation frequency,Gambling,Lotto product - at least weekly
+ind_60,Vaping / e-cigarettes,Tobacco,Use vaping/e-cigarettes to stop smoking completely (only current users)
+ind_61,Vaping / e-cigarettes,Tobacco,Use vaping/e-cigarettes to reduce the amount of tobacco smoked (only those who currently use)
+ind_63,Vaping / e-cigarettes,Tobacco,Agree that e-cigarettes are safer than tobacco
+ind_64,Vaping / e-cigarettes,Tobacco,Agree that e-cigarettes help people quit smoking
+ind_65,Current smoking,Tobacco,"Smoked marijuana (cannabis, pot, grass, weed)"
+ind_66,Alcohol attitudes,Alcohol,Reduce the hours alcohol can be sold in my community
+ind_67,Alcohol attitudes,Alcohol,Increase restrictions on advertising/promotion to reduce exposure of under 18s
+ind_68,Alcohol attitudes,Alcohol,Ban alcohol-related sponsorship of events that people under 18 year olds may attend
+ind_69,Alcohol attitudes,Alcohol,Too many local places to buy alcohol
+ind_7,Gambling participation frequency,Gambling,Gaming machines in pub/club - at least weekly
+ind_70,Alcohol cutting back,Alcohol,Thought about cutting back drinking
+ind_71,Alcohol cutting back,Alcohol,Made serious effort to cut back on drinking
+ind_72,Alcohol consumption,Alcohol,Drinkers (previous year)
+ind_73,Alcohol consumption,Alcohol,Non-drinkers
+ind_74,Alcohol consumption,Alcohol,Drinkers - non-risky (previous 4 weeks)
+ind_75,Alcohol consumption,Alcohol,Drinkers - risky (previous 4 weeks)
+ind_76,Sunburn,Sun exposure,Sunburnt last summer - badly
+ind_77,Sunburn,Sun exposure,Sunburnt last summer - mild
+ind_78,Sun protective behaviours (and skin checks),Sun exposure,Wear sunscreen
+ind_79,Sun protective behaviours (and skin checks),Sun exposure,Hat
+ind_8,Gambling participation frequency,Gambling,Horse/dog races/sports events - at least monthly
+ind_80,Sun protective behaviours (and skin checks),Sun exposure,Clothing
+ind_81,Sun protective behaviours (and skin checks),Sun exposure,Sunglasses
+ind_82,Sun protective behaviours (and skin checks),Sun exposure,Shade
+ind_83,Sun protective behaviours (and skin checks),Sun exposure,Skin check in the last 2 years
+ind_84,Meal preparation,Eating,Main meal - prepared at home 5+ days
+ind_85,Meal preparation,Eating,Main meal - bought outside home 3+ days
+ind_86,Eating habits within households,Eating,Eating together - always/frequently
+ind_87,Eating habits within households,Eating,Eating together - sometimes
+ind_88,Eating habits within households,Eating,Eating together - almost never/never
+ind_89,Wellbeing,Mental health and wellbeing,Important to maintain a strong connection to culture
+ind_9,Gambling participation frequency,Gambling,Continuous forms of gambling - at least weekly
+ind_90,Wellbeing,Mental health and wellbeing,Felt isolated from others
+ind_91,Mental distress,Mental health and wellbeing,Ever diagnosed with a mental illness
+ind_92,Experience of discrimination,Mental health and wellbeing,Treated unfairly because of a mental illness - in general
+ind_93,Experience of discrimination,Mental health and wellbeing,Discrimination setting for those who have been treated unfairly because of a mental illness – Workplace
+ind_94,Experience of discrimination,Mental health and wellbeing,Tell employer if diagnosed with a mental illness
+ind_95,Experience of discrimination,Mental health and wellbeing,Know someone who has experienced a mental illness
+ind_96,Cultural connectedness,M\u0101ori cultural identity,Connectedness - at least somewhat important
+ind_97,Te reo M\u0101ori,M\u0101ori cultural identity,Ability to speak te reo M\u0101ori in day-to-day conversation – very well
+ind_98,Te reo M\u0101ori,M\u0101ori cultural identity,Ability to speak te reo M\u0101ori in day-to-day conversation – well
+ind_99,Te reo M\u0101ori,M\u0101ori cultural identity,Ability to speak te reo M\u0101ori in day-to-day conversation – fairly well

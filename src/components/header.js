@@ -3,6 +3,7 @@ import styled from "styled-components";
 import React from "react"
 
 import Container from "./ui/container";
+import { Link } from "gatsby";
 
 const StyledHeader = styled.header`
   background: ${props => props.theme.white};
@@ -30,7 +31,9 @@ const HeaderLink = styled.div`
 const Header = ({ siteTitle }) => (
   <StyledHeader>
     <Container align="center" justify="space-between">
-      <KupeLogo src={require("../images/logos/kupe.svg")} />
+      <Link to={"/"}>
+        <KupeLogo src={require("../images/logos/kupe.svg")} />
+      </Link>
       <HeaderLinks />
     </Container>
   </StyledHeader>
