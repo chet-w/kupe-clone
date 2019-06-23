@@ -29,6 +29,7 @@ const theme = {
   // Gradients 
   blueGradient: "linear-gradient(to bottom, #02a7c9, #0080a4)",
   shadow: "0 0 20px 0 rgba(0,0,0, 0.08)",
+  shadowHover: "0 0 10px 0 rgba(0,0,0, 0.4)",
   font: "Adelle Sans"
 }
 

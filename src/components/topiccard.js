@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from "styled-components";
+import { toPath } from "../lib/helpers";
 
 const StyledTopicCard = styled.div`
     width: 300px;
     min-height: 150px;
-    margin: 15px;
     padding: 15px;
-    box-shadow: ${props => props.theme.shadow};
+    color: ${props => props.theme.black};
+
 
     & h2 {
         font-size: 22px;
@@ -32,10 +33,8 @@ const CardBody = styled.div`
 
 const TopicCard = ({ topic }) => {
     const { name, description } = topic;
-    let formattedName = name.toLowerCase().replace(/ /g, "-");
-    if(formattedName.includes("\u0101")) {
-        formattedName = formattedName.replace("\u0101", "a");
-    }
+    let formattedName = toPath(name);
+    
 
     return (
         <StyledTopicCard>

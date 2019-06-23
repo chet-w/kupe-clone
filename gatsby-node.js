@@ -1,7 +1,38 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const path = require("path");
+const toPath = require("./src/lib/helpers").toPath;
 
-// You can delete this file if you're not using it
+exports.createPages = ({ actions, graphql }) => {
+
+  const { createPage } = actions;
+
+  const topicTemplate = path.resolve("src/templates/subtopic-page.js");
+
+  return graphql(`
+    {
+      allTopicDescriptionsJson {
+        edges {
+          node {
+            name
+            description
+            path
+          }
+        }
+      }
+    }
+  `).then(res => {
+    if(res.errors) {
+      return Promise.reject(res.errors);
+    }
+
+    res.data.allTopicDescriptionsJson.edges.forEach(({ node }) => {
+      createPage({
+        path: node.path,
+        component: topicTemplate,
+        context: {
+          path: node.path
+        }
+      })
+    }) 
+  })
+
+}

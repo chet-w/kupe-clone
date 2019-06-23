@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Alcohol",
+        "path": "alcohol",
+        "description": "New Zealanders’ level of support for changes to help reduce alcohol-related problems, current consumption, and responses about cutting back how much they drink."
+    },
+    {
+        "name": "Eating",
+        "path": "eating",
+        "description": "The number of days in a week the main meal was prepared at home or bought from outside of home and how often households eat their main meal together."
+    },
+    {
+        "name": "Gambling",
+        "path": "gambling",
+        "description": "New Zealanders’ views and experiences of gambling including participation, frequency of participation, harm, attitudes to harm, and gaming machines / pokies."
+    },
+    {
+        "name": "M\u0101ori cultural identity",
+        "path": "maori-cultural-identity",
+        "description": "How important it is for M\u0101ori New Zealanders to be involved in things to do with M\u0101ori culture, and their ability to speak M\u0101ori in day-to-day conversations."
+    },
+    {
+        "name": "Mental health and wellbeing",
+        "path": "mental-health-and-wellbeing",
+        "description": "Results about feelings of isolation, mental illness diagnosis, experience with discrimination related to mental illness, and strength of connection to culture."
+    },
+    {
+        "name": "Sun exposure",
+        "path": "sun-exposure",
+        "description": "Number of times that New Zealanders got sunburnt during the previous spring and summer, protective behaviours to prevent sunburn, and skin checks for early detection of skin cancer."
+    },
+    {
+        "name": "Tobacco",
+        "path": "tobacco",
+        "description": "New Zealanders’ current smoking status, quit attempts, levels of vaping/e-cigarette use, and related opinions."
+    }
+]
