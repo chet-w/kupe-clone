@@ -46,7 +46,7 @@ const HeaderLinks = () => {
 
   return (
     <StyledHeaderLinks>
-      {links.map(link => <HeaderLink>{link}</HeaderLink>)}
+      {links.map(link => <HeaderLink key={link}>{link}</HeaderLink>)}
       <HeaderLink>
         {homeLink.text}
       </HeaderLink>

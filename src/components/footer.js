@@ -48,7 +48,7 @@ const FooterBorder = () => {
 
     return (
         <StyledFooterBorder>
-            {sections.map(color => <FooterBorderSection thisColor={color} />)}
+            {sections.map(color => <FooterBorderSection key={color} thisColor={color} />)}
         </StyledFooterBorder>
     )
 };

@@ -12,6 +12,7 @@ import { ThemeProvider } from "styled-components";
 
 import Header from "./header"
 import Footer from "./footer"
+import "./antd.css";
 import "./layout.css"
 import Nav from "./nav";
 

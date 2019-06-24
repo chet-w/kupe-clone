@@ -30,7 +30,7 @@ const TopicCards = ({ topics }) => {
             <CardsContainer>
                 {topics.map(topic => {
                     return (
-                        <Link to={`/${topic.node.path}`}>
+                        <Link key={topic} to={`/${topic.node.path}`}>
                             <TopicCard topic={topic.node}/>
                         </Link>
                     )

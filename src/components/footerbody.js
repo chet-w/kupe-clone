@@ -75,7 +75,7 @@ const FooterLinks = () => {
 
     return (
         <StyledFooterLinks>
-            {links.map((link, i) => <FooterLink className={i === links.length - 1 ? "last" : null}>{link}</FooterLink>)}
+            {links.map((link, i) => <FooterLink key={link} className={i === links.length - 1 ? "last" : null}>{link}</FooterLink>)}
         </StyledFooterLinks>
     )
 };
