@@ -15,13 +15,13 @@
    "indicator": "ind_100",
    "subtopic": "Te reo M\u0101ori",
    "topic": "M\u0101ori cultural identity",
-   "shortDescription": "Ability to speak te reo M\u0101ori in day-to-day conversation � not very well"
+   "shortDescription": "Ability to speak te reo M\u0101ori in day-to-day conversation - not very well"
  },
  {
    "indicator": "ind_101",
    "subtopic": "Te reo M\u0101ori",
    "topic": "M\u0101ori cultural identity",
-   "shortDescription": "Ability to speak te reo M\u0101ori in day-to-day conversation � just a few words/phrases"
+   "shortDescription": "Ability to speak te reo M\u0101ori in day-to-day conversation - just a few words/phrases"
  },
  {
    "indicator": "ind_11",
@@ -99,7 +99,7 @@
    "indicator": "ind_22",
    "subtopic": "Gambling harm",
    "topic": "Gambling",
-   "shortDescription": "�Checked in� about gambling"
+   "shortDescription": "-Checked in- about gambling"
  },
  {
    "indicator": "ind_26",
@@ -495,7 +495,7 @@
    "indicator": "ind_93",
    "subtopic": "Experience of discrimination",
    "topic": "Mental health and wellbeing",
-   "shortDescription": "Discrimination setting for those who have been treated unfairly because of a mental illness � Workplace"
+   "shortDescription": "Discrimination setting for those who have been treated unfairly because of a mental illness - Workplace"
  },
  {
    "indicator": "ind_94",
@@ -519,18 +519,18 @@
    "indicator": "ind_97",
    "subtopic": "Te reo M\u0101ori",
    "topic": "M\u0101ori cultural identity",
-   "shortDescription": "Ability to speak te reo M\u0101ori in day-to-day conversation � very well"
+   "shortDescription": "Ability to speak te reo M\u0101ori in day-to-day conversation - very well"
  },
  {
    "indicator": "ind_98",
    "subtopic": "Te reo M\u0101ori",
    "topic": "M\u0101ori cultural identity",
-   "shortDescription": "Ability to speak te reo M\u0101ori in day-to-day conversation � well"
+   "shortDescription": "Ability to speak te reo M\u0101ori in day-to-day conversation - well"
  },
  {
    "indicator": "ind_99",
    "subtopic": "Te reo M\u0101ori",
    "topic": "M\u0101ori cultural identity",
-   "shortDescription": "Ability to speak te reo M\u0101ori in day-to-day conversation � fairly well"
+   "shortDescription": "Ability to speak te reo M\u0101ori in day-to-day conversation - fairly well"
  }
 ]

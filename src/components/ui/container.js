@@ -8,9 +8,10 @@ const StyledContainer = styled.div`
     align-items: ${props => props.align};
     justify-content: ${props => props.justify};
     flex-direction: ${props => props.direction};
+    flex-wrap: ${props => props.wrap};
 `;
 
-const Container = ({ justify = "flex-start", align = "flex-start", direction="row", children }) => {
+const Container = ({ justify = "flex-start", align = "flex-start", direction="row", wrap="nowrap", children }) => {
     return (
         <StyledContainer justify={justify} align={align} direction={direction}>
             {children}
