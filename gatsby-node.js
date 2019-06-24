@@ -5,7 +5,7 @@ exports.createPages = ({ actions, graphql }) => {
 
   const { createPage } = actions;
 
-  const topicTemplate = path.resolve("src/templates/subtopic-page.js");
+  const topicTemplate = path.resolve("src/templates/topic-page.js");
 
   return graphql(`
     {

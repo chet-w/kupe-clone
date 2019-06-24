@@ -47,6 +47,7 @@ const TopicCard = ({ topic }) => {
             </CardBody>
         </StyledTopicCard>
     )
-}
+};
+
 
 export default TopicCard
