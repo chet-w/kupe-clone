@@ -13,7 +13,7 @@ const StyledContainer = styled.div`
 
 const Container = ({ justify = "flex-start", align = "flex-start", direction="row", wrap="nowrap", children }) => {
     return (
-        <StyledContainer justify={justify} align={align} direction={direction}>
+        <StyledContainer justify={justify} align={align} direction={direction} wrap={wrap}>
             {children}
         </StyledContainer>
     )

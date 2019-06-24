@@ -1,22 +1,45 @@
 import React, { useState, useEffect } from 'react';
 import styled from "styled-components";
 import Container from './ui/container';
-import { graphql, useStaticQuery } from 'gatsby';
-import { useHover } from "use-events";
+import { graphql, useStaticQuery, Link } from 'gatsby';
 import { Popover } from 'antd';
+import { toPath } from '../lib/helpers';
 
 const StyledNav = styled.nav`
     display: flex;
     justify-content: space-evenly;
     font-size: 14px;
     position: relative;
+    border-bottom: solid 1px #f5f5f5;
 `;
 
 const StyledNavTopic = styled.div`
-    padding: 5px;
+    padding: 10px;
     cursor: pointer;
     position: relative;
 
+    & > a {
+        color: ${props => props.theme.lightBlue};
+        position: relative;
+
+        &:after {
+            content: " ";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            transition: all 0.3s ease;
+            background: ${props => props.theme.green};
+        }
+
+    }
+
+    &:hover {
+        & > a:after {
+            width: 100%;
+        }
+    }
 `;
 
 const StyledNavBody = styled.div`
@@ -99,25 +122,22 @@ const Nav = () => {
 };
 
 const NavTopic = ({ topic, setCurrentTopic, ...otherProps }) => {
-
     return (
         <StyledNavTopic onMouseOver={() => setCurrentTopic(topic)} {...otherProps}>
-            {topic}
+            <Link to={`/${toPath(topic)}`}>
+                {topic}
+            </Link>
         </StyledNavTopic>
     )
 };
 
-
-
 const NavBody = ({ subtopics, allIndicators }) => {
-
     const justSubtopics = subtopics.map(pair => pair.subtopic);
     const filteredSubtopics = Array.from(new Set(justSubtopics));
 
-
     return (
         <StyledNavBody>
-            <Container wrap={"wrap"} justify="space-between">
+            <Container wrap={"wrap"}>
                 {filteredSubtopics.map(subtopic => (
                     <NavBodySection 
                      subtopic={subtopic}
