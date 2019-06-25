@@ -10,8 +10,9 @@ const Card = styled.div`
     & h2 {
         font-size: 22px;
         margin-bottom: 0;
-        margin-left: 10px;
     }
+
+
 `;
 
 const SubtopiCard = ({ name }) => {

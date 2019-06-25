@@ -18,16 +18,28 @@ const StyledPrelude = styled.div`
 const StyledSubtopicCards = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 15px;
+
+    &  a {
+        margin: 15px;
+        box-shadow: ${props => props.theme.shadow};
+        transition: all 0.3s ease; 
+
+        &:hover {
+            box-shadow: ${props => props.theme.shadowHover}; 
+        }
+    }
 `;
 
-const TopicPageBody = ({ topic, description }) => {
+const TopicPageBody = ({ topic, subtopics, indicators, description }) => {
     return (
         <Container direction="column" padding="20px 0">
             <Breadcrumb items={[topic]} />
             <TopicHeading topic={topic} />
             <TopicPrelude description={description} />
-            <SubtopicCards topic={topic} />
+            <SubtopicCards topic={topic} subtopics={subtopics} indicators={indicators} />
         </Container>
     )
 }
@@ -43,26 +55,16 @@ const TopicPrelude = ({ description }) => (
     </>
 );
 
-const SubtopicCards = ({ topic }) => {
-    const data = useStaticQuery(graphql`
-        query {
-            allIndicatorsJson(filter: {topic: {eq: "Alcohol"}}) {
-                distinct(field: subtopic)
-            }
-        }
-    `);
-
-    const subtopics = data.allIndicatorsJson.distinct;
-        return (
-            <StyledSubtopicCards>
-                {subtopics.map(subtopic => (
-                    <Link to={`/${toPath(topic)}/${toPath(subtopic)}`}>
-                        <SubtopiCard name={subtopic}/>
-                    </Link>
-                ))}
-            </StyledSubtopicCards>
-        )
-
+const SubtopicCards = ({ topic, subtopics, indicators }) => {
+    return (
+        <StyledSubtopicCards>
+            {subtopics.map(subtopic => (
+                <Link to={`/${toPath(topic)}/${toPath(subtopic)}`}>
+                    <SubtopiCard name={subtopic} />
+                </Link>
+            ))}
+        </StyledSubtopicCards>
+    )
 }
 
 export default TopicPageBody;
