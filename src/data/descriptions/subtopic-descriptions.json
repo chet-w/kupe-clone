@@ -1,0 +1,107 @@
+[
+    {
+        "name": "Alcohol attitudes",
+        "path": "alcohol-attitudes",
+        "description": "Support for changes to help reduce problems associated with alcohol use."
+    },
+    {
+        "name": "Alcohol cutting back",
+        "path": "alcohol-cutting-back",
+        "description": "Thoughts about reducing the amount of alcohol consumed."
+    },
+    {
+        "name": "Alcohol consumption",
+        "path": "alcohol-consumption",
+        "description": "Levels of consumption of alcoholic drinks, including risky drinking."
+    },
+    {
+        "name": "Meal preparation",
+        "path": "meal-preparation",
+        "description": "Number of days in a week that the main meal was prepared at home or bought from outside of home."
+    },
+    {
+        "name": "Eating habits within households",
+        "path": "eating-habits-within-households",
+        "description": "How often households eat their main meal together."
+    },
+    {
+        "name": "Gambling participation",
+        "path": "gambling-participation",
+        "description": "Involvement in at least one gambling activity (eg, buying a Lotto ticket) in the past 12 months."
+    },
+    {
+        "name": "Gambling participation frequency",
+        "path": "gambling-participation-frequency",
+        "description": "New Zealanders' gambling frequency and type of gambling."
+    },
+    {
+        "name": "Gambling harm",
+        "path": "gamblin-harm",
+        "description": "Experiences of harm from gambling, both to themselves and to others."
+    },
+    {
+        "name": "Attitudes to gambling harm",
+        "path": "attitudes-to-gambling-harm",
+        "description": "Attitudes to level of gambling harm and knowledge of what to do to help family/friends who gamble too much."
+    },
+    {
+        "name": "Gaming machines and pokies",
+        "path": "gaming-machines-and-pokies",
+        "description": "Use of gaming machines or pokies, and amount spent on average."
+    },
+    {
+        "name": "Wellbeing",
+        "path": "wellbeing",
+        "description": "Views on maintaining a strong connection to culture and feelings of isolation."
+    },
+    {
+        "name": "Mental distress",
+        "path": "mental-distress",
+        "description": "Whether ever diagnosed with mental illness."
+    },
+    {
+        "name": "Experience of discrimination",
+        "path": "experience-of-descrimination",
+        "description": "New Zealanders' experiences of discrimination and willingness to disclose experience of mental illness or distress."
+    },
+    {
+        "name": "Te reo M\u0101ori",
+        "path": "te-reo-maori",
+        "description": "Views by M\u0101ori New Zealanders on being involved in things to do with M\u0101ori culture."
+    },
+    {
+        "name": "Cultural connectedness",
+        "path": "cultural-connectedness",
+        "description": "Ability of M\u0101ori New Zealanders to speak M\u0101ori in day-to-day conversation."
+    },
+    {
+        "name": "Sunburn",
+        "path": "sunburn",
+        "description": "Whether people were sunburnt in spring and summer (September to February)."
+    },
+    {
+        "name": "Sun protective behaviours (and skin checks)",
+        "path": "sun-protective-behaviours",
+        "description": "Behaviours used to protect from sunburn (and skin checks)."
+    },
+    {
+        "name": "Attitudes to tobacco",
+        "path": "attitudes-to-tobacco",
+        "description": "Attitudes to, and knowledge of, tobacco use in New Zealand."
+    },
+    {
+        "name": "Quit smoking",
+        "path": "quit-smoking",
+        "description": "Number of serious attempts to stop smoking in the past 12 months."
+    },
+    {
+        "name": "Current smoking",
+        "path": "current-smoking",
+        "description": "Smoking status of New Zealanders, for example as current smokers, past smokers etc."
+    },
+    {
+        "name": "Vaping / e-cigarettes",
+        "path": "vaping-e-cigarettes",
+        "description": "New Zealanders' levels of vaping/e-cigarette use and reasons for vaping."
+    }
+]
