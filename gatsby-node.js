@@ -6,7 +6,7 @@ exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
 
   const topicTemplate = path.resolve("src/templates/topic-page.js");
-  const subtopicTemplate = path.resolve("src/template/subtopic-page.js");
+  const subtopicTemplate = path.resolve("src/templates/subtopic-page.js");
 
   return graphql(`
     {
@@ -19,9 +19,18 @@ exports.createPages = ({ actions, graphql }) => {
           }
         }
       }
+      allSubtopicDescriptionsJson {
+        edges {
+          node {
+            description
+            name
+            path
+          }
+        }
+      }
     }
   `).then(res => {
-    if(res.errors) {
+    if (res.errors) {
       return Promise.reject(res.errors);
     }
 
@@ -33,7 +42,15 @@ exports.createPages = ({ actions, graphql }) => {
           path: node.path
         }
       })
-    }) 
+    });
+    res.data.allSubtopicDescriptionsJson.edges.forEach(({ node }) => {
+      createPage({
+        path: node.path,
+        component: subtopicTemplate,
+        context: {
+          path: node.path
+        }
+      });
+    })
   })
-
 }
