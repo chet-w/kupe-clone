@@ -9,6 +9,7 @@ const Wrapper = styled.div`
 
 const StyledTopicHeading = styled.h2`
     margin: 20px 0;
+    font-weight: ${props => props.isMainheading ? "bold" : 500};
 `;
 
 const Icon = styled.img`
@@ -16,11 +17,11 @@ const Icon = styled.img`
     margin-right: 15px;
 `;
 
-const TopicHeading = ({ topic }) => {
+const TopicHeading = ({ topic, isMainheading=false }) => {
     return (
         <Wrapper>
             <Icon src={require(`../images/topic-icons/${toPath(topic)}.svg`)} />
-            <StyledTopicHeading>{topic}</StyledTopicHeading>
+            <StyledTopicHeading isMainheading={isMainheading}>{topic}</StyledTopicHeading>
         </Wrapper>
     )
 }

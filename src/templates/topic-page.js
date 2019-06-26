@@ -7,8 +7,6 @@ import { toPath, dePath } from '../lib/helpers';
 
 const TopicPage = ({ data, location }) => {
     
-    // const topic = data.topicDescriptionsJson.name;
-    // const description = data.topicDescriptionsJson.description;
     const currentTopic = location.pathname.substring(1);
     const allIndicators = data.allIndicatorsJson.edges.map(edge => {
         return {
@@ -37,12 +35,6 @@ const TopicPage = ({ data, location }) => {
 }
 
 export const topicQuery = graphql`
-    # query ($path: String){
-    #     topicDescriptionsJson(path: {eq: $path }) {
-    #         name
-    #         description
-    #     }
-    # }
     query {
         allIndicatorsJson {
             edges {

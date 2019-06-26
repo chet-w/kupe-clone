@@ -37,7 +37,7 @@ const TopicPageBody = ({ topic, subtopics, indicators, description }) => {
     return (
         <Container direction="column" padding="20px 0">
             <Breadcrumb items={[topic]} />
-            <TopicHeading topic={topic} />
+            <TopicHeading topic={topic} isMainheading={true}/>
             <TopicPrelude description={description} />
             <SubtopicCards topic={topic} subtopics={subtopics} indicators={indicators} />
         </Container>
