@@ -7,10 +7,12 @@ import { graphql } from 'gatsby';
 
 const SubtopicPage = ({ data, location }) => {
 
+    // Format Topic name
     const noLeadingSlash = location.pathname.substring(1);
     const topic = dePath(noLeadingSlash.substring(0, noLeadingSlash.indexOf("/")));
+    // The current Subtopic
     const subtopic = dePath(noLeadingSlash.substring(noLeadingSlash.indexOf("/") + 1));
-
+    // Indicators for this subtopic
     const indicators = data.allIndicatorsJson.edges.filter(edge => {
         return edge.node.subtopic === subtopic;
     }).map(edge => {
@@ -19,10 +21,17 @@ const SubtopicPage = ({ data, location }) => {
             description: edge.node.shortDescription
         }
     });
-
+    // Subtopic description 
     const subtopicDescription = data.allSubtopicDescriptionsJson.edges.filter(edge => {
         return edge.node.name === subtopic;
     })[0].node.description;
+    // Indicator data 
+    const indicatorIDs = indicators.map(ind => ind.indicator);
+    const desiredGroups = ["Total", "Pacific", "Maori", "European/Other"];
+
+    const indicatorData = data.allPrevalencesJson.nodes.filter(value => {
+        return indicatorIDs.includes(value.indicator) && desiredGroups.includes(value.group);
+    });
 
     return (
         <Layout>
@@ -32,6 +41,7 @@ const SubtopicPage = ({ data, location }) => {
              subtopic={subtopic}
              description={subtopicDescription}
              indicators={indicators}
+             indicatorData={indicatorData}
             />
         </Layout>
     )
@@ -55,6 +65,14 @@ export const getAllIndicators = graphql`
                 name
                 description
             }
+            }
+        }
+        allPrevalencesJson {
+            nodes {
+                indicator
+                group
+                year
+                total
             }
         }
     }

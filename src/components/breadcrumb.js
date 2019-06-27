@@ -12,7 +12,7 @@ const PageBreadcrumb = ({ items }) => {
                 </Link>
             </Breadcrumb.Item>
             {items.map((item, index) => {
-                if (index === items.length - 1 && index !== 0) {
+                if (index === items.length - 1) {
                     return (
                         <Breadcrumb.Item>
                            {item}

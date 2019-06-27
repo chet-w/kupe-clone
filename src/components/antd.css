@@ -20402,6 +20402,7 @@ textarea.ant-mentions {
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
 .ant-table-wrapper {
   zoom: 1;
+  width: 100%;
 }
 .ant-table-wrapper::before,
 .ant-table-wrapper::after {
