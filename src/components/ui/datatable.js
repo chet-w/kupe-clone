@@ -1,9 +1,11 @@
 import React from 'react';
 import { Table } from "antd";
 import { organiseData } from "../../lib/helpers"
+import { Link } from 'gatsby';
+import { toPath } from "../../lib/helpers"
 
 
-const Datatable = ({ data, indicators, group }) => {
+const Datatable = ({ data, indicators, group, topic, subtopic }) => {
 
     const tableData = data.filter(record => record.group === group);
     const withLabels = tableData.map(record => {
@@ -26,7 +28,10 @@ const Datatable = ({ data, indicators, group }) => {
     let tableColumns = [{
         title: "Indicator",
         dataIndex: "description",
-        key: "indicator"
+        key: "indicator",
+        render: ind => (
+            <Link to={toPath(topic+ "/" +subtopic + "/" +ind)}>{ind}</Link>
+        )
     }];
     
     timeTrendYears.map(year => tableColumns.push({ title: year, dataIndex: year, key: year }));

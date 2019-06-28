@@ -34,7 +34,7 @@ const SubtopicPageBody = ({topic, subtopic, description, indicators, indicatorDa
             <SubtopicPrelude description={description}/>
             <PrevalenceText />
             <GroupsFilter groups={filterGroups} setNewGroup={handleGroupChange.bind(this)}/>
-            <Datatable data={indicatorData} indicators={indicators} group={selectedGroup}/>
+            <Datatable data={indicatorData} indicators={indicators} group={selectedGroup} topic={topic} subtopic={subtopic}/>
         </Container>
     )
 };
