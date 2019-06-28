@@ -3,9 +3,9 @@ import { Table } from "antd";
 import { organiseData } from "../../lib/helpers"
 
 
-const Datatable = ({ data, indicators }) => {
+const Datatable = ({ data, indicators, group }) => {
 
-    const tableData = data.filter(record => record.group === "Total");
+    const tableData = data.filter(record => record.group === group);
     const withLabels = tableData.map(record => {
         const description = indicators.find(indicator => indicator.indicator === record.indicator).description;
         record.description = description;
@@ -26,11 +26,11 @@ const Datatable = ({ data, indicators }) => {
     let tableColumns = [{
         title: "Indicator",
         dataIndex: "description",
-        key: "indicator" 
+        key: "indicator"
     }];
     
     timeTrendYears.map(year => tableColumns.push({ title: year, dataIndex: year, key: year }));
-    comparisonYears.map(year => tableColumns.push({ title: year, dataIndex: year.replace(/\s/g, ""), key: year }));
+    comparisonYears.map(year => tableColumns.push({ title: year, dataIndex: year.replace(/\s/g, ""), key: year, align: "center" }));
     
     const organised = organiseData(withLabels, comparisonYears);
     console.log(organised);

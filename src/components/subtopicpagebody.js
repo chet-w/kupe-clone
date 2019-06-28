@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Container from "./ui/container";
 import TopicHeading from "./topicheading";
@@ -6,6 +6,7 @@ import Breadcrumb from "./breadcrumb";
 import PageHeading from "./ui/pageheading";
 import PrevalenceText from "./prevalencetext";
 import Datatable from "./ui/datatable";
+import GroupsFilter from "./ui/groupsfilter";
 
 
 const StyledPrelude = styled.div`
@@ -17,7 +18,13 @@ const StyledPrelude = styled.div`
 `;
 
 
-const SubtopicPageBody = ({topic, subtopic, description, indicators, indicatorData }) => {
+const SubtopicPageBody = ({topic, subtopic, description, indicators, indicatorData, filterGroups }) => {
+
+    const [selectedGroup, setSelectedGroup] = useState("Total");
+
+    const handleGroupChange = newGroup => {
+        setSelectedGroup(newGroup);
+    };
 
     return (
         <Container direction="column" padding="20px 0">
@@ -26,7 +33,8 @@ const SubtopicPageBody = ({topic, subtopic, description, indicators, indicatorDa
             <PageHeading text={subtopic}/>
             <SubtopicPrelude description={description}/>
             <PrevalenceText />
-            <Datatable data={indicatorData} indicators={indicators}/>
+            <GroupsFilter groups={filterGroups} setNewGroup={handleGroupChange.bind(this)}/>
+            <Datatable data={indicatorData} indicators={indicators} group={selectedGroup}/>
         </Container>
     )
 };

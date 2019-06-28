@@ -42,6 +42,7 @@ const SubtopicPage = ({ data, location }) => {
              description={subtopicDescription}
              indicators={indicators}
              indicatorData={indicatorData}
+             filterGroups={desiredGroups}
             />
         </Layout>
     )

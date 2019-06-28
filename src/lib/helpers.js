@@ -37,12 +37,12 @@ const organiseData = (data, comparisonYears) => {
             const componentYears = year.replace(" and", "").split(" ").map(number => Number.parseInt(number))
             // Decrease trend
             if(conciseRecord[componentYears[0]] > conciseRecord[componentYears[1]]) {
-                conciseRecord[strippedYear] = "down";
+                conciseRecord[strippedYear] = `\u25BC`;
             } else if (conciseRecord[componentYears[0]] < conciseRecord[componentYears[1]]) {
                 // Increase trend
-                conciseRecord[strippedYear] = "up";
+                conciseRecord[strippedYear] = `\u25B2`;
             } else {
-                conciseRecord[strippedYear] = "same";
+                conciseRecord[strippedYear] = `\u2248`;
             }
         });
 
