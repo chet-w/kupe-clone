@@ -3,534 +3,712 @@
    "indicator": "ind_1",
    "subtopic": "Gambling participation",
    "topic": "Gambling",
-   "shortDescription": "Any gambling activities"
+   "shortDescription": "Any gambling activities",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_10",
    "subtopic": "Gambling participation frequency",
    "topic": "Gambling",
-   "shortDescription": "Non-continuous forms of gambling - at least weekly"
+   "shortDescription": "Non-continuous forms of gambling - at least weekly",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_100",
    "subtopic": "Te reo M\u0101ori",
    "topic": "M\u0101ori cultural identity",
-   "shortDescription": "Ability to speak te reo M\u0101ori in day-to-day conversation - not very well"
+   "shortDescription": "Ability to speak te reo M\u0101ori in day-to-day conversation - not very well",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_101",
    "subtopic": "Te reo M\u0101ori",
    "topic": "M\u0101ori cultural identity",
-   "shortDescription": "Ability to speak te reo M\u0101ori in day-to-day conversation - just a few words/phrases"
+   "shortDescription": "Ability to speak te reo M\u0101ori in day-to-day conversation - just a few words/phrases",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_11",
    "subtopic": "Gambling participation frequency",
    "topic": "Gambling",
-   "shortDescription": "Four or more activities"
+   "shortDescription": "Four or more activities",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_12",
    "subtopic": "Gambling participation frequency",
    "topic": "Gambling",
-   "shortDescription": "Average number of activities"
+   "shortDescription": "Average number of activities",
+   "measureType" : "mean",
+   "measureUnit" : "activites"
  },
  {
    "indicator": "ind_13",
    "subtopic": "Gambling harm",
    "topic": "Gambling",
-   "shortDescription": "Gamblers (PGSI) - non-problem"
+   "shortDescription": "Gamblers (PGSI) - non-problem",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_14",
    "subtopic": "Gambling harm",
    "topic": "Gambling",
-   "shortDescription": "Gamblers (PGSI) - low risk"
+   "shortDescription": "Gamblers (PGSI) - low risk",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_15",
    "subtopic": "Gambling harm",
    "topic": "Gambling",
-   "shortDescription": "Gamblers (PGSI) - moderate risk and problem"
+   "shortDescription": "Gamblers (PGSI) - moderate risk and problem",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_16",
    "subtopic": "Gambling harm",
    "topic": "Gambling",
-   "shortDescription": "Gambled more than intended"
+   "shortDescription": "Gambled more than intended",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_17",
    "subtopic": "Gambling harm",
    "topic": "Gambling",
-   "shortDescription": "Household-level gambling harm"
+   "shortDescription": "Household-level gambling harm",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_18",
    "subtopic": "Gambling harm",
    "topic": "Gambling",
-   "shortDescription": "Friend/family member gambled more than intended"
+   "shortDescription": "Friend/family member gambled more than intended",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_19",
    "subtopic": "Attitudes to gambling harm",
    "topic": "Gambling",
-   "shortDescription": "Pokies in pubs/clubs are more harmful than other gambling activities"
+   "shortDescription": "Pokies in pubs/clubs are more harmful than other gambling activities",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_2",
    "subtopic": "Gambling participation",
    "topic": "Gambling",
-   "shortDescription": "Pokies at pub/club/casino"
+   "shortDescription": "Pokies at pub/club/casino",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_20",
    "subtopic": "Attitudes to gambling harm",
    "topic": "Gambling",
-   "shortDescription": "Know what to do to help a friend or family member"
+   "shortDescription": "Know what to do to help a friend or family member",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_21",
    "subtopic": "Attitudes to gambling harm",
    "topic": "Gambling",
-   "shortDescription": "Concern with the level of gambling in the community"
+   "shortDescription": "Concern with the level of gambling in the community",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_22",
    "subtopic": "Gambling harm",
    "topic": "Gambling",
-   "shortDescription": "-Checked in- about gambling"
+   "shortDescription": "\"Checked in\" about gambling",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_26",
    "subtopic": "Gaming machines and pokies",
    "topic": "Gambling",
-   "shortDescription": "Spent more than $25 on playing gaming machines/pokies"
+   "shortDescription": "Spent more than $25 on playing gaming machines/pokies",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_3",
    "subtopic": "Gambling participation",
    "topic": "Gambling",
-   "shortDescription": "Any NZ Lotto products"
+   "shortDescription": "Any NZ Lotto products",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_31",
    "subtopic": "Gaming machines and pokies",
    "topic": "Gambling",
-   "shortDescription": "Pokies at either pubs/clubs"
+   "shortDescription": "Pokies at either pubs/clubs",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_32",
    "subtopic": "Gaming machines and pokies",
    "topic": "Gambling",
-   "shortDescription": "Pokies at casinos"
+   "shortDescription": "Pokies at casinos",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_33",
    "subtopic": "Attitudes to tobacco",
    "topic": "Tobacco",
-   "shortDescription": "Banning smoking in cars when children under 18 years old are present"
+   "shortDescription": "Banning smoking in cars when children under 18 years old are present",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_34",
    "subtopic": "Attitudes to tobacco",
    "topic": "Tobacco",
-   "shortDescription": "Banning smoking in all public outdoor dining areas"
+   "shortDescription": "Banning smoking in all public outdoor dining areas",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_35",
    "subtopic": "Attitudes to tobacco",
    "topic": "Tobacco",
-   "shortDescription": "Reduce number of places allowed to sell cigarettes and tobacco"
+   "shortDescription": "Reduce number of places allowed to sell cigarettes and tobacco",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_36",
    "subtopic": "Attitudes to tobacco",
    "topic": "Tobacco",
-   "shortDescription": "Increase price to decrease affordability for young people"
+   "shortDescription": "Increase price to decrease affordability for young people",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_37",
    "subtopic": "Attitudes to tobacco",
    "topic": "Tobacco",
-   "shortDescription": "Perceived proportion of smokers in NZ"
+   "shortDescription": "Perceived proportion of smokers in NZ",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_38",
    "subtopic": "Attitudes to tobacco",
    "topic": "Tobacco",
-   "shortDescription": "Awareness of Smokefree 2025"
+   "shortDescription": "Awareness of Smokefree 2025",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_4",
    "subtopic": "Gambling participation",
    "topic": "Gambling",
-   "shortDescription": "Online gambling on overseas website"
+   "shortDescription": "Online gambling on overseas website",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_41",
    "subtopic": "Quit smoking",
    "topic": "Tobacco",
-   "shortDescription": "Quit attempts - none"
+   "shortDescription": "Quit attempts - none",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_42",
    "subtopic": "Quit smoking",
    "topic": "Tobacco",
-   "shortDescription": "Quit attempts - one"
+   "shortDescription": "Quit attempts - one",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_43",
    "subtopic": "Quit smoking",
    "topic": "Tobacco",
-   "shortDescription": "Quit attempts - 2 or more"
+   "shortDescription": "Quit attempts - 2 or more",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_44",
    "subtopic": "Current smoking",
    "topic": "Tobacco",
-   "shortDescription": "Ever smoked tobacco"
+   "shortDescription": "Ever smoked tobacco",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_45",
    "subtopic": "Current smoking",
    "topic": "Tobacco",
-   "shortDescription": "Age of first try"
+   "shortDescription": "Age of first try",
+   "measureType" : "mean",
+   "measureUnit" : "years old"
  },
  {
    "indicator": "ind_46",
    "subtopic": "Current smoking",
    "topic": "Tobacco",
-   "shortDescription": "Age of starting smoking daily"
+   "shortDescription": "Age of starting smoking daily",
+   "measureType" : "mean",
+   "measureUnit" : "years old"
  },
  {
    "indicator": "ind_47",
    "subtopic": "Current smoking",
    "topic": "Tobacco",
-   "shortDescription": "Smoker - current"
+   "shortDescription": "Smoker - current",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_48",
    "subtopic": "Current smoking",
    "topic": "Tobacco",
-   "shortDescription": "Smoker - past experimental"
+   "shortDescription": "Smoker - past experimental",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_49",
    "subtopic": "Current smoking",
    "topic": "Tobacco",
-   "shortDescription": "Smoker - recent/past quitter"
+   "shortDescription": "Smoker - recent/past quitter",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_5",
    "subtopic": "Gambling participation",
    "topic": "Gambling",
-   "shortDescription": "Any horse/dog races/sports events (NZ)"
+   "shortDescription": "Any horse/dog races/sports events (NZ)",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_50",
    "subtopic": "Current smoking",
    "topic": "Tobacco",
-   "shortDescription": "Never smoker"
+   "shortDescription": "Never smoker",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_51",
    "subtopic": "Current smoking",
    "topic": "Tobacco",
-   "shortDescription": "Average number of cigarettes smoked per day"
+   "shortDescription": "Average number of cigarettes smoked per day",
+   "measureType" : "mean",
+   "measureUnit" : "number of cigarettes"
  },
  {
    "indicator": "ind_52",
    "subtopic": "Current smoking",
    "topic": "Tobacco",
-   "shortDescription": "Addiction to tobacco"
+   "shortDescription": "Addiction to tobacco",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_55",
    "subtopic": "Current smoking",
    "topic": "Tobacco",
-   "shortDescription": "Smoker - current daily"
+   "shortDescription": "Smoker - current daily",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_56",
    "subtopic": "Vaping / e-cigarettes",
    "topic": "Tobacco",
-   "shortDescription": "Ever tried an e-cigarette"
+   "shortDescription": "Ever tried an e-cigarette",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_57",
    "subtopic": "Vaping / e-cigarettes",
    "topic": "Tobacco",
-   "shortDescription": "Current e-cigarette users in the population"
+   "shortDescription": "Current e-cigarette users in the population",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_58",
    "subtopic": "Vaping / e-cigarettes",
    "topic": "Tobacco",
-   "shortDescription": "Use at least daily (of those who have tried vaping)"
+   "shortDescription": "Use at least daily (of those who have tried vaping)",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_59",
    "subtopic": "Vaping / e-cigarettes",
    "topic": "Tobacco",
-   "shortDescription": "Use at least once a week (of those who have tried vaping)"
+   "shortDescription": "Use at least once a week (of those who have tried vaping)",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_6",
    "subtopic": "Gambling participation frequency",
    "topic": "Gambling",
-   "shortDescription": "Lotto product - at least weekly"
+   "shortDescription": "Lotto product - at least weekly",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_60",
    "subtopic": "Vaping / e-cigarettes",
    "topic": "Tobacco",
-   "shortDescription": "Use vaping/e-cigarettes to stop smoking completely (only current users)"
+   "shortDescription": "Use vaping/e-cigarettes to stop smoking completely (only current users)",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_61",
    "subtopic": "Vaping / e-cigarettes",
    "topic": "Tobacco",
-   "shortDescription": "Use vaping/e-cigarettes to reduce the amount of tobacco smoked (only those who currently use)"
+   "shortDescription": "Use vaping/e-cigarettes to reduce the amount of tobacco smoked (only those who currently use)",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_63",
    "subtopic": "Vaping / e-cigarettes",
    "topic": "Tobacco",
-   "shortDescription": "Agree that e-cigarettes are safer than tobacco"
+   "shortDescription": "Agree that e-cigarettes are safer than tobacco",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_64",
    "subtopic": "Vaping / e-cigarettes",
    "topic": "Tobacco",
-   "shortDescription": "Agree that e-cigarettes help people quit smoking"
+   "shortDescription": "Agree that e-cigarettes help people quit smoking",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_65",
    "subtopic": "Current smoking",
    "topic": "Tobacco",
-   "shortDescription": "Smoked marijuana (cannabis, pot, grass, weed)"
+   "shortDescription": "Smoked marijuana (cannabis, pot, grass, weed)",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_66",
    "subtopic": "Alcohol attitudes",
    "topic": "Alcohol",
-   "shortDescription": "Reduce the hours alcohol can be sold in my community"
+   "shortDescription": "Reduce the hours alcohol can be sold in my community",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_67",
    "subtopic": "Alcohol attitudes",
    "topic": "Alcohol",
-   "shortDescription": "Increase restrictions on advertising/promotion to reduce exposure of under 18s"
+   "shortDescription": "Increase restrictions on advertising/promotion to reduce exposure of under 18s",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_68",
    "subtopic": "Alcohol attitudes",
    "topic": "Alcohol",
-   "shortDescription": "Ban alcohol-related sponsorship of events that people under 18 year olds may attend"
+   "shortDescription": "Ban alcohol-related sponsorship of events that people under 18 year olds may attend",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_69",
    "subtopic": "Alcohol attitudes",
    "topic": "Alcohol",
-   "shortDescription": "Too many local places to buy alcohol"
+   "shortDescription": "Too many local places to buy alcohol",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_7",
    "subtopic": "Gambling participation frequency",
    "topic": "Gambling",
-   "shortDescription": "Gaming machines in pub/club - at least weekly"
+   "shortDescription": "Gaming machines in pub/club - at least weekly",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_70",
    "subtopic": "Alcohol cutting back",
    "topic": "Alcohol",
-   "shortDescription": "Thought about cutting back drinking"
+   "shortDescription": "Thought about cutting back drinking",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_71",
    "subtopic": "Alcohol cutting back",
    "topic": "Alcohol",
-   "shortDescription": "Made serious effort to cut back on drinking"
+   "shortDescription": "Made serious effort to cut back on drinking",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_72",
    "subtopic": "Alcohol consumption",
    "topic": "Alcohol",
-   "shortDescription": "Drinkers (previous year)"
+   "shortDescription": "Drinkers (previous year)",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_73",
    "subtopic": "Alcohol consumption",
    "topic": "Alcohol",
-   "shortDescription": "Non-drinkers"
+   "shortDescription": "Non-drinkers",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_74",
    "subtopic": "Alcohol consumption",
    "topic": "Alcohol",
-   "shortDescription": "Drinkers - non-risky (previous 4 weeks)"
+   "shortDescription": "Drinkers - non-risky (previous 4 weeks)",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_75",
    "subtopic": "Alcohol consumption",
    "topic": "Alcohol",
-   "shortDescription": "Drinkers - risky (previous 4 weeks)"
+   "shortDescription": "Drinkers - risky (previous 4 weeks)",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_76",
    "subtopic": "Sunburn",
    "topic": "Sun exposure",
-   "shortDescription": "Sunburnt last summer - badly"
+   "shortDescription": "Sunburnt last summer - badly",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_77",
    "subtopic": "Sunburn",
    "topic": "Sun exposure",
-   "shortDescription": "Sunburnt last summer - mild"
+   "shortDescription": "Sunburnt last summer - mild",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_78",
    "subtopic": "Sun protective behaviours (and skin checks)",
    "topic": "Sun exposure",
-   "shortDescription": "Wear sunscreen"
+   "shortDescription": "Wear sunscreen",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_79",
    "subtopic": "Sun protective behaviours (and skin checks)",
    "topic": "Sun exposure",
-   "shortDescription": "Hat"
+   "shortDescription": "Hat",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_8",
    "subtopic": "Gambling participation frequency",
    "topic": "Gambling",
-   "shortDescription": "Horse/dog races/sports events - at least monthly"
+   "shortDescription": "Horse/dog races/sports events - at least monthly",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_80",
    "subtopic": "Sun protective behaviours (and skin checks)",
    "topic": "Sun exposure",
-   "shortDescription": "Clothing"
+   "shortDescription": "Clothing",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_81",
    "subtopic": "Sun protective behaviours (and skin checks)",
    "topic": "Sun exposure",
-   "shortDescription": "Sunglasses"
+   "shortDescription": "Sunglasses",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_82",
    "subtopic": "Sun protective behaviours (and skin checks)",
    "topic": "Sun exposure",
-   "shortDescription": "Shade"
+   "shortDescription": "Shade",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_83",
    "subtopic": "Sun protective behaviours (and skin checks)",
    "topic": "Sun exposure",
-   "shortDescription": "Skin check in the last 2 years"
+   "shortDescription": "Skin check in the last 2 years",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_84",
    "subtopic": "Meal preparation",
    "topic": "Eating",
-   "shortDescription": "Main meal - prepared at home 5+ days"
+   "shortDescription": "Main meal - prepared at home 5+ days",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_85",
    "subtopic": "Meal preparation",
    "topic": "Eating",
-   "shortDescription": "Main meal - bought outside home 3+ days"
+   "shortDescription": "Main meal - bought outside home 3+ days",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_86",
    "subtopic": "Eating habits within households",
    "topic": "Eating",
-   "shortDescription": "Eating together - always/frequently"
+   "shortDescription": "Eating together - always/frequently",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_87",
    "subtopic": "Eating habits within households",
    "topic": "Eating",
-   "shortDescription": "Eating together - sometimes"
+   "shortDescription": "Eating together - sometimes",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_88",
    "subtopic": "Eating habits within households",
    "topic": "Eating",
-   "shortDescription": "Eating together - almost never/never"
+   "shortDescription": "Eating together - almost never/never",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_89",
    "subtopic": "Wellbeing",
    "topic": "Mental health and wellbeing",
-   "shortDescription": "Important to maintain a strong connection to culture"
+   "shortDescription": "Important to maintain a strong connection to culture",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_9",
    "subtopic": "Gambling participation frequency",
    "topic": "Gambling",
-   "shortDescription": "Continuous forms of gambling - at least weekly"
+   "shortDescription": "Continuous forms of gambling - at least weekly",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_90",
    "subtopic": "Wellbeing",
    "topic": "Mental health and wellbeing",
-   "shortDescription": "Felt isolated from others"
+   "shortDescription": "Felt isolated from others",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_91",
    "subtopic": "Mental distress",
    "topic": "Mental health and wellbeing",
-   "shortDescription": "Ever diagnosed with a mental illness"
+   "shortDescription": "Ever diagnosed with a mental illness",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_92",
    "subtopic": "Experience of discrimination",
    "topic": "Mental health and wellbeing",
-   "shortDescription": "Treated unfairly because of a mental illness - in general"
+   "shortDescription": "Treated unfairly because of a mental illness - in general",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_93",
    "subtopic": "Experience of discrimination",
    "topic": "Mental health and wellbeing",
-   "shortDescription": "Discrimination setting for those who have been treated unfairly because of a mental illness - Workplace"
+   "shortDescription": "Discrimination setting for those who have been treated unfairly because of a mental illness - Workplace",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_94",
    "subtopic": "Experience of discrimination",
    "topic": "Mental health and wellbeing",
-   "shortDescription": "Tell employer if diagnosed with a mental illness"
+   "shortDescription": "Tell employer if diagnosed with a mental illness",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_95",
    "subtopic": "Experience of discrimination",
    "topic": "Mental health and wellbeing",
-   "shortDescription": "Know someone who has experienced a mental illness"
+   "shortDescription": "Know someone who has experienced a mental illness",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_96",
    "subtopic": "Cultural connectedness",
    "topic": "M\u0101ori cultural identity",
-   "shortDescription": "Connectedness - at least somewhat important"
+   "shortDescription": "Connectedness - at least somewhat important",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_97",
    "subtopic": "Te reo M\u0101ori",
    "topic": "M\u0101ori cultural identity",
-   "shortDescription": "Ability to speak te reo M\u0101ori in day-to-day conversation - very well"
+   "shortDescription": "Ability to speak te reo M\u0101ori in day-to-day conversation - very well",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_98",
    "subtopic": "Te reo M\u0101ori",
    "topic": "M\u0101ori cultural identity",
-   "shortDescription": "Ability to speak te reo M\u0101ori in day-to-day conversation - well"
+   "shortDescription": "Ability to speak te reo M\u0101ori in day-to-day conversation - well",
+   "measureType" : "%",
+   "measureUnit" : "%"
  },
  {
    "indicator": "ind_99",
    "subtopic": "Te reo M\u0101ori",
    "topic": "M\u0101ori cultural identity",
-   "shortDescription": "Ability to speak te reo M\u0101ori in day-to-day conversation - fairly well"
+   "shortDescription": "Ability to speak te reo M\u0101ori in day-to-day conversation - fairly well",
+   "measureType" : "%",
+   "measureUnit" : "%"
  }
 ]

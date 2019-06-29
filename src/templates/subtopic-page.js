@@ -18,9 +18,12 @@ const SubtopicPage = ({ data, location }) => {
     }).map(edge => {
         return {
             indicator: edge.node.indicator,
-            description: edge.node.shortDescription
+            description: edge.node.shortDescription,
+            measureType: edge.node.measureType,
+            measureUnit: edge.node.measureUnit
         }
     });
+
     // Subtopic description 
     const subtopicDescription = data.allSubtopicDescriptionsJson.edges.filter(edge => {
         return edge.node.name === subtopic;
@@ -57,6 +60,8 @@ export const getAllIndicators = graphql`
                 shortDescription
                 subtopic
                 topic
+                measureType
+                measureUnit
             }
             }
         }
