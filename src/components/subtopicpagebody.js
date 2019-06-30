@@ -7,6 +7,8 @@ import PageHeading from "./ui/pageheading";
 import PrevalenceText from "./prevalencetext";
 import Datatable from "./ui/datatable";
 import GroupsFilter from "./ui/groupsfilter";
+import SourceText from "./ui/source";
+import Notes from "./ui/notes";
 
 
 const StyledPrelude = styled.div`
@@ -35,6 +37,8 @@ const SubtopicPageBody = ({topic, subtopic, description, indicators, indicatorDa
             <PrevalenceText />
             <GroupsFilter groups={filterGroups} setNewGroup={handleGroupChange.bind(this)}/>
             <Datatable data={indicatorData} indicators={indicators} group={selectedGroup} topic={topic} subtopic={subtopic}/>
+            <SourceText />
+            <Notes type={"subtopics"}/>
         </Container>
     )
 };

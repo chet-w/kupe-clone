@@ -57,10 +57,17 @@ const StyledNavBodySection = styled.div`
     display: flex;
     flex-direction: column;
     width: 33%;
-    padding: 0 20px;
+    padding: 0 20px; 
+    color: ${props => props.theme.black};
+
+    & a {
+        color: ${props => props.theme.black};
+    }
+
 `;
 
 const SubtopicHeading = styled.h3`
+    color: ${props => props.theme.black};
 `;
 
 const Nav = () => {
@@ -108,6 +115,7 @@ const Nav = () => {
                       <NavBody
                        subtopics={currentSubtopics}
                        allIndicators={raw}
+                       topic={topic}
                      />}
                      arrowPointAtCenter
                      trigger={"hover"}
@@ -131,7 +139,7 @@ const NavTopic = ({ topic, setCurrentTopic, ...otherProps }) => {
     )
 };
 
-const NavBody = ({ subtopics, allIndicators }) => {
+const NavBody = ({ subtopics, allIndicators, topic }) => {
     const justSubtopics = subtopics.map(pair => pair.subtopic);
     const filteredSubtopics = Array.from(new Set(justSubtopics));
 
@@ -141,6 +149,7 @@ const NavBody = ({ subtopics, allIndicators }) => {
                 {filteredSubtopics.map(subtopic => (
                     <NavBodySection 
                      subtopic={subtopic}
+                     topic={topic}
                      indicators={allIndicators.filter(ind => ind.node.subtopic === subtopic)}
                     />
                 ))}
@@ -149,12 +158,22 @@ const NavBody = ({ subtopics, allIndicators }) => {
     )
 };
 
-const NavBodySection = ({ subtopic, indicators }) => (
-    <StyledNavBodySection>
-        <SubtopicHeading>{subtopic}</SubtopicHeading>
-        {indicators.map(indicator => <div>{indicator.node.shortDescription}</div>)}
-    </StyledNavBodySection>
-);
+const NavBodySection = ({ subtopic, indicators, topic }) => {
+
+    
+    return (
+        <StyledNavBodySection>
+            <Link to={toPath(`${topic}/${subtopic}`)}>
+                <SubtopicHeading>{subtopic}</SubtopicHeading>
+            </Link>
+            {indicators.map(indicator => {
+                const indicatorPath = toPath(`${topic}/${subtopic}/${indicator.node.shortDescription}`);
+                return <Link to={indicatorPath}>{indicator.node.shortDescription}</Link>
+            })}
+        </StyledNavBodySection>
+    )
+
+};
 
 
 

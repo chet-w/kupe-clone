@@ -54,10 +54,12 @@ a {
   -webkit-text-decoration-skip: objects;
   color: auto;
   text-decoration: none;
+  transition: all 0.3s ease;
 }
 a:active,
 a:hover {
   outline-width: 0;
+  color: #0080a4;
 }
 abbr[title] {
   border-bottom: none;
@@ -652,6 +654,10 @@ main {
 
 .ant-popover-placement-bottom > .ant-popover-content > .ant-popover-arrow {
   display: none;
+}
+
+.ant-table a {
+  color: #02a7c9;
 }
 
 

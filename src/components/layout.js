@@ -20,6 +20,7 @@ import Nav from "./nav";
 const theme = {
   white: "#fff",
   lightGrey: "#f5f5f5",
+  medGrey: "#aaa",
   grey: "#767676",
   black: "#494949",
   darkBlue: "#0080a4",
