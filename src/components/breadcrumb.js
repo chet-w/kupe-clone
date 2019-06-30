@@ -21,7 +21,11 @@ const PageBreadcrumb = ({ items }) => {
                 } else {
                     return (
                         <Breadcrumb.Item>
-                             <Link to={`/${toPath(item)}`}>{item}</Link>
+                             {/* <Link to={`/${toPath(item)}`}>{item}</Link> */}
+                            <Link to={index === 1 && items.length === 3 ? (
+                                toPath(`/${items[index - 1]}/${item}`)) : (
+                                    toPath(`/${item}`))}>
+                                {item}</Link>
                         </Breadcrumb.Item>
                     )
                 }

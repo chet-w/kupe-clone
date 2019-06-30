@@ -1,6 +1,7 @@
 const toPath = string => {
     const lowered = string.toLowerCase();
     let res = lowered.replace(/ /g, "-");
+    res = res.replace(/\"/g, "");
     if (res.includes("\u0101")) {
         res = res.replace("\u0101", "a");
     }

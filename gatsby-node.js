@@ -7,6 +7,7 @@ exports.createPages = ({ actions, graphql }) => {
 
   const topicTemplate = path.resolve("src/templates/topic-page.js");
   const subtopicTemplate = path.resolve("src/templates/subtopic-page.js");
+  const indicatorTemplate = path.resolve("src/templates/indicator-page.js");
 
   return graphql(`
     {
@@ -26,6 +27,16 @@ exports.createPages = ({ actions, graphql }) => {
             name
             path
           }
+        }
+      }
+      allIndicatorsJson {
+        nodes {
+          topic
+          subtopic
+          indicator
+          shortDescription
+          measureType
+          measureUnit
         }
       }
     }
@@ -51,6 +62,15 @@ exports.createPages = ({ actions, graphql }) => {
           path: node.path
         }
       });
-    })
+    });
+    res.data.allIndicatorsJson.nodes.forEach(node => {
+      createPage({
+        path: toPath(`${node.topic}/${node.subtopic}/${node.shortDescription}`),
+        component: indicatorTemplate,
+        context: {
+          path: toPath(`${node.topic}/${node.subtopic}/${node.shortDescription}`)
+        }
+      })
+    });
   })
 }
