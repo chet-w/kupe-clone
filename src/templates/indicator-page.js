@@ -3,6 +3,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { dePath } from "../lib/helpers";
 import IndicatorPageBody from "../components/indicatorpagebody";
+import { graphql } from 'gatsby';
 
 const IndicatorPage = ({ data, location }) => {
     // Format Topic name
@@ -13,6 +14,8 @@ const IndicatorPage = ({ data, location }) => {
     const subtopic = dePath(subtopicPathWithInd.substring(0, subtopicPathWithInd.indexOf("/")));
     const indicator = dePath(subtopicPathWithInd.substring(subtopicPathWithInd.indexOf("/") +1 ));
 
+    // Data for charts and tables
+    const allPrevalences = data.allPrevalencesJson.nodes;
 
     return (
         <Layout>
@@ -21,9 +24,23 @@ const IndicatorPage = ({ data, location }) => {
               topic={topic}
               subtopic={subtopic}
               indicator={indicator}
+              allPrevData={allPrevalences}
             />
         </Layout>
     )
 }
+
+export const IndicatorQuery = graphql`
+    query($id: String) {
+        allPrevalencesJson(filter: {indicator: {eq: $id}}) {
+        nodes {
+        indicator
+        group
+        year
+        total
+        }
+    }
+    }
+`;
 
 export default IndicatorPage;

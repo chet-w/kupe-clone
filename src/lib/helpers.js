@@ -51,9 +51,18 @@ const organiseData = (data, comparisonYears) => {
     });
 
     return records;
-}
+};
+
+const numberWithCommas = number => {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+};
+
+
+const totalPopulation = 3860200;
 
 module.exports.toPath = toPath;
 module.exports.dePath = dePath;
 module.exports.organiseData = organiseData;
+module.exports.totalPopulation = totalPopulation;
+module.exports.numberWithCommas = numberWithCommas;
 

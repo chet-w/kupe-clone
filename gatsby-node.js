@@ -68,7 +68,8 @@ exports.createPages = ({ actions, graphql }) => {
         path: toPath(`${node.topic}/${node.subtopic}/${node.shortDescription}`),
         component: indicatorTemplate,
         context: {
-          path: toPath(`${node.topic}/${node.subtopic}/${node.shortDescription}`)
+          path: toPath(`${node.topic}/${node.subtopic}/${node.shortDescription}`),
+          id: node.indicator
         }
       })
     });

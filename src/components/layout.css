@@ -660,4 +660,54 @@ main {
   color: #02a7c9;
 }
 
+.ant-collapse > .ant-collapse-item.ant-collapse-no-arrow > .ant-collapse-header {
+  padding-left: 0;
+}
+
+.ant-collapse-item {
+  position: relative;
+}
+
+/* .ant-collapse-item.ant-collapse-item-active.ant-collapse-no-arrow:after {
+  content: "Less information";
+  position: absolute;
+  top: 100%;
+  right: 0;
+  color: #02a7c9;
+}
+
+.ant-collapse-item.ant-collapse-no-arrow:after {
+  content: "More information";
+  position: absolute;
+  top: 100%;
+  right: 0;
+  color: #02a7c9;
+} */
+
+.ant-tabs-nav-wrap {
+  margin-top: 30px;
+}
+
+.ant-tabs {
+  width: 100%;
+}
+
+
+.ant-collapse-borderless > .ant-collapse-item {
+  border: none;
+}
+
+.ant-tabs-nav .ant-tabs-tab-active {
+  color: #494949;
+  font-weight: 600;
+
+}
+
+.ant-tabs-nav .ant-tabs-tab {
+  margin: 0;
+}
+
+.ant-tabs-ink-bar {
+  background-color: #84BD00;
+}
 
