@@ -38,6 +38,8 @@ export const IndicatorQuery = graphql`
         group
         year
         total
+        male
+        female
         }
     }
     }

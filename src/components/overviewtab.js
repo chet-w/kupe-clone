@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from "styled-components";
 import OverviewCard from "./overviewcard";
+import TimeseriesCard from './timeseriescard';
+import PageSubeading from './ui/pagesubheading';
 
 const Wrapper = styled.div`
     display: flex;
@@ -9,19 +11,37 @@ const Wrapper = styled.div`
 `;
 
 const StyledOverviewCard = styled.div`
-    width: 50%;
+    width: calc(50% - 10px);
     background: ${props => props.theme.lightGrey};
     padding: 15px;
+
+    &:nth-of-type(even) {
+        margin: 10px 0 10px 10px;
+    }
+
+    &:nth-of-type(odd) {
+        margin: 10px 10px 10px 0;
+    }
 `;
 
-const OverviewTab = ({ indicator, data }) => {
+const OverviewTab = ({ indicator, overviewData, timeseriesData }) => {
 
     return (
-        <Wrapper>
-            <StyledOverviewCard>
-                <OverviewCard data={data}/>
-            </StyledOverviewCard>
-        </Wrapper>
+        <>
+            <PageSubeading text={`${overviewData.year} Health and Lifestyles Survey`} />
+            <Wrapper>
+                <StyledOverviewCard>
+                    <OverviewCard data={overviewData}/>
+                </StyledOverviewCard>
+                <StyledOverviewCard>
+                    <TimeseriesCard data={timeseriesData}/>
+                </StyledOverviewCard>
+                <StyledOverviewCard>
+                </StyledOverviewCard>
+                <StyledOverviewCard>
+                </StyledOverviewCard>
+            </Wrapper>
+        </>
     )
 }
 

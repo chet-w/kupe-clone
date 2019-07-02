@@ -27,6 +27,13 @@ const IndicatorPageBody = ({ topic, subtopic, indicator, allPrevData }) => {
     const overviewCardData = allPrevData
         .filter(record => record.group === "Total" && record.year === latestYear)[0];
 
+    const timeseriesData = allPrevData
+        .filter(record => record.group === "Total");
+
+    const ageSexData = allPrevData
+         .filter(record => record.group.match(/\d\d-\d\d|\d\d\+/) && record.year === latestYear);
+
+    console.log(ageSexData);
 
     return (
         <Container direction="column" padding="20px 0">
@@ -38,7 +45,12 @@ const IndicatorPageBody = ({ topic, subtopic, indicator, allPrevData }) => {
             </Wrapper>
             <Tabs defaultActiveKey="1">
                 <TabPane tab="Overview" key="1">
-                    <OverviewTab indicator={indicator} data={overviewCardData}/>
+                    <OverviewTab
+                     indicator={indicator}
+                     overviewData={overviewCardData}
+                     timeseriesData={timeseriesData}
+                    //  ageSexData={ageSexData}
+                    />
                 </TabPane>
                 <TabPane tab="Prevalence / Mean" key="2">
                     Content of Tab Pane 2
