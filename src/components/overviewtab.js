@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import OverviewCard from "./overviewcard";
 import TimeseriesCard from './timeseriescard';
+import AgeSexCard from './agesexcard.js';
 import PageSubeading from './ui/pagesubheading';
 
 const Wrapper = styled.div`
@@ -24,7 +25,7 @@ const StyledOverviewCard = styled.div`
     }
 `;
 
-const OverviewTab = ({ indicator, overviewData, timeseriesData }) => {
+const OverviewTab = ({ indicator, overviewData, timeseriesData, ageSexData }) => {
 
     return (
         <>
@@ -37,6 +38,7 @@ const OverviewTab = ({ indicator, overviewData, timeseriesData }) => {
                     <TimeseriesCard data={timeseriesData}/>
                 </StyledOverviewCard>
                 <StyledOverviewCard>
+                    <AgeSexCard data={ageSexData}/>
                 </StyledOverviewCard>
                 <StyledOverviewCard>
                 </StyledOverviewCard>

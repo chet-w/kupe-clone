@@ -18,7 +18,6 @@ const TimeseriesCard = ({ data }) => {
         }
     });
 
-    console.log(coords);
 
     const chartData = {
         labels: [""],

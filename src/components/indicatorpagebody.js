@@ -49,7 +49,7 @@ const IndicatorPageBody = ({ topic, subtopic, indicator, allPrevData }) => {
                      indicator={indicator}
                      overviewData={overviewCardData}
                      timeseriesData={timeseriesData}
-                    //  ageSexData={ageSexData}
+                     ageSexData={ageSexData}
                     />
                 </TabPane>
                 <TabPane tab="Prevalence / Mean" key="2">
