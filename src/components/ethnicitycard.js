@@ -1,59 +1,50 @@
 import React from 'react';
 import { Bar } from "react-chartjs-2";
 
-const AgeSexCard = ({ data }) => {
+const EthnicityCard = ({ data }) => {
 
     const chartData = {
         labels: [""],
         datasets: [{
-            label: "Male",
-            data: [null, ...data.map(record => record.male), null],
-            // backgroundColor: [
-            //     'rgb(0, 128, 164)',
-            //     'rgb(0, 128, 164)',
-            //     'rgb(0, 128, 164)',
-            //     'rgb(0, 128, 164)',
-            //     'rgb(0, 128, 164)',
-            //     'rgb(0, 128, 164)',
-            // ]
-        },
-        {
-            label: "Female",
-            data: [null, ...data.map(record => record.female), null],
+            label: "Total",
+            data: [null, ...data.map(record => record.total), null],
             backgroundColor: [
-                'rgb(75, 171, 197)',
-                'rgb(75, 171, 197)',
-                'rgb(75, 171, 197)',
-                'rgb(75, 171, 197)',
-                'rgb(75, 171, 197)',
-                'rgb(75, 171, 197)',
+                'rgb(0, 128, 164)',
+                'rgb(0, 128, 164)',
+                'rgb(0, 128, 164)',
+                'rgb(0, 128, 164)',
+                'rgb(0, 128, 164)',
+                'rgb(0, 128, 164)',
             ]
         }
     ]
     };
 
+    // Workaround to, firstly center the bars from the edges and also break "European/Other" onto two lines
+    const xLabels = ["", ...data.map(record => {
+        let label = record.group;
+        if(record.group === "European/Other") {
+            label = ["European/", "Other"];
+        }
+        return label;
+    }), ""]
+
     const getChartData = canvas => {
         const withGradient = chartData;
         const ctx = canvas.getContext("2d");
-        // Male Gradient
-        const male = ctx.createLinearGradient(0, 300, 0, 0);
-        male.addColorStop(0, '#00c6fb');
-        male.addColorStop(1, '#005bea');
-        // Female Gradient
-        const female = ctx.createLinearGradient(0, 300, 0, 0);
-        female.addColorStop(0, '#009FFD');
-        female.addColorStop(1, '#2A2A72');
+        // Gradient
+        const gradient = ctx.createLinearGradient(0, 300, 0, 0);
+        gradient.addColorStop(0, '#00c6fb');
+        gradient.addColorStop(1, '#005bea');
+        
 
-        withGradient.datasets[0].backgroundColor = [male,male,male,male,male,male];
-        withGradient.datasets[1].backgroundColor = [female,female,female,female,female,female];
+        withGradient.datasets[0].backgroundColor = [gradient,gradient,gradient,gradient,gradient,gradient];
         return withGradient;
     }
 
-    
-
     return (
         <>
-            <h4>Age and sex</h4>
+            <h4>Ethnicity (total)</h4>
             <Bar 
               data={getChartData}
               options={{
@@ -71,7 +62,7 @@ const AgeSexCard = ({ data }) => {
                     xAxes: [
                         {
                             type: "category",
-                            labels: ["", ...data.map(record => record.group), ""],
+                            labels: xLabels,
                             gridLines: {
                                 display: false,
                                 lineWidth: 0,
@@ -92,4 +83,4 @@ const AgeSexCard = ({ data }) => {
     )
 }
 
-export default AgeSexCard;
+export default EthnicityCard;

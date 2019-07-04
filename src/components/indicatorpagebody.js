@@ -9,6 +9,7 @@ import PageHeading from "./ui/pageheading";
 import IndicatorDescription from "./indicatordescription";
 
 import OverviewTab from './overviewtab';
+import { ethnicities } from '../lib/config';
 
 const { TabPane } = Tabs;
 
@@ -26,14 +27,15 @@ const IndicatorPageBody = ({ topic, subtopic, indicator, allPrevData }) => {
     // Overview card data
     const overviewCardData = allPrevData
         .filter(record => record.group === "Total" && record.year === latestYear)[0];
-
+    // Time trends card data
     const timeseriesData = allPrevData
         .filter(record => record.group === "Total");
-
+    // Age and sex card data
     const ageSexData = allPrevData
          .filter(record => record.group.match(/\d\d-\d\d|\d\d\+/) && record.year === latestYear);
-
-    console.log(ageSexData);
+    // Ethnicity card data
+    const ethnicityData = allPrevData
+        .filter(record => ethnicities.includes(record.group) && record.year === latestYear);
 
     return (
         <Container direction="column" padding="20px 0">
@@ -50,6 +52,7 @@ const IndicatorPageBody = ({ topic, subtopic, indicator, allPrevData }) => {
                      overviewData={overviewCardData}
                      timeseriesData={timeseriesData}
                      ageSexData={ageSexData}
+                     ethnicityData={ethnicityData}
                     />
                 </TabPane>
                 <TabPane tab="Prevalence / Mean" key="2">

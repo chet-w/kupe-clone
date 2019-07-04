@@ -58,11 +58,8 @@ const numberWithCommas = number => {
 };
 
 
-const totalPopulation = 3860200;
-
 module.exports.toPath = toPath;
 module.exports.dePath = dePath;
 module.exports.organiseData = organiseData;
-module.exports.totalPopulation = totalPopulation;
 module.exports.numberWithCommas = numberWithCommas;
 

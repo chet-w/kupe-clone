@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from "styled-components";
 import { Bar } from "react-chartjs-2";
-import { numberWithCommas, totalPopulation } from "../lib/helpers";
+import { numberWithCommas } from "../lib/helpers";
+import { totalPopulation } from "../lib/config";
+
 
 const Wrapper = styled.div`
     position: relative;
@@ -49,10 +51,23 @@ const OverviewCard = ({ data }) => {
 
     const roundedTotalPopulation = Math.round((data.total/100*totalPopulation)/1000)*1000;
 
+    const getChartData = canvas => {
+        const withGradient = chartData;
+        const ctx = canvas.getContext("2d");
+        // Gradient
+        const gradient = ctx.createLinearGradient(0, 300, 0, 0);
+        gradient.addColorStop(0, '#EC9F05');
+        gradient.addColorStop(1, '#FF4E00');
+        
+
+        withGradient.datasets[0].backgroundColor = [gradient,gradient,gradient,gradient,gradient,gradient];
+        return withGradient;
+    }
+
     return (
         <Wrapper>
             <Bar
-                data={chartData}
+                data={getChartData}
                 options={{
                     scales: {
                         yAxes: [{

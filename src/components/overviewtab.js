@@ -4,6 +4,7 @@ import OverviewCard from "./overviewcard";
 import TimeseriesCard from './timeseriescard';
 import AgeSexCard from './agesexcard.js';
 import PageSubeading from './ui/pagesubheading';
+import EthnicityCard from './ethnicitycard';
 
 const Wrapper = styled.div`
     display: flex;
@@ -25,7 +26,7 @@ const StyledOverviewCard = styled.div`
     }
 `;
 
-const OverviewTab = ({ indicator, overviewData, timeseriesData, ageSexData }) => {
+const OverviewTab = ({ indicator, overviewData, timeseriesData, ageSexData, ethnicityData }) => {
 
     return (
         <>
@@ -41,6 +42,7 @@ const OverviewTab = ({ indicator, overviewData, timeseriesData, ageSexData }) =>
                     <AgeSexCard data={ageSexData}/>
                 </StyledOverviewCard>
                 <StyledOverviewCard>
+                    <EthnicityCard data={ethnicityData}/>
                 </StyledOverviewCard>
             </Wrapper>
         </>
