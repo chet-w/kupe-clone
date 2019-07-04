@@ -711,3 +711,7 @@ main {
   background-color: #84BD00;
 }
 
+.ant-switch-checked {
+  background: linear-gradient(to right, #02a7c9, #0080a4);
+}
+

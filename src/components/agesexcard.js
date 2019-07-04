@@ -7,27 +7,11 @@ const AgeSexCard = ({ data }) => {
         labels: [""],
         datasets: [{
             label: "Male",
-            data: [null, ...data.map(record => record.male), null],
-            // backgroundColor: [
-            //     'rgb(0, 128, 164)',
-            //     'rgb(0, 128, 164)',
-            //     'rgb(0, 128, 164)',
-            //     'rgb(0, 128, 164)',
-            //     'rgb(0, 128, 164)',
-            //     'rgb(0, 128, 164)',
-            // ]
+            data: [null, ...data.map(record => record.male), null]
         },
         {
             label: "Female",
             data: [null, ...data.map(record => record.female), null],
-            backgroundColor: [
-                'rgb(75, 171, 197)',
-                'rgb(75, 171, 197)',
-                'rgb(75, 171, 197)',
-                'rgb(75, 171, 197)',
-                'rgb(75, 171, 197)',
-                'rgb(75, 171, 197)',
-            ]
         }
     ]
     };
@@ -82,7 +66,7 @@ const AgeSexCard = ({ data }) => {
                     ]
                 },
                 legend: {
-                    display: false
+                    display: true
                 }
                 
             }}

@@ -9,6 +9,7 @@ import PageHeading from "./ui/pageheading";
 import IndicatorDescription from "./indicatordescription";
 
 import OverviewTab from './overviewtab';
+import PrevalenceTab from "./prevalencetab";
 import { ethnicities } from '../lib/config';
 
 const { TabPane } = Tabs;
@@ -19,10 +20,13 @@ const Wrapper = styled.div`
 
 const IndicatorPageBody = ({ topic, subtopic, indicator, allPrevData }) => {
 
-    // Latest year 
-    const latestYear = Math.max(...allPrevData
+    // Available years
+    const years = allPrevData
         .filter(record => record.group === "Total")
-        .map(record => record.year));
+        .map(record => record.year)
+
+    // Latest year 
+    const latestYear = Math.max(...years);
 
     // Overview card data
     const overviewCardData = allPrevData
@@ -56,7 +60,7 @@ const IndicatorPageBody = ({ topic, subtopic, indicator, allPrevData }) => {
                     />
                 </TabPane>
                 <TabPane tab="Prevalence / Mean" key="2">
-                    Content of Tab Pane 2
+                    <PrevalenceTab data={allPrevData} years={years}/>
                  </TabPane>
                 <TabPane tab="Subgroups comparison" key="3">
                     Content of Tab Pane 3
