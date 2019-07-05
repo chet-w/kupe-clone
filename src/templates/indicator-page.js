@@ -38,8 +38,14 @@ export const IndicatorQuery = graphql`
         group
         year
         total
+        total_high_CI
+        total_low_CI
         male
+        male_high_CI
+        male_low_CI
         female
+        female_high_CI
+        female_low_CI
         }
     }
     }

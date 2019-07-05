@@ -91,8 +91,8 @@ const PrevalenceTab = ({ data, years }) => {
         <PrevalenceDatatable
          data={data}
          groups={{
-             men: showMen,
-             women: showWomen,
+             male: showMen,
+             female: showWomen,
              est: showEst
          }}
          year={currentYear}/>
