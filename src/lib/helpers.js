@@ -57,9 +57,33 @@ const numberWithCommas = number => {
     return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 };
 
+const organisePrevalenceData = (data, groups, year) => {
+
+    // const indNumbersRemoved = data.map(record => {
+    //     return { 
+    //         group,
+    //         year,
+    //         total: Number.parseFloat(total),
+    //         male: Number.parseFloat(male),
+    //         female: Number.parseFloat(female)
+    //     };
+    // });
+
+    // let filtered = indNumbersRemoved.filter(record => {
+    //     return record.year === year;
+    // });
+
+    // if(!groups.men) {
+    //     filtered
+    // } 
+
+    return data;
+};
+
 
 module.exports.toPath = toPath;
 module.exports.dePath = dePath;
 module.exports.organiseData = organiseData;
+module.exports.organisePrevalenceData = organisePrevalenceData;
 module.exports.numberWithCommas = numberWithCommas;
 

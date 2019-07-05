@@ -21,12 +21,12 @@ const AgeSexCard = ({ data }) => {
         const ctx = canvas.getContext("2d");
         // Male Gradient
         const male = ctx.createLinearGradient(0, 300, 0, 0);
-        male.addColorStop(0, '#00c6fb');
-        male.addColorStop(1, '#005bea');
+        male.addColorStop(0, '#80CED7');
+        male.addColorStop(1, '#007EA7');
         // Female Gradient
         const female = ctx.createLinearGradient(0, 300, 0, 0);
-        female.addColorStop(0, '#009FFD');
-        female.addColorStop(1, '#2A2A72');
+        female.addColorStop(0, '#20A4F3');
+        female.addColorStop(1, '#182B3A');
 
         withGradient.datasets[0].backgroundColor = [male,male,male,male,male,male];
         withGradient.datasets[1].backgroundColor = [female,female,female,female,female,female];

@@ -45,6 +45,7 @@ const PrevalenceTab = ({ data, years }) => {
     const [showMen, setShowMen] = useState(true);
     const [showWomen, setShowWomen] = useState(true);
     const [showEst, setShowEst] = useState(true);
+    const [currentYear, setCurrentYear] = useState(Math.max(...years))
 
     const toggleShowMen = () => {
         setShowMen(!showMen);
@@ -58,13 +59,17 @@ const PrevalenceTab = ({ data, years }) => {
         setShowEst(!showEst);
     };
 
+    const handleYearChange = newYear => {
+        setCurrentYear(newYear);
+    };
+
     return (
         <>
         <Wrapper>
             <div>
                 <PageSubheading text={"Prevalence for selected indicator"} />
                 <p>This tables shows the percentage of the population affected.</p>
-                <Select defaultValue={Math.max(...years)} style={{ width: "150px" }} >
+                <Select defaultValue={currentYear} style={{ width: "150px" }} onChange={e => handleYearChange(e)}>
                     {years.map(year => <Option value={year}>{year}</Option>)}
                 </Select>
             </div>
@@ -89,7 +94,8 @@ const PrevalenceTab = ({ data, years }) => {
              men: showMen,
              women: showWomen,
              est: showEst
-         }}/>
+         }}
+         year={currentYear}/>
         </>
     )
 }
