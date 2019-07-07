@@ -10,7 +10,7 @@ const ethnicities = ["Maori", "Asian", "Pacific", "European/Other"];
 
 const prevLabels = ["Age groups", "Ethnicities", "Neighbourhood deprivation", "Drinking status"]
 
-const prevGroups = ["Total","Age groups", ageGroups, "Ethnicities",  ethnicities, "Neighbourhood deprivation", deprivation, "Drinking status", drinking].flat();
+const prevGroups = ["Total","Age groups", ...ageGroups, "Ethnicities",  ...ethnicities, "Neighbourhood deprivation", ...deprivation, "Drinking status", ...drinking];
 
 
 module.exports.totalPopulation = totalPopulation;
