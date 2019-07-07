@@ -10,6 +10,7 @@ const SubtopicPage = ({ data, location }) => {
     // Format Topic name
     const noLeadingSlash = location.pathname.substring(1);
     const topic = dePath(noLeadingSlash.substring(0, noLeadingSlash.indexOf("/")));
+    console.log(topic);
     // The current Subtopic
     const subtopic = dePath(noLeadingSlash.substring(noLeadingSlash.indexOf("/") + 1));
     // Indicators for this subtopic
@@ -25,9 +26,12 @@ const SubtopicPage = ({ data, location }) => {
     });
 
     // Subtopic description 
-    const subtopicDescription = data.allSubtopicDescriptionsJson.edges.filter(edge => {
-        return edge.node.name === subtopic;
-    })[0].node.description;
+    // const subtopicDescription = data.allSubtopicDescriptionsJson.edges.filter(edge => {
+    //     return edge.node.name === subtopic;
+    // })[0].node.description;
+
+    const subtopicDescription = "test"
+
     // Indicator data 
     const indicatorIDs = indicators.map(ind => ind.indicator);
     const desiredGroups = ["Total", "Pacific", "Maori", "European/Other"];
