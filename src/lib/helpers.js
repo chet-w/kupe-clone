@@ -114,10 +114,13 @@ const organisePrevalenceData = (data, groups, year) => {
         return record.year === year;
     });
 
+    
     prevLabels.map(group => filtered.push({ group: group }));
+
     const ordered = filtered.sort(function(a, b){  
         return prevGroups.indexOf(a.group) - prevGroups.indexOf(b.group);
-      });
+    });
+
 
     return ordered;
 };

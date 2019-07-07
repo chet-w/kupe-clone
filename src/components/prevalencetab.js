@@ -100,14 +100,4 @@ const PrevalenceTab = ({ data, years }) => {
     )
 }
 
-
-// const PrevalenceFilters = ({ years }) => {
-
-//     console.log(years);
-
-//     return (
-//         
-//     )
-// };
-
 export default PrevalenceTab;

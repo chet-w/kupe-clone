@@ -715,3 +715,7 @@ main {
   background: linear-gradient(to right, #02a7c9, #0080a4);
 }
 
+.ant-table-thead > tr > th[colspan] {
+  text-align: left;
+}
+
