@@ -114,6 +114,18 @@ const organisePrevalenceData = (data, groups, year) => {
     return ordered;
 };
 
+const organiseComparisonsData = data => {
+    const reduced = data.map(record => {
+        return {
+            comparison: record.comparison,
+            ratio: Number.parseFloat(record.adjusted_rate_ratio),
+            ratioCI: `(${record.adjusted_rate_ratio_low_CI} - ${record.adjusted_rate_ratio_low_CI})`,
+            adjustmentVariables: record.adjusted_for
+        }
+    });
+    return reduced;
+};
+
 
 module.exports.toPath = toPath;
 module.exports.dePath = dePath;
@@ -121,5 +133,6 @@ module.exports.capFirst = capFirst;
 module.exports.organiseData = organiseData;
 module.exports.formatCI = formatCI;
 module.exports.organisePrevalenceData = organisePrevalenceData;
+module.exports.organiseComparisonsData = organiseComparisonsData;
 module.exports.numberWithCommas = numberWithCommas;
 

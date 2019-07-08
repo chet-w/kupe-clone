@@ -12,19 +12,21 @@ const IndicatorPage = ({ data, location }) => {
     // The current Subtopic
     const subtopicPathWithInd = noLeadingSlash.substring(noLeadingSlash.indexOf("/") + 1);
     const subtopic = dePath(subtopicPathWithInd.substring(0, subtopicPathWithInd.indexOf("/")));
-    const indicator = dePath(subtopicPathWithInd.substring(subtopicPathWithInd.indexOf("/") +1 ));
+    const indicator = dePath(subtopicPathWithInd.substring(subtopicPathWithInd.indexOf("/") + 1));
 
     // Data for charts and tables
     const allPrevalences = data.allPrevalencesJson.nodes;
+    const allComparisons = data.allComparisonsJson.nodes;
 
     return (
         <Layout>
             <SEO title="Home" />
             <IndicatorPageBody
-              topic={topic}
-              subtopic={subtopic}
-              indicator={indicator}
-              allPrevData={allPrevalences}
+                topic={topic}
+                subtopic={subtopic}
+                indicator={indicator}
+                allPrevData={allPrevalences}
+                allCompData={allComparisons}
             />
         </Layout>
     )
@@ -48,6 +50,19 @@ export const IndicatorQuery = graphql`
         female_low_CI
         }
     }
+    allComparisonsJson(filter: {indicator: {eq: $id}}) {
+      nodes {
+        indicator
+        population
+        year
+        adjusted_for
+        adjusted_rate_ratio
+        adjusted_rate_ratio_high_CI
+        adjusted_rate_ratio_low_CI
+        comparison
+      }
+  }
+
     }
 `;
 
