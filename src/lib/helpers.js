@@ -1,5 +1,7 @@
 const prevGroups = require("./config").prevGroups;
 const prevLabels = require("./config").prevLabels;
+const subgroupGroups = require("./config").subgroupGroups;
+const subgroupLabels = require("./config").subgroupLabels;
 const totalPopulation = require("./config").totalPopulation;
 
 
@@ -119,11 +121,18 @@ const organiseComparisonsData = data => {
         return {
             comparison: record.comparison,
             ratio: Number.parseFloat(record.adjusted_rate_ratio),
-            ratioCI: `(${record.adjusted_rate_ratio_low_CI} - ${record.adjusted_rate_ratio_low_CI})`,
+            ratioCI: `(${record.adjusted_rate_ratio_low_CI} - ${record.adjusted_rate_ratio_high_CI})`,
             adjustmentVariables: record.adjusted_for
         }
     });
-    return reduced;
+
+    subgroupLabels.map(comparison => reduced.push({ comparison: comparison }));
+
+    const ordered = reduced.sort(function(a, b){  
+        return subgroupGroups.indexOf(a.comparison) - subgroupGroups.indexOf(b.comparison);
+    });
+
+    return ordered;
 };
 
 
