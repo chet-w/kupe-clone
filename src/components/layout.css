@@ -719,3 +719,8 @@ main {
   text-align: left;
 }
 
+.ant-tag.tag-significant {
+  position: absolute;
+  right: 0;
+}
+

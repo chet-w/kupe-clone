@@ -122,7 +122,9 @@ const organiseComparisonsData = data => {
             comparison: record.comparison,
             ratio: Number.parseFloat(record.adjusted_rate_ratio),
             ratioCI: `(${record.adjusted_rate_ratio_low_CI} - ${record.adjusted_rate_ratio_high_CI})`,
-            adjustmentVariables: record.adjusted_for
+            adjustmentVariables: record.adjusted_for,
+            isSignificant: Number.parseFloat(record.adjusted_rate_ratio_low_CI) > 1 ||
+             Number.parseFloat(record.adjusted_rate_ratio_high_CI) < 1
         }
     });
 
