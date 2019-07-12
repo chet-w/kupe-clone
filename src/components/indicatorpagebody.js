@@ -11,6 +11,7 @@ import IndicatorDescription from "./indicatordescription";
 import OverviewTab from './overviewtab';
 import PrevalenceTab from "./prevalencetab";
 import ComparisonsTab from "./comparisonstab";
+import TimeseriesTab from "./timeseriestab";
 import { ethnicities } from '../lib/config';
 
 const { TabPane } = Tabs;
@@ -19,7 +20,7 @@ const Wrapper = styled.div`
     width: 60%;
 `;
 
-const IndicatorPageBody = ({ topic, subtopic, indicator, allPrevData, allCompData }) => {
+const IndicatorPageBody = ({ topic, subtopic, indicator, allPrevData, allCompData, allTimeData }) => {
 
     // Available years
     const years = allPrevData
@@ -67,7 +68,7 @@ const IndicatorPageBody = ({ topic, subtopic, indicator, allPrevData, allCompDat
                     <ComparisonsTab data={allCompData} latestYear={latestYear}/>
                 </TabPane>
                 <TabPane tab="Changes over time" key="4">
-                    Content of Tab Pane 4
+                    <TimeseriesTab data={allTimeData} latestYear={latestYear}/>
                 </TabPane>
             </Tabs>
         </Container>

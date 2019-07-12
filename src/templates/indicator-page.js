@@ -17,6 +17,7 @@ const IndicatorPage = ({ data, location }) => {
     // Data for charts and tables
     const allPrevalences = data.allPrevalencesJson.nodes;
     const allComparisons = data.allComparisonsJson.nodes;
+    const allTimeseries = data.allTimeseriesJson.nodes;
 
     return (
         <Layout>
@@ -27,6 +28,7 @@ const IndicatorPage = ({ data, location }) => {
                 indicator={indicator}
                 allPrevData={allPrevalences}
                 allCompData={allComparisons}
+                allTimeData={allTimeseries}
             />
         </Layout>
     )
@@ -61,6 +63,21 @@ export const IndicatorQuery = graphql`
         adjusted_rate_ratio_low_CI
         comparison
       }
+  }
+  allTimeseriesJson(filter: {indicator: {eq: $id}}) {
+    nodes {
+      indicator
+      group
+      percent_12
+      percent_14
+      percent_16
+      percent_18
+      p_value_16_12
+      p_value_16_14
+      p_value_18_12
+      p_value_18_14
+      p_value_18_16
+    }
   }
 
     }
