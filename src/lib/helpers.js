@@ -137,6 +137,15 @@ const organiseComparisonsData = data => {
     return ordered;
 };
 
+const organiseTimeseriesData = data => {
+
+    prevLabels.map(label => data.push({ group: label }));
+    const ordered = data.sort(function(a, b) {
+        return prevGroups.indexOf(a.group) - prevGroups.indexOf(b.group);
+    });
+    return ordered;
+}
+
 
 module.exports.toPath = toPath;
 module.exports.dePath = dePath;
@@ -145,5 +154,6 @@ module.exports.organiseData = organiseData;
 module.exports.formatCI = formatCI;
 module.exports.organisePrevalenceData = organisePrevalenceData;
 module.exports.organiseComparisonsData = organiseComparisonsData;
+module.exports.organiseTimeseriesData = organiseTimeseriesData;
 module.exports.numberWithCommas = numberWithCommas;
 

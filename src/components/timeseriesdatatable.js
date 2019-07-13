@@ -1,7 +1,14 @@
 import React from 'react';
-import { Table } from "antd";
+import styled from "styled-components";
+import { Table, Tag } from "antd";
+import { organiseTimeseriesData } from "../lib/helpers";
+import { prevLabels } from '../lib/config';
 
 const { Column, ColumnGroup } = Table;
+
+const SignificantGroup = styled.div`
+    position: relative;
+`;
 
 const TimeseriesDataTable = ({ data, latestYear, showPvalue }) => {
     const totalVal = data.filter(record => record.group === "Total")[0];
@@ -23,12 +30,22 @@ const TimeseriesDataTable = ({ data, latestYear, showPvalue }) => {
         }
     }).filter(comp => comp.colComparison.includes(`and ${latestYear}`));
 
-    
-    console.log(latestYear);
+    const organised = organiseTimeseriesData(data);
+
+    const determineSignificance = group => {
+        const comparison = organised.find(record => record.group === group);
+        return true;
+    }
 
     return (
-        <Table dataSource={data} pagination={false}>
-            <Column title="Population group" width="35%" dataIndex="group" key="group"/>
+        <Table dataSource={organised} pagination={false}>
+            <Column title="Population group" width="35%" dataIndex="group" key="group" render={group => {
+                let res = group;
+                if(prevLabels.includes(group)) {
+                    res = <strong>{group}</strong>
+                }
+                return res;
+            }}/>
             <ColumnGroup title="Unadjusted prevalence">
                 {years.map(year => (
                     <Column title={year.colYear} key={year.dataYear} dataIndex={year.dataYear} />

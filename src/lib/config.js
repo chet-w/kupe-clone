@@ -8,7 +8,7 @@ const ageGroups = ["15-24", "18-24", "25-44", "45-64", "65+"];
 const drinking = ["Non-drinker", "Drinker", "Risky drinker"];
 const ethnicities = ["Maori", "Asian", "Pacific", "European/Other"];
 const prevLabels = ["Age groups", "Ethnicities", "Neighbourhood deprivation", "Drinking status"]
-const prevGroups = ["Total","Age groups", ...ageGroups, "Ethnicities",  ...ethnicities, "Neighbourhood deprivation", ...deprivation, "Drinking status", ...drinking];
+const prevGroups = ["Total", "Men", "Women", "Age groups", ...ageGroups, "Ethnicities",  ...ethnicities, "Neighbourhood deprivation", ...deprivation, "Drinking status", ...drinking];
 
 // Comparison groups
 const subgroupSex = ["Women vs men"];
