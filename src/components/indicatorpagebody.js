@@ -68,7 +68,7 @@ const IndicatorPageBody = ({ topic, subtopic, indicator, allPrevData, allCompDat
                     <ComparisonsTab data={allCompData} latestYear={latestYear}/>
                 </TabPane>
                 <TabPane tab="Changes over time" key="4">
-                    <TimeseriesTab data={allTimeData} latestYear={latestYear}/>
+                    <TimeseriesTab data={allTimeData} latestYear={latestYear} years={years}/>
                 </TabPane>
             </Tabs>
         </Container>
