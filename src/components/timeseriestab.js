@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from "styled-components";
 import { Switch } from "antd";
 import PageSubheading from "./ui/pagesubheading";
@@ -42,7 +42,14 @@ const Switches = styled.div`
     }
 `;
 
-const TimseriesTab = ({ data, years }) => {
+const TimseriesTab = ({ data, years, latestYear }) => {
+
+    const [ showPvalue, setShowPvalue ] = useState(true);
+
+    const togglePvalue = () => {
+        setShowPvalue(!showPvalue);
+    };
+
     return (
         <>
         <Wrapper>
@@ -58,7 +65,7 @@ const TimseriesTab = ({ data, years }) => {
             <Checkboxes>
                  <Switches>
                  <StyledLabel>Show:</StyledLabel>
-                     <Switch />
+                     <Switch onChange={togglePvalue} checked={showPvalue}/>
                 </Switches>
                  <SwitchLabels>
                     <br/>
@@ -66,7 +73,12 @@ const TimseriesTab = ({ data, years }) => {
                  </SwitchLabels>
             </Checkboxes>
         </Wrapper>
-        <TimeseriesDataTable data={data} years={years}/>
+        <TimeseriesDataTable
+         data={data}
+         years={years}
+         latestYear={latestYear}
+         showPvalue={showPvalue}
+        />
         </>
     )
 }

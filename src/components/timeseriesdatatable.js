@@ -3,7 +3,7 @@ import { Table } from "antd";
 
 const { Column, ColumnGroup } = Table;
 
-const TimeseriesDataTable = ({ data }) => {
+const TimeseriesDataTable = ({ data, latestYear, showPvalue }) => {
     const totalVal = data.filter(record => record.group === "Total")[0];
     const yearsCols = Object.keys(totalVal).filter(key => key.includes("percent"));
     const years = yearsCols.map(year => {
@@ -21,24 +21,24 @@ const TimeseriesDataTable = ({ data }) => {
             dataComparison: comp,
             colComparison: longYears.join(" and ")
         }
-    })
+    }).filter(comp => comp.colComparison.includes(`and ${latestYear}`));
 
-    console.log(data);
+    
+    console.log(latestYear);
 
     return (
-        <Table>
-            <Column title="Population group" width="20%"
-            />
+        <Table dataSource={data} pagination={false}>
+            <Column title="Population group" width="35%" dataIndex="group" key="group"/>
             <ColumnGroup title="Unadjusted prevalence">
                 {years.map(year => (
                     <Column title={year.colYear} key={year.dataYear} dataIndex={year.dataYear} />
                 ))}
             </ColumnGroup>
-            <ColumnGroup title="Statistical difference between years (p value)">
+            {showPvalue && <ColumnGroup title="Statistical difference between years (p value)">
                 {comparisonYears.map(comp => (
                     <Column title={comp.colComparison} key={comp.dataComparison} dataIndex={comp.dataComparison} />
                 ))}
-            </ColumnGroup>
+            </ColumnGroup>}
         </Table>
     )
 }
