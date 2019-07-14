@@ -34,6 +34,8 @@ const TimeseriesDataTable = ({ data, latestYear, showPvalue }) => {
 
     const determineSignificance = group => {
         const comparison = organised.find(record => record.group === group);
+
+        // TODO: determine significance and format accordingly
         return true;
     }
 
