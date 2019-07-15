@@ -60,7 +60,7 @@ const SubtopicCards = ({ topic, subtopicDescriptions }) => {
         <StyledSubtopicCards>
             {subtopicDescriptions.map(subtopic => (
                 <Link to={`/${toPath(topic)}/${toPath(subtopic.node.name)}`}>
-                    <SubtopiCard name={subtopic.node.name} description={subtopic.node.description}/>
+                    <SubtopiCard name={subtopic.node.name} description={subtopic.node.description} topic={topic}/>
                 </Link>
             ))}
         </StyledSubtopicCards>

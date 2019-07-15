@@ -15,9 +15,9 @@ const Card = styled.div`
 
 `;
 
-const SubtopiCard = ({ name, description }) => {
+const SubtopiCard = ({ name, description, topic }) => {
     return (
-        <Card>
+        <Card topic={topic}>
             <h2>{name}</h2>
             <p>{description}</p>
         </Card>

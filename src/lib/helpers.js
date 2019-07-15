@@ -42,7 +42,7 @@ const organiseData = (data, comparisonYears) => {
             group: justOneInd[0].group,
         };
         years.map(year => {
-            conciseRecord[year] = Number.parseFloat(justOneInd.find(record => record.year === year).total);
+            conciseRecord[year] = Number.parseFloat(justOneInd.find(record => record.year === year).total).toFixed(1);
         });
         comparisonYears.map(year => {
             const strippedYear = year.replace(/\s/g, "");
@@ -60,7 +60,7 @@ const organiseData = (data, comparisonYears) => {
 
         return conciseRecord;
     });
-
+    console.log(records);
     return records;
 };
 

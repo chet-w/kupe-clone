@@ -19,6 +19,17 @@ const Datatable = ({ data, indicators, group, topic, subtopic }) => {
     const prevInds = indicators.filter(indicator => indicator.measureType === "%").map(indicator => indicator.indicator);
 
     const timeTrendYears = Array.from(new Set(tableData.map(record => record.year)));
+
+    // Consider more dynamic solution
+    if(!timeTrendYears.includes(2012)) {
+        timeTrendYears.push(2012);
+        timeTrendYears.sort();
+    }
+    if(!timeTrendYears.includes(2014)) {
+        timeTrendYears.push(2014);
+        timeTrendYears.sort();
+    }
+
     const latestYear = Math.max(...timeTrendYears);
     
     const comparisonYears = timeTrendYears.map(year => {
@@ -39,7 +50,18 @@ const Datatable = ({ data, indicators, group, topic, subtopic }) => {
         width: "30%"
     }];
     
-    timeTrendYears.map(year => tableColumns.push({ title: year, dataIndex: year, key: year }));
+    timeTrendYears.map(year => tableColumns.push({ 
+        title: year,
+        dataIndex: year,
+        key: year,
+        render: value => {
+            if(value === undefined) {
+                return "-"
+            } else {
+                return value
+            }
+        }
+    }));
     comparisonYears.map(year => tableColumns.push({
         title: year,
         dataIndex: year.replace(/\s/g, ""),
