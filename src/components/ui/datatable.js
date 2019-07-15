@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table } from "antd";
+import { Table, Icon } from "antd";
 import { Link } from 'gatsby';
 import MeanText from "../meantext";
 import { organiseData } from "../../lib/helpers"
@@ -40,7 +40,21 @@ const Datatable = ({ data, indicators, group, topic, subtopic }) => {
     }];
     
     timeTrendYears.map(year => tableColumns.push({ title: year, dataIndex: year, key: year }));
-    comparisonYears.map(year => tableColumns.push({ title: year, dataIndex: year.replace(/\s/g, ""), key: year, align: "center" }));
+    comparisonYears.map(year => tableColumns.push({
+        title: year,
+        dataIndex: year.replace(/\s/g, ""),
+        key: year, align: "center",
+        render: value => {
+            let res = value;
+            if(value === "up") {
+                res = <Icon style={{color: "#02a7c9"}} type="up-circle" />
+            } else if (value === "down") {
+                res = <Icon style={{color: "#02a7c9"}} type="down-circle" />
+            }
+            return <span style={{color: "#02a7c9"}}>{res}</span>;
+        }
+    }
+    ));
     
     const organised = organiseData(withLabels, comparisonYears);
     

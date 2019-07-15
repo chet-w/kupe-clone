@@ -9,16 +9,17 @@ const Card = styled.div`
 
     & h2 {
         font-size: 22px;
-        margin-bottom: 0;
+        margin-bottom: 10px;
     }
 
 
 `;
 
-const SubtopiCard = ({ name }) => {
+const SubtopiCard = ({ name, description }) => {
     return (
         <Card>
             <h2>{name}</h2>
+            <p>{description}</p>
         </Card>
     )
 }

@@ -33,13 +33,13 @@ const StyledSubtopicCards = styled.div`
     }
 `;
 
-const TopicPageBody = ({ topic, subtopics, indicators, description }) => {
+const TopicPageBody = ({ topic, description, subtopicDescriptions }) => {
     return (
         <Container direction="column" padding="20px 0">
             <Breadcrumb items={[topic]} />
             <TopicHeading topic={topic} isMainheading={true}/>
             <TopicPrelude description={description} />
-            <SubtopicCards topic={topic} subtopics={subtopics} indicators={indicators} />
+            <SubtopicCards topic={topic} subtopicDescriptions={subtopicDescriptions}/>
         </Container>
     )
 }
@@ -55,12 +55,12 @@ const TopicPrelude = ({ description }) => (
     </>
 );
 
-const SubtopicCards = ({ topic, subtopics, indicators }) => {
+const SubtopicCards = ({ topic, subtopicDescriptions }) => {
     return (
         <StyledSubtopicCards>
-            {subtopics.map(subtopic => (
-                <Link to={`/${toPath(topic)}/${toPath(subtopic)}`}>
-                    <SubtopiCard name={subtopic} />
+            {subtopicDescriptions.map(subtopic => (
+                <Link to={`/${toPath(topic)}/${toPath(subtopic.node.name)}`}>
+                    <SubtopiCard name={subtopic.node.name} description={subtopic.node.description}/>
                 </Link>
             ))}
         </StyledSubtopicCards>

@@ -26,11 +26,10 @@ const SubtopicPage = ({ data, location }) => {
     });
 
     // Subtopic description 
-    // const subtopicDescription = data.allSubtopicDescriptionsJson.edges.filter(edge => {
-    //     return edge.node.name === subtopic;
-    // })[0].node.description;
+    const subtopicDescription = data.allSubtopicDescriptionsJson.edges.filter(edge => {
+        return edge.node.name === subtopic;
+    })[0].node.description;
 
-    const subtopicDescription = "test"
 
     // Indicator data 
     const indicatorIDs = indicators.map(ind => ind.indicator);

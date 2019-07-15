@@ -19,16 +19,19 @@ const TopicPage = ({ data, location }) => {
     const topicIndicators = allIndicators.filter(indicator => toPath(indicator.topic) === currentTopic);
     const currentSubtopics = Array.from(new Set(topicIndicators.map(indicator => indicator.subtopic)));
 
-    const description = data.allTopicDescriptionsJson.edges.filter(edge => edge.node.name === dePath(currentTopic))[0].node.description;
+    const description = data.allTopicDescriptionsJson.edges
+    .filter(edge => edge.node.name === dePath(currentTopic))[0].node.description;
+
+    const subtopicDescriptions = data.allSubtopicDescriptionsJson.edges
+    .filter(edge => currentSubtopics.includes(edge.node.name))
 
     return (
         <Layout>
             <SEO title="Home" />
             <TopicPageBody
              topic={dePath(currentTopic)}
-             subtopics={currentSubtopics}
-             indicators={topicIndicators}
              description={description}
+             subtopicDescriptions={subtopicDescriptions}
             />
         </Layout>
     )
@@ -47,6 +50,14 @@ export const topicQuery = graphql`
             }
         }
         allTopicDescriptionsJson {
+            edges {
+            node {
+                name
+                description
+            }
+            }
+        }
+        allSubtopicDescriptionsJson {
             edges {
             node {
                 name
