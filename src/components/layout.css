@@ -643,17 +643,19 @@ main {
 }
 
 .ant-popover {
-  top: 111px !important;
+  position: fixed;
+  margin-top: -10px;
   left: 0;
   width: 100%;
+  box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.ant-popover-placement-bottom {
+  padding-top: 0;
 }
 
 .ant-popover-inner {
   box-shadow: none
-}
-
-.ant-popover-placement-bottom > .ant-popover-content > .ant-popover-arrow {
-  display: none;
 }
 
 .ant-table a {
@@ -686,6 +688,24 @@ main {
 
 .ant-tabs-nav-wrap {
   margin-top: 30px;
+}
+
+.kupe-logo, .nav-header-links {
+  display: none;
+}
+
+.ant-affix .kupe-logo {
+  padding: 10px;
+  display: block;
+  animation: antMoveLeftIn 0.3s ease forwards;
+  color: #02a7c9;
+}
+
+.ant-affix .nav-header-links {
+  padding: 10px;
+  display: block;
+  animation: antMoveRightIn 0.3s ease forwards;
+  color: #02a7c9;
 }
 
 .ant-tabs {

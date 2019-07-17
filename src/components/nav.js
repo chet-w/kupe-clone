@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from "styled-components";
 import Container from './ui/container';
 import { graphql, useStaticQuery, Link } from 'gatsby';
-import { Popover } from 'antd';
+import { Popover, Affix, Icon } from 'antd';
 import { toPath } from '../lib/helpers';
 
 const StyledNav = styled.nav`
@@ -11,6 +11,8 @@ const StyledNav = styled.nav`
     font-size: 14px;
     position: relative;
     border-bottom: solid 1px #f5f5f5;
+    background: ${props => props.theme.white};
+
 `;
 
 const StyledNavTopic = styled.div`
@@ -70,6 +72,7 @@ const SubtopicHeading = styled.h3`
     color: ${props => props.theme.black};
 `;
 
+
 const Nav = () => {
 
     const data = useStaticQuery(graphql`
@@ -90,9 +93,9 @@ const Nav = () => {
     const topics = Array.from(new Set(raw.map(ind => ind.node.topic))).sort();
     const subtopics = Array.from(new Set(raw.map(ind => (
         { subtopic: ind.node.subtopic, topic: ind.node.topic }
-        ))));
+    ))));
 
-    const [currentTopic, setCurrentTopic ] = useState(null);
+    const [currentTopic, setCurrentTopic] = useState(null);
     const [currentSubtopics, setCurrentSubtopics] = useState(null);
 
     useEffect(() => {
@@ -106,26 +109,34 @@ const Nav = () => {
 
 
     return (
-        <StyledNav>
-            <Container justify="space-between">
-                {topics.map((topic, i) => (
-                    <Popover
-                     key={topic + i}
-                     content={
-                      <NavBody
-                       subtopics={currentSubtopics}
-                       allIndicators={raw}
-                       topic={topic}
-                     />}
-                     arrowPointAtCenter
-                     trigger={"hover"}
-                     placement={"bottom"}
-                    >
-                        <NavTopic topic={topic} setCurrentTopic={handleTopicChange.bind(this)}/>
-                    </Popover>
-                ))}
-            </Container>
-        </StyledNav>
+        <Affix>
+            <StyledNav>
+                <Container justify="space-between">
+                    <Link to="/" className="kupe-logo">
+                        <Icon type="home"/>
+                    </Link>
+                    {topics.map((topic, i) => (
+                        <Popover
+                            key={topic + i}
+                            content={
+                                <NavBody
+                                    subtopics={currentSubtopics}
+                                    allIndicators={raw}
+                                    topic={topic}
+                                />}
+                            
+                            trigger={"hover"}
+                            placement={"bottom"}
+                        >
+                            <NavTopic topic={topic} setCurrentTopic={handleTopicChange.bind(this)} />
+                        </Popover>
+                    ))}
+                    <div  className="nav-header-links">
+                        <Icon type="menu"/>
+                    </div>
+                </Container>
+            </StyledNav>
+        </Affix>
     )
 };
 
@@ -147,10 +158,10 @@ const NavBody = ({ subtopics, allIndicators, topic }) => {
         <StyledNavBody>
             <Container wrap={"wrap"}>
                 {filteredSubtopics.map(subtopic => (
-                    <NavBodySection 
-                     subtopic={subtopic}
-                     topic={topic}
-                     indicators={allIndicators.filter(ind => ind.node.subtopic === subtopic)}
+                    <NavBodySection
+                        subtopic={subtopic}
+                        topic={topic}
+                        indicators={allIndicators.filter(ind => ind.node.subtopic === subtopic)}
                     />
                 ))}
             </Container>
@@ -160,7 +171,7 @@ const NavBody = ({ subtopics, allIndicators, topic }) => {
 
 const NavBodySection = ({ subtopic, indicators, topic }) => {
 
-    
+
     return (
         <StyledNavBodySection>
             <Link to={toPath(`${topic}/${subtopic}`)}>

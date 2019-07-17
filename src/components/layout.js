@@ -7,6 +7,7 @@
 
 import React from "react"
 import PropTypes from "prop-types"
+import { BackTop } from "antd";
 import { useStaticQuery, graphql } from "gatsby"
 import { ThemeProvider } from "styled-components";
 
@@ -55,6 +56,7 @@ const Layout = ({ children }) => {
           <Header siteTitle={data.site.siteMetadata.title} />
           <Nav/>
           <main>{children}</main>
+          <BackTop />
           <Footer />
         </>
       </ThemeProvider>
