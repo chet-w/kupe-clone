@@ -4,6 +4,7 @@ import Container from './ui/container';
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import { Popover, Affix, Icon } from 'antd';
 import { toPath } from '../lib/helpers';
+import SearchDrawer from "./searchdrawer"
 
 const StyledNav = styled.nav`
     display: flex;
@@ -21,7 +22,7 @@ const StyledNavTopic = styled.div`
     padding: 10px;
     cursor: pointer;
     position: relative;
-    /* animation: antFadeIn 1s ease 1.5s forwards; */
+    transition: max-width 0.4s ease;
 
     & > a {
         color: ${props => props.theme.lightBlue};
@@ -82,7 +83,7 @@ const Search = styled.div`
     border: none;
     background: none;
     transition: width 0.3s ease;
-    width: ${props => props.isOpen ? `100%` : 0};
+    /* width: ${props => props.isOpen ? `1000px` : 0}; */
     color: ${props => props.theme.lightBlue};
     /* border-left: solid 2px ${props => props.theme.lightBlue}; */
 
@@ -155,12 +156,19 @@ const Nav = ({ page }) => {
                             trigger={"hover"}
                             placement={"bottom"}
                         >
-                            <NavTopic topic={topic} setCurrentTopic={handleTopicChange.bind(this)} />
+                            <NavTopic
+                             topic={topic}
+                             setCurrentTopic={handleTopicChange.bind(this)}
+                            />
                         </Popover>
                     ))}
                     <Search onClick={() => toggleSearchOpen(!isSearchOpen)} isOpen={isSearchOpen}>
                        <Icon type="search" />
                     </Search>
+                    <SearchDrawer
+                     isOpen={isSearchOpen}
+                     toggleIsOpen={toggleSearchOpen.bind(this)}
+                    />
                     <div  className="nav-header-links">
                         <Icon type="menu"/>
                     </div>
@@ -172,7 +180,7 @@ const Nav = ({ page }) => {
 
 const NavTopic = ({ topic, setCurrentTopic, ...otherProps }) => {
     return (
-        <StyledNavTopic onMouseOver={() => setCurrentTopic(topic)} {...otherProps}>
+        <StyledNavTopic onMouseOver={() => setCurrentTopic(topic)} {...otherProps} >
             <Link to={`/${toPath(topic)}`}>
                 {topic}
             </Link>
