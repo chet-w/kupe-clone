@@ -15,12 +15,15 @@ const StyledHeader = styled.header`
 
 const KupeLogo = styled.img`
   width: 200px;
+animation: ${props => props.shouldAnimate ? `antMoveUpIn 0.8s ease forwards` : `none` };
 `;
 
 const StyledHeaderLinks = styled.div`
   display: flex;
   width: 300px;
+  opacity: ${props => props.shouldAnimate ? 0 : 1 };
   justify-content: space-between;
+  animation: ${props => props.shouldAnimate ? `antMoveUpIn 0.8s ease 0.6s forwards` : `none` };
 `;
 
 const HeaderLink = styled.div`
@@ -28,24 +31,24 @@ const HeaderLink = styled.div`
   font-size: 12px;
 `;
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle, page }) => (
   <StyledHeader>
     <Container align="center" justify="space-between">
       <Link to={"/"}>
-        <KupeLogo src={require("../images/logos/kupe.svg")} />
+        <KupeLogo src={require("../images/logos/kupe.svg")} shouldAnimate={page === "index"}/>
       </Link>
-      <HeaderLinks />
+      <HeaderLinks shouldAnimate={page === "index"} />
     </Container>
   </StyledHeader>
 );
 
-const HeaderLinks = () => {
+const HeaderLinks = ({ shouldAnimate }) => {
 
   const links = ["Feedback", "About", "Method"];
   const homeLink = { text: "hpa.org.nz", href: "https://www.hpa.org.nz" };
 
   return (
-    <StyledHeaderLinks>
+    <StyledHeaderLinks shouldAnimate={shouldAnimate}>
       {links.map(link => <HeaderLink key={link}>{link}</HeaderLink>)}
       <HeaderLink>
         {homeLink.text}

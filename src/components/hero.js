@@ -10,7 +10,9 @@ const StyledHero = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
     color: ${props => props.theme.white};
+    animation: antFadeIn 0.8s 1.8s ease forwards;
 
     & p {
         font-size: 14px;

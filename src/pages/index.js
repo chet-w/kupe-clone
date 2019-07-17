@@ -7,7 +7,7 @@ import Hero from "../components/hero";
 import TopicCards from "../components/topiccards";
 
 const IndexPage = ({ data }) => (
-  <Layout>
+  <Layout page="index">
     <SEO title="Home" />
     <Hero />
     <TopicCards topics={data.allTopicDescriptionsJson.edges}/>

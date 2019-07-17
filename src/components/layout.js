@@ -38,7 +38,7 @@ const theme = {
 }
 
 
-const Layout = ({ children }) => {
+const Layout = ({ children, page }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -53,8 +53,8 @@ const Layout = ({ children }) => {
     <>
       <ThemeProvider theme={theme}>
         <>
-          <Header siteTitle={data.site.siteMetadata.title} />
-          <Nav/>
+          <Header siteTitle={data.site.siteMetadata.title} page={page}/>
+          <Nav page={page}/>
           <main>{children}</main>
           <BackTop />
           <Footer />

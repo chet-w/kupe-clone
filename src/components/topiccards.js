@@ -13,6 +13,8 @@ const CardsContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     margin: 15px 0;
+    opacity: 0;
+    animation: antMoveDownIn 0.8s ease 2.4s forwards;
 
     & .react-reveal {
         margin: 15px;

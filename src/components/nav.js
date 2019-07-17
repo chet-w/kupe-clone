@@ -11,6 +11,8 @@ const StyledNav = styled.nav`
     font-size: 14px;
     position: relative;
     border-bottom: solid 1px #f5f5f5;
+    opacity: ${props => props.shouldAnimate ? 0 : 1};
+    animation: ${props => props.shouldAnimate ? `antFadeIn 0.8s ease 1.2s forwards` : `none`};
     background: ${props => props.theme.white};
 
 `;
@@ -19,6 +21,7 @@ const StyledNavTopic = styled.div`
     padding: 10px;
     cursor: pointer;
     position: relative;
+    /* animation: antFadeIn 1s ease 1.5s forwards; */
 
     & > a {
         color: ${props => props.theme.lightBlue};
@@ -73,7 +76,7 @@ const SubtopicHeading = styled.h3`
 `;
 
 
-const Nav = () => {
+const Nav = ({ page }) => {
 
     const data = useStaticQuery(graphql`
         query {
@@ -110,7 +113,7 @@ const Nav = () => {
 
     return (
         <Affix>
-            <StyledNav>
+            <StyledNav shouldAnimate={page === "index"}>
                 <Container justify="space-between">
                     <Link to="/" className="kupe-logo">
                         <Icon type="home"/>
