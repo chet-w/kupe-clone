@@ -10,7 +10,6 @@ const SubtopicPage = ({ data, location }) => {
     // Format Topic name
     const noLeadingSlash = location.pathname.substring(1);
     const topic = dePath(noLeadingSlash.substring(0, noLeadingSlash.indexOf("/")));
-    console.log(topic);
     // The current Subtopic
     const subtopic = dePath(noLeadingSlash.substring(noLeadingSlash.indexOf("/") + 1));
     // Indicators for this subtopic

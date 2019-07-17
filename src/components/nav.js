@@ -75,6 +75,28 @@ const SubtopicHeading = styled.h3`
     color: ${props => props.theme.black};
 `;
 
+const Search = styled.div`
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    transition: width 0.3s ease;
+    width: ${props => props.isOpen ? `100%` : 0};
+    color: ${props => props.theme.lightBlue};
+    /* border-left: solid 2px ${props => props.theme.lightBlue}; */
+
+    &::before {
+        content: " ";
+        position: absolute;
+        width: 1px;
+        height: 50%;
+        top: 25%;
+        left: 0;
+        background: ${props => props.theme.lightGrey};
+    }
+`;
+
 
 const Nav = ({ page }) => {
 
@@ -100,6 +122,8 @@ const Nav = ({ page }) => {
 
     const [currentTopic, setCurrentTopic] = useState(null);
     const [currentSubtopics, setCurrentSubtopics] = useState(null);
+
+    const [isSearchOpen, toggleSearchOpen] = useState(false);
 
     useEffect(() => {
         const newSubtopics = subtopics.filter(subtopic => subtopic.topic === currentTopic);
@@ -134,6 +158,9 @@ const Nav = ({ page }) => {
                             <NavTopic topic={topic} setCurrentTopic={handleTopicChange.bind(this)} />
                         </Popover>
                     ))}
+                    <Search onClick={() => toggleSearchOpen(!isSearchOpen)} isOpen={isSearchOpen}>
+                       <Icon type="search" />
+                    </Search>
                     <div  className="nav-header-links">
                         <Icon type="menu"/>
                     </div>

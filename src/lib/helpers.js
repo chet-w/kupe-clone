@@ -60,7 +60,6 @@ const organiseData = (data, comparisonYears) => {
 
         return conciseRecord;
     });
-    console.log(records);
     return records;
 };
 
