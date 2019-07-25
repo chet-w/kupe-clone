@@ -10,7 +10,7 @@ const toPath = string => {
     let res = lowered.replace(/ /g, "-");
     res = res.replace(/\"/g, "");
     if (res.includes("\u0101")) {
-        res = res.replace("\u0101", "a");
+        res = res.replace(/\u0101/g, "a");
     }
     return res;
 };
@@ -18,9 +18,13 @@ const toPath = string => {
 const dePath = path => {
     const withSpaces = path.replace(/-/g, " ");
     let res = `${withSpaces.charAt(0).toUpperCase()}${withSpaces.substr(1)}`;
+    if (res.includes("maori")) {
+        res = res.replace("maori", "M\u0101ori");
+    } 
     if (res.includes("aori")) {
         res = res.replace("aori", "\u0101ori");
     }
+    res = res.replace(/   /g, " - ")
     return res;
 };
 

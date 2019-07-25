@@ -24,10 +24,16 @@ const SubtopicPage = ({ data, location }) => {
         }
     });
 
-    // Subtopic description 
-    const subtopicDescription = data.allSubtopicDescriptionsJson.edges.filter(edge => {
-        return edge.node.name === subtopic;
-    })[0].node.description;
+    // Subtopic description
+    let subtopicDescription;
+    try {
+        subtopicDescription = data.allSubtopicDescriptionsJson.edges.filter(edge => {
+            return edge.node.name === subtopic;
+        })[0].node.description;
+    } catch (e) {
+        subtopicDescription = "Failed";
+        console.log(subtopic);
+    }
 
 
     // Indicator data 

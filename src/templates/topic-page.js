@@ -19,6 +19,8 @@ const TopicPage = ({ data, location }) => {
     const topicIndicators = allIndicators.filter(indicator => toPath(indicator.topic) === currentTopic);
     const currentSubtopics = Array.from(new Set(topicIndicators.map(indicator => indicator.subtopic)));
 
+    console.log(dePath(currentTopic));
+
     const description = data.allTopicDescriptionsJson.edges
     .filter(edge => edge.node.name === dePath(currentTopic))[0].node.description;
 
