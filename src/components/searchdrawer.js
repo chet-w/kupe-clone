@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Drawer, Button, Input } from "antd";
 import styled from "styled-components";
+import SearchOutput from "./searchoutput";
 import Container from './ui/container';
+import { useStaticQuery, graphql } from 'gatsby';
 
 const SearchHeading = styled.h2`
     margin: 0;
@@ -28,6 +30,31 @@ const SearchBody = styled.div`
 
 const SearchDrawer = ({ isOpen, toggleIsOpen }) => {
 
+    const [searchText, setSearchText] = useState("");
+    const [searchResults, setSearchResults] = useState([]);
+
+    const handleSearchChange = value => {
+        console.log(searchText);
+        const res = allSearchables.filter(subtopic => {
+            return subtopic.name.includes(value) || subtopic.description.includes(value)
+        });
+        setSearchText(value);
+        setSearchResults(res);
+    }
+
+    const allSearchables = useStaticQuery(graphql`
+        query allSearchables {
+            allSubtopicDescriptionsJson {
+                nodes {
+                    description
+                    name
+                }
+            }
+        }
+    `).allSubtopicDescriptionsJson.nodes;
+
+    
+
     return (
         <Drawer
             title={(
@@ -48,18 +75,13 @@ const SearchDrawer = ({ isOpen, toggleIsOpen }) => {
                     <Input
                         className="search-input"
                         placeholder="What are you looking for?"
+                        onChange={e => handleSearchChange(e.target.value)}
                         allowClear
                         autoFocus
                     />
+                    <SearchOutput results={searchText === "" ? [] : searchResults}/>
                 </SearchBody>
             </Container>
-            <Footer>
-                <Container justify="flex-end">
-                    <Button type="primary" ghost onClick={e => toggleIsOpen(!isOpen)}>
-                        Close
-                     </Button>
-                </Container>
-            </Footer>
         </Drawer>
 
     )

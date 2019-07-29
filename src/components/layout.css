@@ -786,4 +786,13 @@ main {
   color: #02a7c9;
 }
 
+.ant-drawer-content-wrapper {
+  height: 100% !important;
+}
+
+.ant-drawer .ant-drawer-content {
+  overflow: auto;
+
+}
+
 
