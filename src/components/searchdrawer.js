@@ -58,8 +58,9 @@ const SearchDrawer = ({ isOpen, toggleIsOpen }) => {
     return (
         <Drawer
             title={(
-                <Container>
+                <Container justify="space-between">
                     <SearchHeading>Search Kupe</SearchHeading>
+                    <Button onClick={e => toggleIsOpen(!isOpen)}>Close</Button>
                 </Container>
             )}
             placement="top"
@@ -79,7 +80,7 @@ const SearchDrawer = ({ isOpen, toggleIsOpen }) => {
                         allowClear
                         autoFocus
                     />
-                    <SearchOutput results={searchText === "" ? [] : searchResults}/>
+                    <SearchOutput results={searchText === "" ? [] : searchResults} search={searchText}/>
                 </SearchBody>
             </Container>
         </Drawer>

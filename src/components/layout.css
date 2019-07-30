@@ -795,4 +795,23 @@ main {
 
 }
 
+/* .search-input input {
+  border: none;
+  position: relative;
+}
+
+.search-input input:after {
+  content: " ";
+  background: black;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+} */
+
+.search-match {
+  background: linear-gradient(to bottom, #02a7c975, #0080a4ba);
+  padding: 0;
+}
+
+
 

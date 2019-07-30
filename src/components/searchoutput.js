@@ -1,18 +1,33 @@
 import React from 'react'
 import { Empty } from 'antd';
+import Highligher from "react-highlight-words";
 
-const SearchOutput = ({ results }) => {
+const SearchOutput = ({ results, search }) => {
     console.log(results.length);
     return (
         <div>
-            { results.length > 0 ?
-            results.map(result => (
+            {results.length > 0 ?
+                results.map(result => (
+                    <div>
                         <div>
-                            <div><strong>{result.name}</strong></div>
-                            <div>{result.description}</div>
+                            <Highligher
+                                highlightClassName="search-match"
+                                searchWords={[search]}
+                                autoEscape={true}
+                                textToHighlight={result.name}
+                            />
                         </div>
-                    ))
-            : <Empty />
+                        <div>
+                            <Highligher
+                                highlightClassName="search-match"
+                                searchWords={[search]}
+                                autoEscape={true}
+                                textToHighlight={result.description}
+                            />
+                        </div>
+                    </div>
+                ))
+                : <Empty />
             }
         </div>
     )
