@@ -1,0 +1,81 @@
+[
+    {
+        "indicator": "ind_66",
+        "topic": "Alcohol", 
+        "subtopic": "Alcohol attitudes", 
+        "shortDescription": "Reduce the hours alcohol can be sold in my community",
+        "longDescription": "New Zealand adults who support reducing the hours when alcohol can be sold in the community where they live.",
+        "questions": [
+            {
+                "leadIn": "Please tell me how much you would support or oppose the following changes, if they were made to help reduce the problems associated with alcohol use.",
+                "question": "Reducing the hours when alcohol can be sold in my community where I live.",
+                "answers": [
+                    "Strongly support",
+                    "Support",
+                    "Neither support nor oppose",
+                    "Oppose",
+                    "Strongly oppose"
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "ind_67",
+        "topic": "Alcohol", 
+        "subtopic": "Alcohol attitudes", 
+        "shortDescription": "Increase restrictions on advertising/promotion seen or heard by under 18s",
+        "longDescription": "New Zealand adults who support increasing the restrictions on alcohol advertising or promotion that is seen or heard by people under 18.",
+        "questions": [
+            {
+                "leadIn": "Please tell me how much you would support or oppose the following changes, if they were made to help reduce the problems associated with alcohol use.",
+                "question": "Increasing the restrictions on alcohol advertising or promotion that is seen or heard by people under 18 years of age.",
+                "answers": [
+                    "Strongly support",
+                    "Support",
+                    "Neither support nor oppose",
+                    "Oppose",
+                    "Strongly oppose"
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "ind_68",
+        "topic": "Alcohol", 
+        "subtopic": "Alcohol attitudes", 
+        "shortDescription": "Ban alcohol-related sponsorship of events that people under 18 may attend",
+        "longDescription": "New Zealand adults who support banning alcohol related sponsorship of events that people under the age of 18 may attend.",
+        "questions": [
+            {
+                "leadIn": "Please tell me how much you would support or oppose the following changes, if they were made to help reduce the problems associated with alcohol use.",
+                "question": "Banning alcohol-related sponsorship of events that people under the age of 18 may attend.",
+                "answers": [
+                    "Strongly support",
+                    "Support",
+                    "Neither support nor oppose",
+                    "Oppose",
+                    "Strongly oppose"
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "ind_69",
+        "topic": "Alcohol", 
+        "subtopic": "Alcohol attitudes", 
+        "shortDescription": "Too many local places to buy alcohol",
+        "longDescription": "New Zealand adults who think the number of places where alcohol can be bought in their local areas is too many.",
+        "questions": [
+            {
+                "leadIn": "Please tell me how much you would support or oppose the following changes, if they were made to help reduce the problems associated with alcohol use.",
+                "question": "Do you think the number of places where alcohol can be bought in your local area is too few, about right, or too many?",
+                "answers": [
+                    "Too few",
+                    "About right",
+                    "Too many",
+                    "Don't know"
+                ]
+            }
+        ]
+    }
+]

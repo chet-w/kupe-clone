@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import { useStaticQuery, graphql } from "gatsby";
 import { Collapse } from "antd";
 
 const { Panel } = Collapse;
@@ -33,6 +34,11 @@ const Answers = styled.div`
 
 const IndicatorDescription = () => {
     const description = "New Zealand adults who support reducing the hours when alcohol can be sold in the community where they live."
+   
+    // const data = useStaticQuery(graphql`
+    //     query 
+    // `)
+   
     return (
         <Collapse bordered={false} defaultActiveKey={['1']}>
             <Panel showArrow={false} header={<Description>{description}</Description>} key="1">
