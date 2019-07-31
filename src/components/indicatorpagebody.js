@@ -20,7 +20,7 @@ const Wrapper = styled.div`
     width: 60%;
 `;
 
-const IndicatorPageBody = ({ topic, subtopic, indicator, allPrevData, allCompData, allTimeData }) => {
+const IndicatorPageBody = ({ topic, subtopic, indicator, allPrevData, allCompData, allTimeData, indId }) => {
 
     // Available years
     const years = allPrevData
@@ -49,7 +49,7 @@ const IndicatorPageBody = ({ topic, subtopic, indicator, allPrevData, allCompDat
             <Wrapper>
                 <TopicHeading topic={topic} />
                 <PageHeading text={indicator} />
-                <IndicatorDescription />
+                <IndicatorDescription indicator={indId}/>
             </Wrapper>
             <Tabs defaultActiveKey="1">
                 <TabPane tab="Overview" key="1">

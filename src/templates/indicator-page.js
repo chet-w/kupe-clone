@@ -26,6 +26,7 @@ const IndicatorPage = ({ data, location }) => {
                 topic={topic}
                 subtopic={subtopic}
                 indicator={indicator}
+                indId={data.allPrevalencesJson.nodes[0].indicator}
                 allPrevData={allPrevalences}
                 allCompData={allComparisons}
                 allTimeData={allTimeseries}
