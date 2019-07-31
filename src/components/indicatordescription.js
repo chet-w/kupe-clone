@@ -55,21 +55,30 @@ const IndicatorDescription = ({ indicator }) => {
 
     const data = res.filter(desc => desc.indicator === indicator)[0];
 
+    console.log(indicator);
+
+    const getLongDescription = () => {
+        return {
+            __html: data.longDescription
+        }
+    };
+
     return (
-        <Collapse bordered={false} defaultActiveKey={['1']}>
-            <Panel showArrow={false} header={<Description>{data.shortDescription}</Description>} key="1">
-                <QuestionLead>Question{data.questions.length > 1 ? "/s" : ""}:</QuestionLead>
-                {data.questions.map(q => (
-                    <QuestionsBody>
-                        <Context>{q.leadIn}</Context>
-                        <Question>{q.question}</Question>
-                        <Answers>
-                            ({q.answers.map((answer, i) => i !== q.answers.length - 1 ? ` ${answer} /` : ` ${answer} ` )})
-                        </Answers>
-                    </QuestionsBody>
-                ))}
-            </Panel>
-        </Collapse>
+        // <Collapse bordered={false} defaultActiveKey={['1']}>
+        //     <Panel showArrow={false} header={<Description dangerouslySetInnerHTML={getLongDescription()}></Description>} key="1">
+        //         <QuestionLead>Question{data.questions.length > 1 ? "/s" : ""}:</QuestionLead>
+        //         {data.questions.map(q => (
+        //             <QuestionsBody>
+        //                 <Context>{q.leadIn}</Context>
+        //                 <Question>{q.question}</Question>
+        //                 <Answers>
+        //                     ({q.answers.map((answer, i) => i !== q.answers.length - 1 ? ` ${answer} /` : ` ${answer} ` )})
+        //                 </Answers>
+        //             </QuestionsBody>
+        //         ))}
+        //     </Panel>
+        // </Collapse>
+        <div>{indicator}</div>
     )
 };
 

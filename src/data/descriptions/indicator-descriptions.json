@@ -4,7 +4,7 @@
         "topic": "Alcohol", 
         "subtopic": "Alcohol attitudes", 
         "shortDescription": "Reduce the hours alcohol can be sold in my community",
-        "longDescription": "New Zealand adults who support reducing the hours when alcohol can be sold in the community where they live.",
+        "longDescription": "<p>New Zealand adults who support reducing the hours when alcohol can be sold in the community where they live.</p>",
         "questions": [
             {
                 "leadIn": "Please tell me how much you would support or oppose the following changes, if they were made to help reduce the problems associated with alcohol use.",
@@ -24,7 +24,7 @@
         "topic": "Alcohol", 
         "subtopic": "Alcohol attitudes", 
         "shortDescription": "Increase restrictions on advertising/promotion seen or heard by under 18s",
-        "longDescription": "New Zealand adults who support increasing the restrictions on alcohol advertising or promotion that is seen or heard by people under 18.",
+        "longDescription": "<p>New Zealand adults who support increasing the restrictions on alcohol advertising or promotion that is seen or heard by people under 18.</p>",
         "questions": [
             {
                 "leadIn": "Please tell me how much you would support or oppose the following changes, if they were made to help reduce the problems associated with alcohol use.",
@@ -44,7 +44,7 @@
         "topic": "Alcohol", 
         "subtopic": "Alcohol attitudes", 
         "shortDescription": "Ban alcohol-related sponsorship of events that people under 18 may attend",
-        "longDescription": "New Zealand adults who support banning alcohol related sponsorship of events that people under the age of 18 may attend.",
+        "longDescription": "<p>New Zealand adults who support banning alcohol related sponsorship of events that people under the age of 18 may attend.</p>",
         "questions": [
             {
                 "leadIn": "Please tell me how much you would support or oppose the following changes, if they were made to help reduce the problems associated with alcohol use.",
@@ -64,7 +64,7 @@
         "topic": "Alcohol", 
         "subtopic": "Alcohol attitudes", 
         "shortDescription": "Too many local places to buy alcohol",
-        "longDescription": "New Zealand adults who think the number of places where alcohol can be bought in their local areas is too many.",
+        "longDescription": "<p>New Zealand adults who think the number of places where alcohol can be bought in their local areas is too many.</p>",
         "questions": [
             {
                 "leadIn": "Please tell me how much you would support or oppose the following changes, if they were made to help reduce the problems associated with alcohol use.",
@@ -74,6 +74,1023 @@
                     "About right",
                     "Too many",
                     "Don't know"
+                ]
+            }
+        ]
+    }, 
+    {
+        "indicator": "ind_84",
+        "topic": "Eating", 
+        "subtopic": "Meal preparation", 
+        "shortDescription": "New Zealand adults whose main meal of the day was prepared at home 5+ days in the last week.",
+        "longDescription": "<p>The main meal is the largest meal of the day. A meal prepared at home could include a meal that has been added to with takeaways like rice or hot chips.</p>",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": "Thinking about the last 7 days, that is from last [7 days ago] until yesterday, on how many of those days was your main meal prepared at home?",
+                "answers": [
+                    "Number from 0 to 7"
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "ind_85",
+        "topic": "Eating", 
+        "subtopic": "Meal preparation", 
+        "shortDescription": "New Zealand adults whose main meal of the day was bought outside home 3+ days in the last week.",
+        "longDescription": "<p>The main meal is the largest meal of the day. Bought outside the home means meals bought at a takeaway outlet, restaurant, food court, café, pub, petrol station or dairy.</p>",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": "Over the last 7 days, on how many days was your entire main meal bought outside the home, such as buying takeaways, or eating at a restaurant?",
+                "answers": [
+                    "Number from 0 to 7"
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "ind_86",
+        "topic": "Eating", 
+        "subtopic": "Eating habits within households", 
+        "shortDescription": "Eating together - always/frequently",
+        "longDescription": "<p>All or most members of the household eat the main meal of the day together always or frequently.</p>",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": "How often do all, or most, of the members of your household eat the main meal of the day together?",
+                "answers": [
+                    "Always",
+                    "Frequently",
+                    "Sometimes",
+                    "Almost never",
+                    "Never"
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "ind_87",
+        "topic": "Eating", 
+        "subtopic": "Eating habits within households", 
+        "shortDescription": "Eating together - sometimes",
+        "longDescription": "<p>All or most members of the household eat the main meal of the day together sometimes.</p>",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": "How often do all, or most, of the members of your household eat the main meal of the day together?",
+                "answers": [
+                    "Always",
+                    "Frequently",
+                    "Sometimes",
+                    "Almost never",
+                    "Never"
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "ind_88",
+        "topic": "Eating", 
+        "subtopic": "Eating habits within households", 
+        "shortDescription": "Eating together - almost never/never",
+        "longDescription": "<p>All or most members of the household eat the main meal of the day together almost never or never.</p>",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": "How often do all, or most, of the members of your household eat the main meal of the day together?",
+                "answers": [
+                    "Always",
+                    "Frequently",
+                    "Sometimes",
+                    "Almost never",
+                    "Never"
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "ind_1",
+        "topic": "Gambling", 
+        "subtopic": "Gambling participation", 
+        "shortDescription": "Any gambling activities",
+        "longDescription": "<p>New Zealand adults who participated in any gambling activities in the last 12 months.</p>",
+        "longHidden": "<p>Gambling activities include placing a bet with the NZ TAB on a horse or dog race or a sporting event, buying any NZ Lotteries Commission (Lotto) products, playing on gaming (pokie) machines in a pub, club or casino, playing table games at one of the six casinos, playing housie or bingo, playing an internet game to win money, buying a raffle ticket, participating for money in sweepstakes with friends, family or workmates, making bets for money with friends or family, placing a bet or buying tickets through an overseas online website.</p><p>Questions are about participation in different gambling activities either online, at home, or elsewhere. Respondents who answered yes to any of these questions are defined as gamblers.</p>",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": "I’ll read out different types of gambling that are available. Include gambling at home and elsewhere. For each type, please tell me whether or not you have done that activity in the last 12 months.",
+                "options": [
+                    "Placed a bet on a horse or dog race with the New Zealand TAB.",
+                    "Placed a bet on any other sports event with the New Zealand TAB.",
+                    "Bought an Instant Kiwi or scratch ticket.",
+                    "Bought a Lotto, Strike, Powerball (Wednesday or Saturday) ticket.",
+                    "Bought a Keno, Bullseye or Play 3 ticket.",
+                    "Played gaming machines, or pokies, at a pub or club.",
+                    "Played gaming machines, or pokies, at one of the six casinos.",
+                    "Played table games, such as card games or dice, at one of the six casinos.",
+                    "Played Housie or Bingo for money.",
+                    "Played an Internet game to win money.",
+                    "Bought a raffle ticket or attended a casino fundraising evening.",
+                    "Participated in sweepstakes for money with your work mates, friends or family on such things as the Melbourne Cup.",
+                    "Made bets for money with family or friends, on such things as card games."
+                ],
+                "answers": [
+                    "Yes", "No"
+                ]
+            }, 
+            {
+                "leadIn": null,
+                "question": "In the last 12 months, have you spent or bet any money, bought any tickets or paid to do any of the activities listed on online through a website or mobile phone for money or prizes?",
+                "options": [
+                    "Horse or dog race online through an overseas TAB, bookie or betting exchange [NOT through a NZ TAB account]",
+                    "Sports event online through an overseas TAB, bookie or betting exchange [NOT through a NZ TAB account]",
+                    "Event bet through a website (for example, an election result or TV show)",
+                    "Online poker/Other online casino games such as blackjack, roulette, etc.",
+                    "Online pokies/Internet bingo/Skill games online such as chess, scrabble, mah-jong, bridge, backgammon, etc.",
+                    "Overseas lottery, lotto or keno ticket online [NOT through a NZ MyLotto account]",
+                    "Fantasy or novelty betting such as virtual sports or other events",
+                    "Any other gambling or lottery activity online through a website for money (for example, online gaming machines or instant games)"
+                ],
+                "answers": [
+                    "Yes", "No"
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "ind_2",
+        "topic": "Gambling", 
+        "subtopic": "Gambling participation", 
+        "shortDescription": "Pokies at pub/club/casino",
+        "longDescription": "<p>New Zealand adults who played on gaming machines (pokies) in pub, club or one of the six casinos in last 12 months.</p>",
+        "longHidden": "<p>Respondents answered Yes to at least one of the gaming machines / pokies questions.</p>",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": "In the last 12 months, have you...",
+                "options": [
+                    "Played gaming machines, or pokies, at a pub or club.",
+                    "Played gaming machines, or pokies, at one of the six casinos.\ni: The six casinos are in Auckland, Hamilton, Christchurch, Dunedin, and two in Queenstown"
+                ],
+                "answers": [
+                    "Yes", "No"
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "ind_3",
+        "topic": "Gambling", 
+        "subtopic": "Gambling participation", 
+        "shortDescription": "Any NZ Lotto products",
+        "longDescription": "<p>New Zealand adults who bought any NZ Lotteries Commission (Lotto) products in last 12 months.<p>",
+        "longHidden": "<p>Lotto products are Instant Kiwi ticket/s (scratchies), online Instant Play ticket/s (online scratchies), Lotto, Strike, Powerball, Big Wednesday (2014, 2012 HLS), Keno, Bullseye or Play 3 tickets.</p>",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": "In the last 12 months, have you...",
+                "options": [
+                    "Bought an Instant Kiwi, Instant Play or scratch ticket (scratchie)?",
+                    "Bought a Lotto, Strike, Powerball (Wednesday or Saturday) ticket.",
+                    "Bought a Keno, Bullseye or Play 3 ticket."
+                ],
+                "answers": [
+                    "Yes", "No"
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "ind_4",
+        "topic": "Gambling", 
+        "subtopic": "Gambling participation", 
+        "shortDescription": "Online gambling on overseas websites",
+        "longDescription": "<p>New Zealand adults who participated in online gambling on overseas websites in the last 12 months.</p>",
+        "longHidden": "<p>This indicator reports on respondents who answered Yes to any of the activities.</p>",
+        "questions": [
+            {
+                "leadIn": "In the last 12 months, have you bet any money, bought any tickets or paid to do any of the listed activities online through a website or mobile phone for money or prizes?",
+                "question": "i: Do not include placing a bet through a NZ TAB account, buying a ticket through a NZ MyLotto account, spending money to download games on to your PC, purchasing game software, or doing any of the activities for free.",
+                "options": [
+                    "Betting:",
+                    "Horse or dog race online through an overseas TAB, bookie or betting exchange [NOT through a NZ TAB account].",
+                    "Sports event online through an overseas TAB, bookie or betting exchange [NOT through a NZ TAB account].",
+                    "Event bet through a website (for example, an election result or TV show).",
+                    "Poker/Casino games/Pokies:",
+                    "Online poker.",
+                    "Other online casino games such as blackjack, roulette etc.",
+                    "Online pokies.",
+                    "Other:",
+                    "Internet bingo.",
+                    "Skill games online such as chess, scrabble, mah-jong, bridge, backgammon, etc.",
+                    "Overseas lottery, lotto or keno ticket online [NOT through a NZ MyLotto account].",
+                    "Fantasy/novelty betting such as virtual sports or other events.",
+                    "Any other gambling or lottery activity online through a website for money (for example, online gaming machines or instant games)."
+                ],
+                "answers": [
+                    "Yes", "No"
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "ind_5",
+        "topic": "Gambling", 
+        "subtopic": "Gambling participation", 
+        "shortDescription": "Any horse/dog races/sports events (NZ)",
+        "longDescription": "<p>New Zealand adults who placed a bet on a horse or dog race or on a sporting event with the New Zealand TAB in the last 12 months.</p>",
+        "longHidden": "<p>Respondents who answered Yes to either Question.</p>",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": "In the last 12 months, have you...",
+                "options": [
+                    "Placed a bet on a horse or dog race with the New Zealand TAB.",
+                    "Placed a bet on any other sports event with the New Zealand TAB."
+                ],
+                "answers": [
+                    "Yes", "No"
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "ind_6",
+        "topic": "Gambling", 
+        "subtopic": "Gambling participation frequency", 
+        "shortDescription": "Lotto product - at least weekly",
+        "longDescription": "<p>New Zealand adults who bought NZ Lotteries Commission (Lotto) products at least once a week in the last 12 months.</p>",
+        "longHidden": "<p>Lotto products are Instant Kiwi ticket/s (scratchies), online Instant Play ticket/s (online scratchies), Lotto, Strike, Powerball, Keno, Bullseye or Play 3 tickets.</p><p>Questions are about participation in different gambling activities. Respondents who answered yes to any of these Questions are then asked about the frequency of their participation.</p>",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": "In the last 12 months have you...",
+                "options": [
+                    "Bought an Instant Kiwi, Instant Play or scratch ticket (scratchie)?",
+                    "Bought a Lotto, Strike, Powerball (Wednesday or Saturday) ticket.",
+                    "Bought a Keno, Bullseye or Play 3 ticket."
+                ],
+                "answers": [
+                    "Yes", "No"
+                ]
+            },
+            {
+                "leadIn": null,
+                "question": "Please tell me about how often you do that.",
+                "answers": [
+                    "Almost every day",
+                    "More than once a week",
+                    "Once a week",
+                    "More than once a month",
+                    "Once a month",
+                    "Once every three months",
+                    "Less than once every three months", 
+                    "Once a year",
+                    "Less than once a year"
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "ind_7",
+        "topic": "Gambling", 
+        "subtopic": "Gambling participation frequency", 
+        "shortDescription": "Gaming machines in pub/club - at least weekly",
+        "longDescription": "<p>New Zealand adults who played gaming machines or pokies in a pub or club at least once a week in the last 12 months.</p>",
+        "questions": [
+            {
+                "leadIn": "In the last 12 months, have you... ",
+                "question": "Played gaming machines, or pokies, at a pub or club?",
+                "answers": [
+                    ""
+                ]
+            },
+            {
+                "leadIn": "Please tell me about how often you do that.",
+                "question": "Played gaming machines, or pokies, at a pub or club?",
+                "answers": [
+                    "Almost every day",
+                    "More than once a week",
+                    "Once a week",
+                    "More than once a month",
+                    "Once a month",
+                    "Once every three months",
+                    "Less than once every three months", 
+                    "Once a year",
+                    "Less than once a year"
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "ind_8",
+        "topic": "Gambling", 
+        "subtopic": "Gambling participation frequency", 
+        "shortDescription": "Horse/dog races/sports events - at least monthly",
+        "longDescription": "<p>New Zealand adults who bet on horse/dog races or sports events through the New Zealand TAB at least once a month.</p>",
+        "longHidden": "<p>Respondents who answered yes to TAB gambling participation questions are then asked about the frequency of their participation.</p>",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": "In the last 12 months, have you...",
+                "options": [
+                    "Placed a bet on a horse or dog race with the New Zealand TAB.",
+                    "Placed a bet on any other sports event with the New Zealand TAB."
+                ],
+                "answers": [
+                    "Yes", "No"
+                ]
+            },
+            {
+                "leadIn": "Please tell me about how often you do that.",
+                "question": "Played gaming machines, or pokies, at a pub or club?",
+                "answers": [
+                    "Almost every day",
+                    "More than once a week",
+                    "Once a week",
+                    "More than once a month",
+                    "Once a month",
+                    "Once every three months",
+                    "Less than once every three months", 
+                    "Once a year",
+                    "Less than once a year"
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "ind_9",
+        "topic": "Gambling", 
+        "subtopic": "Gambling participation frequency", 
+        "shortDescription": "Continuous forms of gambling - at least weekly",
+        "longDescription": "<p>New Zealand adults who participated at least once a week in continuous forms of gambling in past 12 months.</p>",
+        "longHidden": "<p>Continuous gambling is where winnings can be immediately 'reinvested'. Betting on races or sports events, playing gaming or pokie machines or playing table games at casinos and housie are examples of continuous forms of gambling.</p>",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": "In the last 12 months, have you...",
+                "options": [
+                    "Placed a bet on a horse or dog race with the New Zealand TAB.",
+                    "Placed a bet on any other sports event with the New Zealand TAB.",
+                    "Played gaming machines, or pokies, at a pub or club.",
+                    "Played gaming machines, or pokies, at one of the six casinos.",
+                    "Played table games, such as card games or dice, at one of the six casinos.",
+                    "Played Housie or Bingo for money.",
+                    "Played an Internet game to win money."
+                ],
+                "answers": [
+                    "Yes", "No"
+                ]
+            },
+            {
+                "leadIn": null,
+                "question": "Please tell me about how often you do that.",
+                "answers": [
+                    "Almost every day",
+                    "More than once a week",
+                    "Once a week",
+                    "More than once a month",
+                    "Once a month",
+                    "Once every three months",
+                    "Less than once every three months", 
+                    "Once a year",
+                    "Less than once a year"
+                ]
+            },
+            {
+                "leadIn": null,
+                "question": "In the last 12 months, have you bet any money, bought any tickets or paid to do any of the listed activities online through a website or mobile phone for money or prizes?",
+                "options": [
+                    "Horse or dog race online through an overseas TAB, bookie or betting exchange [NOT through a NZ TAB account]",
+                    "Sports event online through an overseas TAB, bookie or betting exchange [NOT through a NZ TAB account]."
+                ],
+                "answers": [
+                    "Yes", "No"
+                ]
+            },
+            {
+                "leadIn": null,
+                "question": "About how often have you placed a bet on a horse or dog race online through an overseas TAB, bookie or betting exchange [NOT through a NZ TAB account]?",
+                "answers": [
+                    "Almost every day",
+                    "More than once a week",
+                    "Once a week",
+                    "More than once a month",
+                    "Once a month",
+                    "Once every three months",
+                    "Less than once every three months", 
+                    "Once a year",
+                    "Less than once a year"
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "",
+        "topic": "", 
+        "subtopic": "", 
+        "shortDescription": "",
+        "longDescription": "",
+        "questions": [
+            {
+                "leadIn": "",
+                "question": "",
+                "answers": [
+                    ""
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "",
+        "topic": "", 
+        "subtopic": "", 
+        "shortDescription": "",
+        "longDescription": "",
+        "questions": [
+            {
+                "leadIn": "",
+                "question": "",
+                "answers": [
+                    ""
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "",
+        "topic": "", 
+        "subtopic": "", 
+        "shortDescription": "",
+        "longDescription": "",
+        "questions": [
+            {
+                "leadIn": "",
+                "question": "",
+                "answers": [
+                    ""
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "",
+        "topic": "", 
+        "subtopic": "", 
+        "shortDescription": "",
+        "longDescription": "",
+        "questions": [
+            {
+                "leadIn": "",
+                "question": "",
+                "answers": [
+                    ""
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "",
+        "topic": "", 
+        "subtopic": "", 
+        "shortDescription": "",
+        "longDescription": "",
+        "questions": [
+            {
+                "leadIn": "",
+                "question": "",
+                "answers": [
+                    ""
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "",
+        "topic": "", 
+        "subtopic": "", 
+        "shortDescription": "",
+        "longDescription": "",
+        "questions": [
+            {
+                "leadIn": "",
+                "question": "",
+                "answers": [
+                    ""
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "",
+        "topic": "", 
+        "subtopic": "", 
+        "shortDescription": "",
+        "longDescription": "",
+        "questions": [
+            {
+                "leadIn": "",
+                "question": "",
+                "answers": [
+                    ""
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "",
+        "topic": "", 
+        "subtopic": "", 
+        "shortDescription": "",
+        "longDescription": "",
+        "questions": [
+            {
+                "leadIn": "",
+                "question": "",
+                "answers": [
+                    ""
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "",
+        "topic": "", 
+        "subtopic": "", 
+        "shortDescription": "",
+        "longDescription": "",
+        "questions": [
+            {
+                "leadIn": "",
+                "question": "",
+                "answers": [
+                    ""
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "",
+        "topic": "", 
+        "subtopic": "", 
+        "shortDescription": "",
+        "longDescription": "",
+        "questions": [
+            {
+                "leadIn": "",
+                "question": "",
+                "answers": [
+                    ""
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "",
+        "topic": "", 
+        "subtopic": "", 
+        "shortDescription": "",
+        "longDescription": "",
+        "questions": [
+            {
+                "leadIn": "",
+                "question": "",
+                "answers": [
+                    ""
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "",
+        "topic": "", 
+        "subtopic": "", 
+        "shortDescription": "",
+        "longDescription": "",
+        "questions": [
+            {
+                "leadIn": "",
+                "question": "",
+                "answers": [
+                    ""
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "",
+        "topic": "", 
+        "subtopic": "", 
+        "shortDescription": "",
+        "longDescription": "",
+        "questions": [
+            {
+                "leadIn": "",
+                "question": "",
+                "answers": [
+                    ""
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "",
+        "topic": "", 
+        "subtopic": "", 
+        "shortDescription": "",
+        "longDescription": "",
+        "questions": [
+            {
+                "leadIn": "",
+                "question": "",
+                "answers": [
+                    ""
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "",
+        "topic": "", 
+        "subtopic": "", 
+        "shortDescription": "",
+        "longDescription": "",
+        "questions": [
+            {
+                "leadIn": "",
+                "question": "",
+                "answers": [
+                    ""
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "",
+        "topic": "", 
+        "subtopic": "", 
+        "shortDescription": "",
+        "longDescription": "",
+        "questions": [
+            {
+                "leadIn": "",
+                "question": "",
+                "answers": [
+                    ""
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "",
+        "topic": "", 
+        "subtopic": "", 
+        "shortDescription": "",
+        "longDescription": "",
+        "questions": [
+            {
+                "leadIn": "",
+                "question": "",
+                "answers": [
+                    ""
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "",
+        "topic": "", 
+        "subtopic": "", 
+        "shortDescription": "",
+        "longDescription": "",
+        "questions": [
+            {
+                "leadIn": "",
+                "question": "",
+                "answers": [
+                    ""
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "",
+        "topic": "", 
+        "subtopic": "", 
+        "shortDescription": "",
+        "longDescription": "",
+        "questions": [
+            {
+                "leadIn": "",
+                "question": "",
+                "answers": [
+                    ""
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "",
+        "topic": "", 
+        "subtopic": "", 
+        "shortDescription": "",
+        "longDescription": "",
+        "questions": [
+            {
+                "leadIn": "",
+                "question": "",
+                "answers": [
+                    ""
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "",
+        "topic": "", 
+        "subtopic": "", 
+        "shortDescription": "",
+        "longDescription": "",
+        "questions": [
+            {
+                "leadIn": "",
+                "question": "",
+                "answers": [
+                    ""
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "",
+        "topic": "", 
+        "subtopic": "", 
+        "shortDescription": "",
+        "longDescription": "",
+        "questions": [
+            {
+                "leadIn": "",
+                "question": "",
+                "answers": [
+                    ""
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "",
+        "topic": "", 
+        "subtopic": "", 
+        "shortDescription": "",
+        "longDescription": "",
+        "questions": [
+            {
+                "leadIn": "",
+                "question": "",
+                "answers": [
+                    ""
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "",
+        "topic": "", 
+        "subtopic": "", 
+        "shortDescription": "",
+        "longDescription": "",
+        "questions": [
+            {
+                "leadIn": "",
+                "question": "",
+                "answers": [
+                    ""
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "",
+        "topic": "", 
+        "subtopic": "", 
+        "shortDescription": "",
+        "longDescription": "",
+        "questions": [
+            {
+                "leadIn": "",
+                "question": "",
+                "answers": [
+                    ""
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "",
+        "topic": "", 
+        "subtopic": "", 
+        "shortDescription": "",
+        "longDescription": "",
+        "questions": [
+            {
+                "leadIn": "",
+                "question": "",
+                "answers": [
+                    ""
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "",
+        "topic": "", 
+        "subtopic": "", 
+        "shortDescription": "",
+        "longDescription": "",
+        "questions": [
+            {
+                "leadIn": "",
+                "question": "",
+                "answers": [
+                    ""
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "",
+        "topic": "", 
+        "subtopic": "", 
+        "shortDescription": "",
+        "longDescription": "",
+        "questions": [
+            {
+                "leadIn": "",
+                "question": "",
+                "answers": [
+                    ""
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "",
+        "topic": "", 
+        "subtopic": "", 
+        "shortDescription": "",
+        "longDescription": "",
+        "questions": [
+            {
+                "leadIn": "",
+                "question": "",
+                "answers": [
+                    ""
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "",
+        "topic": "", 
+        "subtopic": "", 
+        "shortDescription": "",
+        "longDescription": "",
+        "questions": [
+            {
+                "leadIn": "",
+                "question": "",
+                "answers": [
+                    ""
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "",
+        "topic": "", 
+        "subtopic": "", 
+        "shortDescription": "",
+        "longDescription": "",
+        "questions": [
+            {
+                "leadIn": "",
+                "question": "",
+                "answers": [
+                    ""
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "",
+        "topic": "", 
+        "subtopic": "", 
+        "shortDescription": "",
+        "longDescription": "",
+        "questions": [
+            {
+                "leadIn": "",
+                "question": "",
+                "answers": [
+                    ""
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "",
+        "topic": "", 
+        "subtopic": "", 
+        "shortDescription": "",
+        "longDescription": "",
+        "questions": [
+            {
+                "leadIn": "",
+                "question": "",
+                "answers": [
+                    ""
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "",
+        "topic": "", 
+        "subtopic": "", 
+        "shortDescription": "",
+        "longDescription": "",
+        "questions": [
+            {
+                "leadIn": "",
+                "question": "",
+                "answers": [
+                    ""
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "",
+        "topic": "", 
+        "subtopic": "", 
+        "shortDescription": "",
+        "longDescription": "",
+        "questions": [
+            {
+                "leadIn": "",
+                "question": "",
+                "answers": [
+                    ""
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "",
+        "topic": "", 
+        "subtopic": "", 
+        "shortDescription": "",
+        "longDescription": "",
+        "questions": [
+            {
+                "leadIn": "",
+                "question": "",
+                "answers": [
+                    ""
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "",
+        "topic": "", 
+        "subtopic": "", 
+        "shortDescription": "",
+        "longDescription": "",
+        "questions": [
+            {
+                "leadIn": "",
+                "question": "",
+                "answers": [
+                    ""
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "",
+        "topic": "", 
+        "subtopic": "", 
+        "shortDescription": "",
+        "longDescription": "",
+        "questions": [
+            {
+                "leadIn": "",
+                "question": "",
+                "answers": [
+                    ""
                 ]
             }
         ]
