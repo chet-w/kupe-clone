@@ -488,161 +488,201 @@
         ]
     },
     {
-        "indicator": "",
-        "topic": "", 
-        "subtopic": "", 
-        "shortDescription": "",
-        "longDescription": "",
+        "indicator": "ind_10",
+        "topic": "Gambling", 
+        "subtopic": "Gambling participation frequency", 
+        "shortDescription": "Non continuous forms of gambling - at least weekly",
+        "longDescription": "<p>New Zealand adults who participated at least once a week in non-continuous forms of gambling in the last 12 months. </p>",
+        "longHidden": "<p>Buying lottery tickets, going to casino evenings/buying raffle tickets for fundraising are examples of non-continuous forms of gambling.</p>",
         "questions": [
             {
-                "leadIn": "",
-                "question": "",
+                "leadIn": null,
+                "question": "In the last 12 months, have you...",
+                "options": [
+                    "Bought an Instant Kiwi or scratch ticket",
+                    "Bought a Lotto, Strike, Powerball (Wednesday or Saturday) ticket.",
+                    "Bought a Keno, Bullseye or Play 3 ticket.",
+                    "Bought a raffle ticket or attended a casino fundraising evening.",
+                    "Participated in sweepstakes for money with your work mates, friends or family on such things as the Melbourne Cup.",
+                    "Made bets for money with family or friends, on such things as card games."
+                ],
                 "answers": [
-                    ""
+                    "Yes", "No"
+                ]
+            },
+            {
+                "leadIn": null,
+                "question": "Please tell me about how often you do that.",
+                "answers": [
+                    "Almost every day",
+                    "More than once a week",
+                    "Once a week",
+                    "More than once a month",
+                    "Once a month",
+                    "Once every three months",
+                    "Less than once every three months", 
+                    "Once a year",
+                    "Less than once a year"
                 ]
             }
         ]
     },
     {
-        "indicator": "",
-        "topic": "", 
-        "subtopic": "", 
-        "shortDescription": "",
-        "longDescription": "",
+        "indicator": "ind_11",
+        "topic": "Gambling", 
+        "subtopic": "Gambling participation frequency", 
+        "shortDescription": "Four or more activities",
+        "longDescription": "<p>New Zealand adults who participated in 4 or more gambling activities in the past 12 months.</p>",
+        "longHidden": "<p>This indicator reports on participation in 4 or more different gambling activities. For example, if a respondent said they bought an Instant Kiwi ticket and played Pokies at a pub/club they would have participated in two gambling activities and therefore will not be included in this indicator. Note that over time more kinds of gambling activities have become available, also as activities become more common, they are more likely to be asked about in a separate question in the HLS.</p>",
         "questions": [
             {
-                "leadIn": "",
-                "question": "",
+                "leadIn": null,
+                "question": null,
+                "answers": []
+            }
+        ]
+    },
+    {
+        "indicator": "ind_12",
+        "topic": "Gambling", 
+        "subtopic": "Gambling participation frequency", 
+        "shortDescription": "Average number of activities",
+        "longDescription": "<p>Average number of gambling activities participated in past 12 months.</p>",
+        "longHidden": "<p>This is the sum of different gambling activities. For example, if a respondent said they bought an Instant Kiwi ticket and played Pokies at a pub/club they participated in two gambling activities. Note that over time more kinds of gambling activities have become available; also as activities become more common, they are more likely to be asked about in a separate question in the HLS.</p>",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": null,
+                "answers": []
+            }
+        ]
+    },
+    {
+        "indicator": "ind_13",
+        "topic": "Gambling", 
+        "subtopic": "Gambling harm", 
+        "shortDescription": "Gamblers (PGSI) - non-problem",
+        "longDescription": "<p>Individual gambling harm (PGSI): non-problem gamblers.</p>",
+        "longHidden": "<p>Problem Gambling Severity Index (PGSI; Ferris & Wynne, 2001) is a 9-item scale used to assess people’s experiences of gambling-related harm in the last 12 months.</p><p>An example item is: “Thinking about the last 12 months, how often have you bet more than you could really afford to lose?” Participants rated themselves on a 4-point scale from 0 (never) to 3 (almost always). Response values from each participant were added to calculate the total score and ‘refused’ or ‘don’t know’ was coded as ‘never’ (0). Possible scores range from 0 to 27 with higher scores being indicative of greater problem of gambling. Non-problem gamblers had a score of zero.</p>",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": null,
+                "answers": []
+            }
+        ]
+    },
+    {
+        "indicator": "ind_14",
+        "topic": "Gambling", 
+        "subtopic": "Gambling harm", 
+        "shortDescription": "Gamblers (PGSI) - low risk",
+        "longDescription": "<p>Individual gambling harm (PGSI): Low risk gamblers.</p>",
+        "longHidden": "<p>Problem Gambling Severity Index (PGSI; Ferris & Wynne, 2001) is a 9-item scale used to assess people’s experiences of gambling-related harm in the last 12 months.</p><p>An example item is: “Thinking about the last 12 months, how often have you bet more than you could really afford to lose?” Participants rated themselves on a 4-point scale from 0 (never) to 3 (almost always). Response values from each participant were added to calculate the total score and ‘refused’ or ‘don’t know’ was coded as ‘never’ (0). Possible scores range from 0 to 27 with higher scores being indicative of greater problem of gambling. Low risk gamblers have a score of 1-2.</p>",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": null,
+                "answers": []
+            }
+        ]
+    },
+    {
+        "indicator": "ind_15",
+        "topic": "Gambling", 
+        "subtopic": "Gambling harm", 
+        "shortDescription": "Gamblers (PGSI) - moderate risk and problem",
+        "longDescription": "<p>Individual gambling harm (PGSI): Moderate risk and problem gamblers.<p/>",
+        "longHidden": "<p>Problem Gambling Severity Index (PGSI; Ferris & Wynne, 2001) is a 9-item scale used to assess people’s experiences of gambling-related harm in the last 12 months.</p><p>An example item is: “Thinking about the last 12 months, how often have you bet more than you could really afford to lose?” Participants rated themselves on a 4-point scale from 0 (never) to 3 (almost always).</p><p>Response values from each participant were added to calculate the total score and ‘refused’ or ‘don’t know’ was coded as ‘never’ (0). Possible scores range from 0 to 27 with higher scores being indicative of greater problem of gambling. Because the number of respondents who were classified as ‘problem gamblers’ (n = 19) was too small to be analysed separately, ‘moderate-risk’ and ‘problem gamblers’ were combined into one group, as in the Gambling report: Results from the 2016 Health and Lifestyles Survey. Moderate risk gamblers have a score of 3-7 and Problem gamblers have a score of 8-27. This combined group can be described as experienced some level of gambling harm.</p>",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": null,
+                "answers": []
+            }
+        ]
+    },
+    {
+        "indicator": "ind_16",
+        "topic": "Gambling", 
+        "subtopic": "Gambling harm", 
+        "shortDescription": "Gambled more than intended",
+        "longDescription": "<p>New Zealand adults who gambled and had an occasion when they spent more time or money gambling than intended to, in the last 12 months.</p>",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": "Over the last 12 months, have you had a day, or an outing, where at the end of it you looked back and thought to yourself – I really overdid that? I spent more time or money gambling than I meant to.",
                 "answers": [
-                    ""
+                    "Yes", "No"
                 ]
             }
         ]
     },
     {
-        "indicator": "",
-        "topic": "", 
-        "subtopic": "", 
-        "shortDescription": "",
-        "longDescription": "",
+        "indicator": "ind_17",
+        "topic": "Gambling", 
+        "subtopic": "Gambling harm", 
+        "shortDescription": "Household-level gambling harm",
+        "longDescription": "<p>New Zealand adults who experienced at least one form of household-level gambling harm in last 12 months (an argument or going without due to gambling).</p>",
         "questions": [
             {
-                "leadIn": "",
-                "question": "",
+                "leadIn": null,
+                "question": "Some argument about time or money spend on betting or gambling.",
                 "answers": [
-                    ""
+                    "Yes", "No"
+                ]
+            },
+            {
+                "leadIn": null,
+                "question": "And has this happened in the last 12 months?",
+                "answers": [
+                    "Yes", "No"
+                ]
+            },
+            {
+                "leadIn": null,
+                "question": "Someone had to go without something they needed, or some bills weren't paid, because too much was spent on gambling by another person.",
+                "answers": [
+                    "Yes", "No"
+                ]
+            },
+            {
+                "leadIn": null,
+                "question": "And has this happened in the last 12 months?",
+                "answers": [
+                    "Yes", "No"
                 ]
             }
         ]
     },
     {
-        "indicator": "",
-        "topic": "", 
-        "subtopic": "", 
-        "shortDescription": "",
-        "longDescription": "",
+        "indicator": "ind_18",
+        "topic": "Gambling", 
+        "subtopic": "Gambling harm", 
+        "shortDescription": "And has this happened in the last 12 months?",
+        "longDescription": "<p>New Zealand adults who experienced a friend or family member spending more time or money on gambling than they intended to, in the last 12 months.</p>",
         "questions": [
             {
-                "leadIn": "",
-                "question": "",
+                "leadIn": null,
+                "question": "Over the last 12 months, do you feel that someone close to you has had a day or an occasion where they spent much more time or money than they meant to, on gambling? This can be a friend, family member, or partner. You don't need to say who.",
                 "answers": [
-                    ""
+                    "Yes", "No"
                 ]
             }
         ]
     },
     {
-        "indicator": "",
-        "topic": "", 
-        "subtopic": "", 
-        "shortDescription": "",
-        "longDescription": "",
+        "indicator": "ind_19",
+        "topic": "Gambling", 
+        "subtopic": "Gambling harm", 
+        "shortDescription": "'Checked in' about gambling",
+        "longDescription": "<p>Those who gambled and had an occasion in the last 12 months where they thought about whether their gambling was still just for fun.</p>",
         "questions": [
             {
-                "leadIn": "",
-                "question": "",
+                "leadIn": null,
+                "question": "The next question is about checking in with yourself about your gambling. In the last 12 months, have you had an occasion where you thought about whether your gambling was still just for fun?",
                 "answers": [
-                    ""
-                ]
-            }
-        ]
-    },
-    {
-        "indicator": "",
-        "topic": "", 
-        "subtopic": "", 
-        "shortDescription": "",
-        "longDescription": "",
-        "questions": [
-            {
-                "leadIn": "",
-                "question": "",
-                "answers": [
-                    ""
-                ]
-            }
-        ]
-    },
-    {
-        "indicator": "",
-        "topic": "", 
-        "subtopic": "", 
-        "shortDescription": "",
-        "longDescription": "",
-        "questions": [
-            {
-                "leadIn": "",
-                "question": "",
-                "answers": [
-                    ""
-                ]
-            }
-        ]
-    },
-    {
-        "indicator": "",
-        "topic": "", 
-        "subtopic": "", 
-        "shortDescription": "",
-        "longDescription": "",
-        "questions": [
-            {
-                "leadIn": "",
-                "question": "",
-                "answers": [
-                    ""
-                ]
-            }
-        ]
-    },
-    {
-        "indicator": "",
-        "topic": "", 
-        "subtopic": "", 
-        "shortDescription": "",
-        "longDescription": "",
-        "questions": [
-            {
-                "leadIn": "",
-                "question": "",
-                "answers": [
-                    ""
-                ]
-            }
-        ]
-    },
-    {
-        "indicator": "",
-        "topic": "", 
-        "subtopic": "", 
-        "shortDescription": "",
-        "longDescription": "",
-        "questions": [
-            {
-                "leadIn": "",
-                "question": "",
-                "answers": [
-                    ""
+                    "Yes", "No"
                 ]
             }
         ]
