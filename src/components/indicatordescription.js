@@ -23,8 +23,16 @@ const Context = styled.div`
     margin-bottom: 10px;
 `;
 
-const Question = styled.div`
+const QuestionText = styled.div`
     font-weight: bold;
+`;
+
+const OptionList = styled.ul`
+        padding-left: 20px;
+
+        & li {
+            margin: 0;
+        }
 `;
 
 const Answers = styled.div`
@@ -43,9 +51,11 @@ const IndicatorDescription = ({ indicator }) => {
                     subtopic
                     shortDescription
                     longDescription
+                    longHidden
                     questions {
                         leadIn
                         question
+                        options
                         answers
                     }
                 }
@@ -55,7 +65,7 @@ const IndicatorDescription = ({ indicator }) => {
 
     const data = res.filter(desc => desc.indicator === indicator)[0];
 
-    console.log(indicator);
+    console.log(data);
 
     const getLongDescription = () => {
         return {
@@ -63,23 +73,51 @@ const IndicatorDescription = ({ indicator }) => {
         }
     };
 
+    const getHiddenLongDescription = () => {
+        return {
+            __html: data.longHidden
+        }
+    };
+
     return (
-        data ? ( <Collapse bordered={false} defaultActiveKey={['1']}>
+        data ? (<Collapse bordered={false} defaultActiveKey={['0']}>
             <Panel showArrow={false} header={<Description dangerouslySetInnerHTML={getLongDescription()}></Description>} key="1">
-                <QuestionLead>Question{data.questions.length > 1 ? "/s" : ""}:</QuestionLead>
-                {data.questions.map(q => (
-                    <QuestionsBody>
-                        <Context>{q.leadIn}</Context>
-                        <Question>{q.question}</Question>
-                        <Answers>
-                            ({q.answers.map((answer, i) => i !== q.answers.length - 1 ? ` ${answer} /` : ` ${answer} ` )})
-                        </Answers>
-                    </QuestionsBody>
-                ))}
+                {data.longHidden && <div dangerouslySetInnerHTML={getHiddenLongDescription()}></div>}
+                {data.questions[0].question && <QuestionLead>Question{data.questions.length > 1 ? "s" : ""}:</QuestionLead>}
+                {data.questions.map(q => <Question question={q} />)}
             </Panel>
-        </Collapse> ) : (
-        <div>{indicator}</div>
-        )
+        </Collapse>) : (
+                <div>{indicator}</div>
+            )
+    )
+};
+
+const Question = ({ question }) => {
+
+    const getAnswerText = () => {
+        let answerText = question.answers.join(" / ");
+        console.log(answerText);
+        if(answerText === "Yes / No") {
+            return "Yes/No";
+        } 
+        return answerText;
+    };
+
+    const getOptionsText = () => (
+        <OptionList>
+            {question.options.map(opt => <li>{opt}</li>)}
+        </OptionList>
+    );
+
+    return (
+        <QuestionsBody>
+            <Context>{question.leadIn}</Context>
+            <QuestionText>{question.question}</QuestionText>
+            {question.options && getOptionsText()}
+            <Answers>
+                ({getAnswerText()})
+        </Answers>
+        </QuestionsBody>
     )
 };
 
