@@ -805,113 +805,136 @@
         ]
     },
     {
-        "indicator": "",
-        "topic": "",
-        "subtopic": "",
-        "shortDescription": "",
-        "longDescription": "",
+        "indicator": "ind_89",
+        "topic": "Mental health and wellbeing",
+        "subtopic": "Wellbeing",
+        "shortDescription": "Important to maintain a strong connection to culture",
+        "longDescription": "<p>New Zealand adults who agree or strongly agree that maintaining a strong connection to their culture is important to them.</p>",
         "questions": [
             {
-                "leadIn": "",
-                "question": "",
+                "leadIn": null,
+                "question": "Maintaining a strong connection to my culture is important to me.",
                 "answers": [
-                    ""
+                    "Strongly agree", "Agree", "Neither agree nor disagree", "Disagree", "Strongly disagree"
                 ]
             }
         ]
     },
     {
-        "indicator": "",
-        "topic": "",
-        "subtopic": "",
-        "shortDescription": "",
-        "longDescription": "",
+        "indicator": "ind_90",
+        "topic": "Mental health and wellbeing",
+        "subtopic": "Wellbeing",
+        "shortDescription": "Felt isolated from others",
+        "longDescription": "<p>Felt isolated from others at any time over the last 4 weeks. This includes those who felt isolated only a little of the time through to those who felt isolated all of the time.</p>",
         "questions": [
             {
-                "leadIn": "",
-                "question": "",
+                "leadIn": null,
+                "question": "In the last four weeks, how often have you felt isolated from others?",
                 "answers": [
-                    ""
+                    "None of the time", "A little of the time", "Some of the time", "Most of the time", "All of the time"
                 ]
             }
         ]
     },
     {
-        "indicator": "",
-        "topic": "",
-        "subtopic": "",
-        "shortDescription": "",
-        "longDescription": "",
+        "indicator": "ind_91",
+        "topic": "Mental health and wellbeing",
+        "subtopic": "Mental distress",
+        "shortDescription": "Ever diagnosed with a mental illness",
+        "longDescription": "<p>Has ever been diagnosed with a mental illness.</p>",
         "questions": [
             {
-                "leadIn": "",
-                "question": "",
+                "leadIn": null,
+                "question": "Have you ever been diagnosed with a mental illness?",
                 "answers": [
-                    ""
+                    "Yes", "No"
                 ]
             }
         ]
     },
     {
-        "indicator": "",
-        "topic": "",
-        "subtopic": "",
-        "shortDescription": "",
-        "longDescription": "",
+        "indicator": "ind_92",
+        "topic": "Mental health and wellbeing",
+        "subtopic": "Experience of discrimination",
+        "shortDescription": "Treated unfairly because of a mental illness - in general",
+        "longDescription": "<p>New Zealand adults with a diagnosed mental illness who report being treated unfairly or discriminated against because of their experience of mental illness.</p>",
+        "longHidden": "<p>This indicator is derived from the following questions.</p>",
         "questions": [
             {
-                "leadIn": "",
-                "question": "",
+                "leadIn": null,
+                "question": "Have you ever been diagnosed with a mental illness?",
                 "answers": [
-                    ""
+                    "Yes", "No"
+                ]
+            }, 
+            {
+                "leadIn": "Those who answered 'Yes' to the question are asked:",
+                "question": "Have you ever been treated unfairly or believe you have been discriminated against because of your experience of mental illness?",
+                "answers": [
+                    "Yes", "No"
                 ]
             }
         ]
     },
     {
-        "indicator": "",
-        "topic": "",
-        "subtopic": "",
-        "shortDescription": "",
-        "longDescription": "",
+        "indicator": "ind_93",
+        "topic": "Mental health and wellbeing",
+        "subtopic": "Experience of discrimination",
+        "shortDescription": "Discrimination setting for those who have been treated unfairly because of a mental illness - workplace",
+        "longDescription": "<p>New Zealand adults with a diagnosed mental illness who report being treated unfairly or discriminated against in the workplace.</p>",
+        "longHidden": "<p>This indicator is derived from the following questions.</p>",
         "questions": [
             {
-                "leadIn": "",
-                "question": "",
+                "leadIn": null,
+                "question": "Have you ever been diagnosed with a mental illness?",
                 "answers": [
-                    ""
+                    "Yes", "No"
+                ]
+            }, 
+            {
+                "leadIn": "For those who answered 'Yes' the following question was asked:",
+                "question": "Have you ever been treated unfairly or believe you have been discriminated against because of your experience of mental illness?", 
+                "answers":[
+                    "Yes", "No"
+                ]
+            },
+            {
+                "leadIn": "For those who answered 'Yes' the following question was asked:",
+                "question": "Please, can you identify the settings where you were treated unfairly or were discriminated against. Response 1: Workplace.",
+                "answers": [
+                    "Yes", "No"
                 ]
             }
         ]
     },
     {
-        "indicator": "",
-        "topic": "",
-        "subtopic": "",
-        "shortDescription": "",
-        "longDescription": "",
+        "indicator": "ind_94",
+        "topic": "Mental health and wellbeing",
+        "subtopic": "Experience of discrimination",
+        "shortDescription": "Tell employer if diagnosed with a mental illness",
+        "longDescription": "<p>New Zealand adults who would tell their employer if they were diagnosed with a mental illness.</p>",
         "questions": [
             {
-                "leadIn": "",
-                "question": "",
+                "leadIn": null,
+                "question": "If you were diagnosed with a mental illness, who would you tell? Response 5: Your employer.",
                 "answers": [
-                    ""
+                    "Yes", "No"
                 ]
             }
         ]
     },
     {
-        "indicator": "",
-        "topic": "",
-        "subtopic": "",
-        "shortDescription": "",
-        "longDescription": "",
+        "indicator": "ind_95",
+        "topic": "Mental health and wellbeing",
+        "subtopic": "Experience of discrimination",
+        "shortDescription": "Know someone who has experienced a mental illness",
+        "longDescription": "<p>New Zealand adults who have had someone they know tell them they have experienced mental illness.</p>",
         "questions": [
             {
-                "leadIn": "",
-                "question": "",
+                "leadIn": null,
+                "question": "Has anyone you know ever told you that they have experienced mental illness?",
                 "answers": [
-                    ""
+                    "Yes", "No"
                 ]
             }
         ]
