@@ -114,9 +114,9 @@ const Question = ({ question }) => {
             <Context>{question.leadIn}</Context>
             <QuestionText>{question.question}</QuestionText>
             {question.options && getOptionsText()}
-            <Answers>
+            { !!question.answers.length && <Answers>
                 ({getAnswerText()})
-        </Answers>
+            </Answers> }
         </QuestionsBody>
     )
 };

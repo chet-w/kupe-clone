@@ -227,7 +227,7 @@
         "subtopic": "Gambling participation",
         "shortDescription": "Pokies at pub/club/casino",
         "longDescription": "<p>New Zealand adults who played on gaming machines (pokies) in pub, club or one of the six casinos in last 12 months.</p>",
-        "longHidden": "<p>Respondents answered Yes to at least one of the gaming machines / pokies questions.</p>",
+        "longHidden": "<p>Respondents answered Yes to at least one of the gaming machines\u0101pokies questions.</p>",
         "questions": [
             {
                 "leadIn": null,
@@ -1040,50 +1040,50 @@
         ]
     },
     {
-        "indicator": "",
-        "topic": "",
-        "subtopic": "",
-        "shortDescription": "",
-        "longDescription": "",
+        "indicator": "ind_96",
+        "topic": "M\u0101ori cultural identity",
+        "subtopic": "Cultural connectedness",
+        "shortDescription": "Connectedness - at least somewhat important",
+        "longDescription": "<p>M\u0101ori respondents who reported it was at least somewhat important to be involved in or part of M\u0101ori culture.</p>",
         "questions": [
             {
-                "leadIn": "",
-                "question": "",
+                "leadIn": null,
+                "question": "Thinking about your life as a whole, how important is it for you to be involved in, or to be part of, Māori culture?",
                 "answers": [
-                    ""
+                    "Very important",
+                    "Quite important",
+                    "Somewhat important",
+                    "A little important",
+                    "Not at all important"
                 ]
             }
         ]
     },
     {
-        "indicator": "",
-        "topic": "",
-        "subtopic": "",
-        "shortDescription": "",
-        "longDescription": "",
+        "indicator": "ind_76",
+        "topic": "Sun exposure",
+        "subtopic": "Sunburn",
+        "shortDescription": "Sunburnt last summer - badly",
+        "longDescription": "<p>New Zealand adults who got sunburnt (with blisters or were in pain for 2+ days) last spring/summer (September to February).</p>",
         "questions": [
             {
-                "leadIn": "",
-                "question": "",
-                "answers": [
-                    ""
-                ]
+                "leadIn": null,
+                "question": "The next question is about the last New Zealand spring and summer. By this I mean September [previous year] to February [current year].\n During that time, how many times did you get sunburnt, where you got blisters or were in pain for two or more days?",
+                "answers": []
             }
         ]
     },
     {
-        "indicator": "",
-        "topic": "",
-        "subtopic": "",
-        "shortDescription": "",
-        "longDescription": "",
+        "indicator": "ind_77",
+        "topic": "Sun exposure",
+        "subtopic": "Sunburn",
+        "shortDescription": "Sunburnt last summer - mild",
+        "longDescription": "<p>New Zealand adults who got sunburnt (with reddening or soreness of the skin) after being in the sun last spring/summer (September to February). This does not include those times where they were badly sunburnt.</p>",
         "questions": [
             {
-                "leadIn": "",
-                "question": "",
-                "answers": [
-                    ""
-                ]
+                "leadIn": null,
+                "question": "The next question is about the last New Zealand spring and summer. By this I mean September [previous year] to February [current year]. \nOver that same time, how many times did you get sunburnt, where you had reddening or soreness of the skin after being in the sun? \nDo not include the times you got blisters or were in pain for two or more days.",
+                "answers": []
             }
         ]
     },
