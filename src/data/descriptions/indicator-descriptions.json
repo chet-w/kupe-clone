@@ -940,81 +940,101 @@
         ]
     },
     {
-        "indicator": "",
-        "topic": "",
-        "subtopic": "",
-        "shortDescription": "",
-        "longDescription": "",
+        "indicator": "ind_100",
+        "topic": "M\u0101ori cultural identity",
+        "subtopic": "Te reo M\u0101ori",
+        "shortDescription": "Ability to speak Te reo M\u0101ori in day to day conversation - not very well",
+        "longDescription": "<p>M\u0101ori respondents who can only talk about simple or basic things in Te reo M\u0101ori in day-to-day conversation.</p>",
         "questions": [
             {
-                "leadIn": "",
-                "question": "",
+                "leadIn": null,
+                "question": "How well are you able to speak M\u0101ori in day-to-day conversation?",
                 "answers": [
-                    ""
+                    "Very well (I can talk about almost anything in M\u0101ori)",
+                    "Well (I can talk about many things in M\u0101ori)",
+                    "Fairly well (I can talk about some things in M\u0101ori)",
+                    "Not very well (I can only talk about simple/basic things)",
+                    "No more than a few words or phrases"
                 ]
             }
         ]
     },
     {
-        "indicator": "",
-        "topic": "",
-        "subtopic": "",
-        "shortDescription": "",
-        "longDescription": "",
+        "indicator": "ind_101",
+        "topic": "M\u0101ori cultural identity",
+        "subtopic": "Te reo M\u0101ori",
+        "shortDescription": "Ability to speak Te reo M\u0101ori in day to day conversation - just a few words/phrases",
+        "longDescription": "<p>M\u0101ori respondents who are able to speak no more than a few words or phrases in Te reo M\u0101ori.</p>",
         "questions": [
             {
-                "leadIn": "",
-                "question": "",
+                "leadIn": null,
+                "question": "How well are you able to speak M\u0101ori in day-to-day conversation?",
                 "answers": [
-                    ""
+                    "Very well (I can talk about almost anything in M\u0101ori)",
+                    "Well (I can talk about many things in M\u0101ori)",
+                    "Fairly well (I can talk about some things in M\u0101ori)",
+                    "Not very well (I can only talk about simple/basic things)",
+                    "No more than a few words or phrases"
                 ]
             }
         ]
     },
     {
-        "indicator": "",
-        "topic": "",
-        "subtopic": "",
-        "shortDescription": "",
-        "longDescription": "",
+        "indicator": "ind_97",
+        "topic": "M\u0101ori cultural identity",
+        "subtopic": "Te reo M\u0101ori",
+        "shortDescription": "Ability to speak Te reo M\u0101ori in day to day conversation - very well",
+        "longDescription": "<p>M\u0101ori respondents who are able to speak te reo M\u0101ori very well in day-to-day conversation.</p>",
         "questions": [
             {
-                "leadIn": "",
-                "question": "",
+                "leadIn": null,
+                "question": "How well are you able to speak M\u0101ori in day-to-day conversation?",
                 "answers": [
-                    ""
+                    "Very well (I can talk about almost anything in M\u0101ori)",
+                    "Well (I can talk about many things in M\u0101ori)",
+                    "Fairly well (I can talk about some things in M\u0101ori)",
+                    "Not very well (I can only talk about simple/basic things)",
+                    "No more than a few words or phrases"
                 ]
             }
         ]
     },
     {
-        "indicator": "",
-        "topic": "",
-        "subtopic": "",
-        "shortDescription": "",
-        "longDescription": "",
+        "indicator": "ind_98",
+        "topic": "M\u0101ori cultural identity",
+        "subtopic": "Te reo M\u0101ori",
+        "shortDescription": "Ability to speak Te reo M\u0101ori in day to day conversation - well",
+        "longDescription": "<p>M\u0101ori respondents who are able to speak te reo M\u0101ori well in day-to-day conversation.</p>",
         "questions": [
             {
-                "leadIn": "",
-                "question": "",
+                "leadIn": null,
+                "question": "How well are you able to speak M\u0101ori in day-to-day conversation?",
                 "answers": [
-                    ""
+                    "Very well (I can talk about almost anything in M\u0101ori)",
+                    "Well (I can talk about many things in M\u0101ori)",
+                    "Fairly well (I can talk about some things in M\u0101ori)",
+                    "Not very well (I can only talk about simple/basic things)",
+                    "No more than a few words or phrases"
                 ]
             }
         ]
     },
     {
-        "indicator": "",
-        "topic": "",
-        "subtopic": "",
-        "shortDescription": "",
-        "longDescription": "",
+        "indicator": "ind_99",
+        "topic": "M\u0101ori cultural identity",
+        "subtopic": "Te reo M\u0101ori",
+        "shortDescription": "Ability to speak Te reo M\u0101ori in day to day conversation - fairly well",
+        "longDescription": "<p>M\u0101ori respondents who are able to speak Te reo M\u0101ori fairly well in day-to-day conversation.</p>",
         "questions": [
             {
-                "leadIn": "",
-                "question": "",
+                "leadIn": null,
+                "question": "How well are you able to speak M\u0101ori in day-to-day conversation?",
                 "answers": [
-                    ""
+                    "Very well (I can talk about almost anything in M\u0101ori)",
+                    "Well (I can talk about many things in M\u0101ori)",
+                    "Fairly well (I can talk about some things in M\u0101ori)",
+                    "Not very well (I can only talk about simple/basic things)",
+                    "No more than a few words or phrases"
                 ]
             }
         ]
