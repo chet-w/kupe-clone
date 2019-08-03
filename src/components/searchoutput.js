@@ -1,31 +1,48 @@
 import React from 'react'
+import styled from "styled-components";
 import { Empty } from 'antd';
 import Highligher from "react-highlight-words";
 
+const SearchResult = styled.div`
+    margin: 10px 0;
+    padding: 10px 0;
+    border-bottom: 1px solid ${props => props.theme.lightGrey};
+`;
+
+const Title = styled.div`
+    font-weight: bold;
+`;
+
 const SearchOutput = ({ results, search }) => {
-    console.log(results.length);
+
+    const getLongDescription = withHTML => {
+        let tempElement = document.createElement("div");
+        tempElement.innerHTML = withHTML;
+        return tempElement.innerText;
+    }
+
     return (
         <div>
             {results.length > 0 ?
                 results.map(result => (
-                    <div>
+                    <SearchResult>
+                        <Title>
+                            <Highligher
+                                highlightClassName="search-match"
+                                searchWords={[search]}
+                                autoEscape={true}
+                                textToHighlight={result.shortDescription}
+                            />
+                        </Title>
                         <div>
                             <Highligher
                                 highlightClassName="search-match"
                                 searchWords={[search]}
                                 autoEscape={true}
-                                textToHighlight={result.name}
+                                textToHighlight={getLongDescription(result.longDescription)}
                             />
                         </div>
-                        <div>
-                            <Highligher
-                                highlightClassName="search-match"
-                                searchWords={[search]}
-                                autoEscape={true}
-                                textToHighlight={result.description}
-                            />
-                        </div>
-                    </div>
+                    </SearchResult>
                 ))
                 : <Empty />
             }

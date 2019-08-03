@@ -35,8 +35,8 @@ const SearchDrawer = ({ isOpen, toggleIsOpen }) => {
 
     const handleSearchChange = value => {
         console.log(searchText);
-        const res = allSearchables.filter(subtopic => {
-            return subtopic.name.includes(value) || subtopic.description.includes(value)
+        const res = allSearchables.filter(indicator => {
+            return indicator.shortDescription.includes(value) || indicator.longDescription.includes(value)
         });
         setSearchText(value);
         setSearchResults(res);
@@ -44,14 +44,17 @@ const SearchDrawer = ({ isOpen, toggleIsOpen }) => {
 
     const allSearchables = useStaticQuery(graphql`
         query allSearchables {
-            allSubtopicDescriptionsJson {
+            allIndicatorDescriptionsJson {
                 nodes {
-                    description
-                    name
+                indicator
+                topic
+                subtopic
+                shortDescription
+                longDescription
                 }
             }
         }
-    `).allSubtopicDescriptionsJson.nodes;
+    `).allIndicatorDescriptionsJson.nodes;
 
     
 
