@@ -1088,33 +1088,139 @@
         ]
     },
     {
-        "indicator": "",
-        "topic": "",
-        "subtopic": "",
-        "shortDescription": "",
-        "longDescription": "",
+        "indicator": "ind_78",
+        "topic": "Sun exposure",
+        "subtopic": "Sun protective behaviours (and skin checks)",
+        "shortDescription": "Wear sunscreen",
+        "longDescription": "<p>New Zealand adults who used sunscreen to protect themselves from getting sunburnt.</p>",
         "questions": [
             {
-                "leadIn": "",
-                "question": "",
-                "answers": [
-                    ""
-                ]
+                "leadIn": null,
+                "question": "What are the things you do, if anything, to protect yourself from getting sunburnt?",
+                "options": [
+                    "Cover up with clothing.",
+                    "Wear a hat.",
+                    "Wear sunglasses.",
+                    "Wear a rash shirt.",
+                    "Wear sunscreen.",
+                    "Reapply sunscreen regularly.",
+                    "Reapply sunscreen at least every two hours.",
+                    "Seek shade/Stay in the shade/Stay out of the sun."
+                ],
+                "answers": []
             }
         ]
     },
     {
-        "indicator": "",
-        "topic": "",
-        "subtopic": "",
-        "shortDescription": "",
-        "longDescription": "",
+        "indicator": "ind_79",
+        "topic": "Sun exposure",
+        "subtopic": "Sun protective behaviours (and skin checks)",
+        "shortDescription": "Wear sunscreen",
+        "longDescription": "<p>New Zealand adults who used sunscreen to protect themselves from getting sunburnt.</p>",
         "questions": [
             {
-                "leadIn": "",
-                "question": "",
+                "leadIn": null,
+                "question": "What are the things you do, if anything, to protect yourself from getting sunburnt?",
+                "options": [
+                    "Cover up with clothing.",
+                    "Wear a hat.",
+                    "Wear sunglasses.",
+                    "Wear a rash shirt.",
+                    "Wear sunscreen.",
+                    "Reapply sunscreen regularly.",
+                    "Reapply sunscreen at least every two hours.",
+                    "Seek shade/Stay in the shade/Stay out of the sun."
+                ],
+                "answers": []
+            }
+        ]
+    },
+    {
+        "indicator": "ind_80",
+        "topic": "Sun exposure",
+        "subtopic": "Sun protective behaviours (and skin checks)",
+        "shortDescription": "Wear sunscreen",
+        "longDescription": "<p>New Zealand adults who used sunscreen to protect themselves from getting sunburnt.</p>",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": "What are the things you do, if anything, to protect yourself from getting sunburnt?",
+                "options": [
+                    "Cover up with clothing.",
+                    "Wear a hat.",
+                    "Wear sunglasses.",
+                    "Wear a rash shirt.",
+                    "Wear sunscreen.",
+                    "Reapply sunscreen regularly.",
+                    "Reapply sunscreen at least every two hours.",
+                    "Seek shade/Stay in the shade/Stay out of the sun."
+                ],
+                "answers": []
+            }
+        ]
+    },
+    {
+        "indicator": "ind_81",
+        "topic": "Sun exposure",
+        "subtopic": "Sun protective behaviours (and skin checks)",
+        "shortDescription": "Wear sunscreen",
+        "longDescription": "<p>New Zealand adults who used sunscreen to protect themselves from getting sunburnt.</p>",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": "What are the things you do, if anything, to protect yourself from getting sunburnt?",
+                "options": [
+                    "Cover up with clothing.",
+                    "Wear a hat.",
+                    "Wear sunglasses.",
+                    "Wear a rash shirt.",
+                    "Wear sunscreen.",
+                    "Reapply sunscreen regularly.",
+                    "Reapply sunscreen at least every two hours.",
+                    "Seek shade/Stay in the shade/Stay out of the sun."
+                ],
+                "answers": []
+            }
+        ]
+    },
+    {
+        "indicator": "ind_82",
+        "topic": "Sun exposure",
+        "subtopic": "Sun protective behaviours (and skin checks)",
+        "shortDescription": "Wear sunscreen",
+        "longDescription": "<p>New Zealand adults who used sunscreen to protect themselves from getting sunburnt.</p>",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": "What are the things you do, if anything, to protect yourself from getting sunburnt?",
+                "options": [
+                    "Cover up with clothing.",
+                    "Wear a hat.",
+                    "Wear sunglasses.",
+                    "Wear a rash shirt.",
+                    "Wear sunscreen.",
+                    "Reapply sunscreen regularly.",
+                    "Reapply sunscreen at least every two hours.",
+                    "Seek shade/Stay in the shade/Stay out of the sun."
+                ],
+                "answers": []
+            }
+        ]
+    },
+    {
+        "indicator": "ind_83",
+        "topic": "Sun exposure",
+        "subtopic": "Sun protective behaviours (and skin checks)",
+        "shortDescription": "Skin check in the last 2 years",
+        "longDescription": "<p>New Zealand adults who had a skin check from a doctor in the last two years.</p>",
+        "longHidden": "<p>A skin check is where a health professional checks the skin on the whole body, as well as any unusual looking spots, freckles or moles.</p>",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": "In the past two years, have you had a skin check from a health professional? This is where a health professional checks the skin on your whole body, as well as any unusual looking spots, freckles or moles.",
                 "answers": [
-                    ""
+                    "Yes - Doctor (GP), Skin doctor (Dermatologist), Specialist, Nurse, Other – (please specify)",
+                    "No"
                 ]
             }
         ]
