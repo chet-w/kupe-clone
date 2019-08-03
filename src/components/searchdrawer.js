@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Drawer, Button, Input } from "antd";
 import styled from "styled-components";
-import SearchOutput from "./searchoutput";
+import SearchOutputPanel from "./searchoutputpanel";
 import Container from './ui/container';
 import { useStaticQuery, graphql } from 'gatsby';
 
@@ -83,7 +83,7 @@ const SearchDrawer = ({ isOpen, toggleIsOpen }) => {
                         allowClear
                         autoFocus
                     />
-                    <SearchOutput results={searchText === "" ? [] : searchResults} search={searchText}/>
+                    <SearchOutputPanel results={searchText === "" ? [] : searchResults} search={searchText}/>
                 </SearchBody>
             </Container>
         </Drawer>

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from "styled-components";
-import { Empty } from 'antd';
 import Highligher from "react-highlight-words";
+import { Icon } from 'antd';
 
 const SearchResult = styled.div`
     margin: 10px 0;
@@ -11,6 +11,11 @@ const SearchResult = styled.div`
 
 const Title = styled.div`
     font-weight: bold;
+`;
+
+const Trace = styled.div`
+    color: ${props => props.theme.lightBlue};
+
 `;
 
 const SearchOutput = ({ results, search }) => {
@@ -23,31 +28,33 @@ const SearchOutput = ({ results, search }) => {
 
     return (
         <div>
-            {results.length > 0 ?
-                results.map(result => (
-                    <SearchResult>
-                        <Title>
-                            <Highligher
-                                highlightClassName="search-match"
-                                searchWords={[search]}
-                                autoEscape={true}
-                                textToHighlight={result.shortDescription}
-                            />
-                        </Title>
-                        <div>
-                            <Highligher
-                                highlightClassName="search-match"
-                                searchWords={[search]}
-                                autoEscape={true}
-                                textToHighlight={getLongDescription(result.longDescription)}
-                            />
-                        </div>
-                    </SearchResult>
-                ))
-                : <Empty />
-            }
+            <h4>Found {results.length} indicators for "{search}"</h4>
+            {results.map(result => (
+                <SearchResult>
+                    <Title>
+                        <Highligher
+                            highlightClassName="search-match"
+                            searchWords={[search]}
+                            autoEscape={true}
+                            textToHighlight={result.shortDescription}
+                        />
+                    </Title>
+                    <Trace>
+                        {result.topic} <Icon type={"right"} /> {result.subtopic}
+                    </Trace>
+                    <div>
+                        <Highligher
+                            highlightClassName="search-match"
+                            searchWords={[search]}
+                            autoEscape={true}
+                            textToHighlight={getLongDescription(result.longDescription)}
+                        />
+                    </div>
+                </SearchResult>
+            ))
+        }
         </div>
-    )
-}
-
-export default SearchOutput;
+        )
+    }
+    
+    export default SearchOutput;

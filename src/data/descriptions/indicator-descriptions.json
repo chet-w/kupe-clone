@@ -1603,22 +1603,6 @@
         ]
     },
     {
-        "indicator": "ind_56",
-        "topic": "Tobacco",
-        "subtopic": "Vaping / e-cigarettes",
-        "shortDescription": "Ever tried an e-cigarette",
-        "longDescription": "<p>New Zealand adults who have ever tried a vaping device/e-cigarette.</p>",
-        "questions": [
-            {
-                "leadIn": null,
-                "question": "Have you ever tried an e-cigarette or vaping device?",
-                "answers": [
-                    "Yes", "No"
-                ]
-            }
-        ]
-    },
-    {
         "indicator": "ind_57",
         "topic": "Tobacco",
         "subtopic": "Vaping / e-cigarettes",
