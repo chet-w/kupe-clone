@@ -1226,99 +1226,508 @@
         ]
     },
     {
-        "indicator": "",
-        "topic": "",
-        "subtopic": "",
-        "shortDescription": "",
-        "longDescription": "",
+        "indicator": "ind_33",
+        "topic": "Tobacco",
+        "subtopic": "Attitudes to tobacco",
+        "shortDescription": "Ban smoking in cars when children under 18 years old are present",
+        "longDescription": "<p>New Zealand adults who agree or strongly agree that smoking in cars should be banned when children under 18 years old are present.</p>",
         "questions": [
             {
-                "leadIn": "",
-                "question": "",
+                "leadIn": "Please tell me how much you agree or disagree with the following statements.",
+                "question": "Smoking in cars should be banned when children aged under 18 years old are in them.",
                 "answers": [
-                    ""
+                    "Strongly agree", "Agree", "Neither agree nor disagree", "Disagree", "Strongly disagree"
                 ]
             }
         ]
     },
     {
-        "indicator": "",
-        "topic": "",
-        "subtopic": "",
-        "shortDescription": "",
-        "longDescription": "",
+        "indicator": "ind_34",
+        "topic": "Tobacco",
+        "subtopic": "Attitudes to tobacco",
+        "shortDescription": "Banning smoking in all public outdoor dining areas",
+        "longDescription": "<p>New Zealand adults who agree or strongly agree that smoking should be banned in all public outdoor dining areas.</p>",
         "questions": [
             {
-                "leadIn": "",
-                "question": "",
+                "leadIn": "Please tell me how much you agree or disagree with the following statements.",
+                "question": "Smoking in cars should be banned when children aged under 18 years old are in them.",
                 "answers": [
-                    ""
+                    "Strongly agree", "Agree", "Neither agree nor disagree", "Disagree", "Strongly disagree"
                 ]
             }
         ]
     },
     {
-        "indicator": "",
-        "topic": "",
-        "subtopic": "",
-        "shortDescription": "",
-        "longDescription": "",
+        "indicator": "ind_35",
+        "topic": "Tobacco",
+        "subtopic": "Attitudes to tobacco",
+        "shortDescription": "Reduce number of places allowed to sell cigarettes and tobacco",
+        "longDescription": "<p>New Zealand adults who agree or strongly agree that the number of places allowed to sell cigarettes and tobacco should be reduced to make them less easily available.</p>",
         "questions": [
             {
-                "leadIn": "",
-                "question": "",
+                "leadIn": "Please tell me how much you agree or disagree with the following statements.",
+                "question": "Smoking in cars should be banned when children aged under 18 years old are in them.",
                 "answers": [
-                    ""
+                    "Strongly agree", "Agree", "Neither agree nor disagree", "Disagree", "Strongly disagree"
                 ]
             }
         ]
     },
     {
-        "indicator": "",
-        "topic": "",
-        "subtopic": "",
-        "shortDescription": "",
-        "longDescription": "",
+        "indicator": "ind_36",
+        "topic": "Tobacco",
+        "subtopic": "Attitudes to tobacco",
+        "shortDescription": "Increase price to decrease affordability for young people",
+        "longDescription": "<p>New Zealand adults who agree or strongly agree that cigarettes and tobacco should be made more expensive so that young people can’t afford to buy them. </p>",
         "questions": [
             {
-                "leadIn": "",
-                "question": "",
+                "leadIn": "Please tell me how much you agree or disagree with the following statements.",
+                "question": "Smoking in cars should be banned when children aged under 18 years old are in them.",
                 "answers": [
-                    ""
+                    "Strongly agree", "Agree", "Neither agree nor disagree", "Disagree", "Strongly disagree"
                 ]
             }
         ]
     },
     {
-        "indicator": "",
-        "topic": "",
-        "subtopic": "",
-        "shortDescription": "",
-        "longDescription": "",
+        "indicator": "ind_37",
+        "topic": "Tobacco",
+        "subtopic": "Attitudes to tobacco",
+        "shortDescription": "Perceived proportion of smokers in NZ",
+        "longDescription": "<p>Perceived proportion of New Zealanders who smoke.</p>",
         "questions": [
             {
-                "leadIn": "",
-                "question": "",
+                "leadIn": null,
+                "question": "Now I am going to ask a question about how many people you think smoke. Out of 100 adults in New Zealand, how many do you think smoke cigarettes or tobacco? By this we mean they smoke cigarettes or tobacco at least once a day.",
                 "answers": [
-                    ""
+                    "Number 0 - 100"
                 ]
             }
         ]
     },
     {
-        "indicator": "",
-        "topic": "",
-        "subtopic": "",
-        "shortDescription": "",
-        "longDescription": "",
+        "indicator": "ind_38",
+        "topic": "Tobacco",
+        "subtopic": "Attitudes to tobacco",
+        "shortDescription": "Awareness of Smokefree 2025",
+        "longDescription": "<p>New Zealand adults who are aware that the government wants New Zealand smoking rates reduced to less than 5% by 2025. This is called \"Smokefree 2025\".</p>",
         "questions": [
             {
-                "leadIn": "",
-                "question": "",
+                "leadIn": null,
+                "question": "Are you aware that the government wants New Zealand smoking rates reduced to less than 5% by 2025?",
                 "answers": [
-                    ""
+                    "Yes", "No"
                 ]
             }
         ]
-    }
+    }, 
+    {
+        "indicator": "ind_41",
+        "topic": "Tobacco",
+        "subtopic": "Quit smoking",
+        "shortDescription": "Quit attempts - none",
+        "longDescription": "<p>No quit attempts in past 12 months. This is reported for current smokers and those who quit in the last 12 months (recent quitters).</p>",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": "In the last 12 months, how many serious attempts to stop smoking did you make that lasted 24 hours or longer? Please include any attempt that you are currently making.",
+                "answers": []
+            }
+        ]
+    }, 
+    {
+        "indicator": "ind_42",
+        "topic": "Tobacco",
+        "subtopic": "Quit smoking",
+        "shortDescription": "Quit attempts - one",
+        "longDescription": "<p>One quit attempt in past 12 months. This is reported for current smokers and those who quit in the last 12 months (recent quitters).</p>",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": "In the last 12 months, how many serious attempts to stop smoking did you make that lasted 24 hours or longer? Please include any attempt that you are currently making.",
+                "answers": []
+            }
+        ]
+    }, 
+    {
+        "indicator": "ind_43",
+        "topic": "Tobacco",
+        "subtopic": "Quit smoking",
+        "shortDescription": "Quit attempts - two",
+        "longDescription": "<p>Two or more quit attempts in past 12 months. This is reported for current smokers and those who quit in the last 12 months (recent quitters).</p>",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": "In the last 12 months, how many serious attempts to stop smoking did you make that lasted 24 hours or longer? Please include any attempt that you are currently making.",
+                "answers": []
+            }
+        ]
+    }, 
+    {
+        "indicator": "ind_44",
+        "topic": "Tobacco",
+        "subtopic": "Current smoking",
+        "shortDescription": "Ever smoked tobacco",
+        "longDescription": "<p>New Zealand adults who ever smoked tobacco, even just a few puffs.</p>",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": "Have you ever smoked cigarettes or tobacco at all, even just a few puffs?",
+                "answers": [
+                    "Yes", "No"
+                ]
+            }
+        ]
+    }, 
+    {
+        "indicator": "ind_45",
+        "topic": "Tobacco",
+        "subtopic": "Current smoking",
+        "shortDescription": "Age of first try",
+        "longDescription": "Age in years of first trying a cigarette. ",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": "At what age did you FIRST try a cigarette, even just a few puffs?",
+                "answers": []
+            }
+        ]
+    }, 
+    {
+        "indicator": "ind_46",
+        "topic": "Tobacco",
+        "subtopic": "Current smoking",
+        "shortDescription": "Age of starting smoking daily",
+        "longDescription": "<p>Age in years of starting smoking daily.</p>",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": "At what age did you first start smoking daily?",
+                "answers": []
+            }
+        ]
+    }, 
+    {
+        "indicator": "ind_47",
+        "topic": "Tobacco",
+        "subtopic": "Current smoking",
+        "shortDescription": "Smoker - current",
+        "longDescription": "New Zealand adults who currently smoke tobacco at least monthly.",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": "Have you ever smoked cigarettes or tobacco at all, even just a few puffs?",
+                "answers": [
+                    "Yes", "No"
+                ]
+            }, 
+            {
+                "leadIn": null,
+                "question": "Which best describes how often you smoke tobacco now?",
+                "answers": [
+                    "At least once a day", "At least once a week", "At least once a month", "Less often than once a month", "I do not smoke now"
+                ]
+            }
+        ]
+    }, 
+    {
+        "indicator": "ind_48",
+        "topic": "Tobacco",
+        "subtopic": "Current smoking",
+        "shortDescription": "Smoker - past experimental",
+        "longDescription": "<p>New Zealand adults who tried smoking cigarettes or tobacco, but never started smoking.</p>",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": "Have you ever smoked cigarettes or tobacco at all, even just a few puffs?",
+                "answers": [
+                    "Yes", "No"
+                ]
+            },
+            {
+                "leadIn": null,
+                "question": "Which best describes how often you smoke tobacco now?",
+                "answers": [
+                    "At least once a day",
+                    "At least once a week",
+                    "At least once a month",
+                    "Less often than once a month",
+                    "I do not smoke now"
+                ]
+            },
+            {
+                "leadIn": null,
+                "question": "How long ago did you stop smoking?",
+                "answers": [
+                    "Within the last month",
+                    "1 to 6 months ago",
+                    "7 to 12 months ago",
+                    "1 to 2 years ago",
+                    "3 to 5 years ago",
+                    "6 to 10 years ago",
+                    "More than 10 years ago",
+                    "Not applicable - never started smoking"
+                ]
+            }
+        ]
+    }, 
+    {
+        "indicator": "ind_49",
+        "topic": "Tobacco",
+        "subtopic": "Current smoking",
+        "shortDescription": "Smoker - recent/past quitter",
+        "longDescription": "<p>New Zealand adults who stopped smoking.</p>",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": "Have you ever smoked cigarettes or tobacco at all, even just a few puffs?",
+                "answers": [
+                    "Yes", "No"
+                ]
+            },
+            {
+                "leadIn": null,
+                "question": "Which best describes how often you smoke tobacco now?",
+                "answers": [
+                    "At least once a day", "At least once a week", "At least once a month", "Less often than once a month", "I do not smoke now"
+                ]
+            },
+            {
+                "leadIn": null,
+                "question": "How long ago did you stop smoking?",
+                "answers": [
+                    "Within the last month", "1 to 6 months ago", "7 to 12 months ago", "1 to 2 years ago", "3 to 5 years ago", "6 to 10 years ago", "More than 10 years ago"
+                ]
+            }
+        ]
+    }, 
+    {
+        "indicator": "ind_50",
+        "topic": "Tobacco",
+        "subtopic": "Current smoking",
+        "shortDescription": "Never smoker",
+        "longDescription": "<p>New Zealand adults who never smoked, even just a few puffs.</p>",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": "Have you ever smoked cigarettes or tobacco at all, even just a few puffs?",
+                "answers": [
+                    "Yes", "No"
+                ]
+            }
+        ]
+    }, 
+    {
+        "indicator": "ind_51",
+        "topic": "Tobacco",
+        "subtopic": "Current smoking",
+        "shortDescription": "Average number of cigarettes smoked per day",
+        "longDescription": "<p>Average number of cigarettes smoked per day.</p>",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": "How many cigarettes a day do you smoke?",
+                "answers": []
+            }
+        ]
+    }, 
+    {
+        "indicator": "ind_52",
+        "topic": "Tobacco",
+        "subtopic": "Current smoking",
+        "shortDescription": "Addiction to tobacco",
+        "longDescription": "<p>Smokers who have their first cigarette within 30 minutes of waking.</p>",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": "How soon after you wake up do you smoke your first cigarette?",
+                "answers": [
+                    "Within 5 minutes", "6 to 30 minutes", "31 minutes to 1 hour", "More than 1 hour"
+                ]
+            }
+        ]
+    }, 
+    {
+        "indicator": "ind_55",
+        "topic": "Tobacco",
+        "subtopic": "Current smoking",
+        "shortDescription": "Smoker - current daily",
+        "longDescription": "<p>New Zealand adults who smoke tobacco at least once a day.</p>",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": "Have you ever smoked cigarettes or tobacco at all, even just a few puffs?",
+                "answers": [
+                    "Yes", "No"
+                ]
+            },
+            {
+                "leadIn": null,
+                "question": "Which best describes how often you smoke tobacco now?",
+                "answers": [
+                    "At least once a day", "At least once a week", "At least once a month", "Less often than once a month", "I do not smoke now"
+                ]
+            }
+        ]
+    }, 
+    {
+        "indicator": "ind_65",
+        "topic": "Tobacco",
+        "subtopic": "Current smoking",
+        "shortDescription": "Smoked marijuana (cannabis, pot, grass, weed)",
+        "longDescription": "<p>New Zealand adults who have smoked cannabis (marijuana, pot, grass, weed), even just a few puffs, in the last 30 days. The interviewer did not see survey participant's response.</p>",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": "During the last 30 days, have you smoked marijuana (cannabis, pot, grass, weed), even just a few puffs?",
+                "answers": [
+                    "No – I have never smoked marijuana", "No – But I have smoked marijuana in the past", "Yes – Once in the past 30 days", "Yes – Two or three times in the past 30 days", "Yes – About once a week", "Yes – Several times a week"
+                ]
+            }
+        ]
+    }, 
+    {
+        "indicator": "ind_56",
+        "topic": "Tobacco",
+        "subtopic": "Vaping / e-cigarettes",
+        "shortDescription": "Ever tried an e-cigarette",
+        "longDescription": "<p>New Zealand adults who have ever tried a vaping device/e-cigarette.</p>",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": "Have you ever tried an e-cigarette or vaping device?",
+                "answers": [
+                    "Yes", "No"
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "ind_56",
+        "topic": "Tobacco",
+        "subtopic": "Vaping / e-cigarettes",
+        "shortDescription": "Ever tried an e-cigarette",
+        "longDescription": "<p>New Zealand adults who have ever tried a vaping device/e-cigarette.</p>",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": "Have you ever tried an e-cigarette or vaping device?",
+                "answers": [
+                    "Yes", "No"
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "ind_57",
+        "topic": "Tobacco",
+        "subtopic": "Vaping / e-cigarettes",
+        "shortDescription": "Current vaping product users in the population",
+        "longDescription": "<p>New Zealand adults who are current (at least monthly) vaping product users in the population.</p>",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": "Which of the options on the showcard, best describes how often you use an e-cigarette or vaping device now?",
+                "answers": [
+                    "At least once a day", "At least once a week", "At least once a month", "Less often than once a month", "Do not use one now"
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "ind_58",
+        "topic": "Tobacco",
+        "subtopic": "Vaping / e-cigarettes",
+        "shortDescription": "Use at least daily (of those who have tried vaping)",
+        "longDescription": "<p>Use vaping products at least daily out of those who have ever tried vaping.</p>",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": "Which of the options on the showcard, best describes how often you use an e-cigarette or vaping device now?",
+                "answers": [
+                    "At least once a day", "At least once a week", "At least once a month", "Less often than once a month", "Do not use one now"
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "ind_59",
+        "topic": "Tobacco",
+        "subtopic": "Vaping / e-cigarettes",
+        "shortDescription": "Use at least once a week (of those who have tried vaping",
+        "longDescription": "<p>Use vaping products at least once a week out of those who have ever tried vaping.</p>",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": "Which of the options on the showcard, best describes how often you use an e-cigarette or vaping device now?",
+                "answers": [
+                    "At least once a day", "At least once a week", "At least once a month", "Less often than once a month", "Do not use one now"
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "ind_60",
+        "topic": "Tobacco",
+        "subtopic": "Vaping / e-cigarettes",
+        "shortDescription": "Use vaping/e-cigarettes to stop smoking completely (only current users)",
+        "longDescription": "<p>Using vaping producs to stop smoking completely. Only asked of those who vape at least monthly.</p>",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": "What is your main reason for using an e-cigarette or vaping device?",
+                "answers": [
+                    "To quit smoking", "To cut down smoking", "To use when I cannot or am not allowed to smoke", "To avoid returning to smoking", "Because I enjoy(ed) it", "Curiosity", "Just wanted to try them", "Other"
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "ind_61",
+        "topic": "Tobacco",
+        "subtopic": "Vaping / e-cigarettes",
+        "shortDescription": "Use vaping/e-cigarettes to reduce the amount of tobacco smoked (only those who currently use)",
+        "longDescription": "<p>Using vaping products to reduce the amount of tobacco smoked. Only asked of those who vape at least monthly.</p>",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": "What is your main reason for using an e-cigarette or vaping device?",
+                "answers": [
+                    "To quit smoking", "To cut down smoking", "To use when I cannot or am not allowed to smoke", "To avoid returning to smoking", "Because I enjoy(ed) it", "Curiosity", "Just wanted to try them", "Other"
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "ind_63",
+        "topic": "Tobacco",
+        "subtopic": "Vaping / e-cigarettes",
+        "shortDescription": "Agree that e-cigarettes are safer than tobacco",
+        "longDescription": "<p>Perceived safety of vaping products compared with tobacco (agree/strongly agree). The statement was \"E-cigarettes or vaping devices are safer for your health than smoking cigarettes.\" Respondents could also answer disagree, strongly disagree, or don’t know.</p>",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": "E-cigarettes are safer for your health than smoked cigarettes.",
+                "answers": [
+                    "Strongly agree", "Agree", "Neither agree nor disagree", "Disagree", "Strongly disagree", "Not applicable – don’t know what an e-cigarette is"
+                ]
+            }
+        ]
+    },
+    {
+        "indicator": "ind_64",
+        "topic": "Tobacco",
+        "subtopic": "Vaping / e-cigarettes",
+        "shortDescription": "Agree that vaping helps people quit smoking",
+        "longDescription": "<p>Perceived efficacy of vaping products as a way to quit smoking (agree/strongly agree). The statement was \"E-cigarettes or vaping devices can help people quit smoking tobacco.\" Respondents could also answer disagree, strongly disagree, or don’t know.</p>",
+        "questions": [
+            {
+                "leadIn": null,
+                "question": "E-cigarettes can help people quit smoking tobacco.",
+                "answers": [
+                    "Strongly agree", "Agree", "Neither agree nor disagree", "Disagree", "Strongly disagree", "Not applicable – don’t know what an e-cigarette is"
+                ]
+            }
+        ]
+    } 
 ]
