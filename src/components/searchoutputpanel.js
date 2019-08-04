@@ -11,29 +11,8 @@ const SearchContainer = styled.div`
     margin: 20px 0;
 `;
 
-const StyledSearchFilters = styled.div`
-    width: 300px;
-    margin-right: 20px;
-    border-right: solid 2px ${props => props.theme.lightGrey};
-`;
-
-const StyledSearchFilter = styled.div`
-    padding: 5px 0px;
-    margin: 5px 15px 5px 5px;
-    border-bottom: solid 2px ${props => props.theme.lightGrey};
-`;
 
 const SearchOutputPanel = ({ results, search }) => {
-    // return (
-    //     <SearchContainer>
-    //         {results.length > 0 ? (
-    //             <>
-    //                 <SearchFilters />
-    //                 <SearchOutput results={results} search={search} />
-    //             </>
-    //         ) : <Empty />}
-    //     </SearchContainer>
-    // )
     const filters = ["Indicators", "Subtopics", "Topics"];
 
     return (
@@ -45,7 +24,7 @@ const SearchOutputPanel = ({ results, search }) => {
                         {filters.map(filter => {
                             return (
                                 <TabPane tab={filter} key={filter}>
-                                    {filter === "Indicators" ? <SearchOutput results={results} search={search} /> : filter}
+                                    <SearchOutput results={results} search={search} type={filter}/> 
                                 </TabPane>
                             )
                         })}
@@ -55,16 +34,5 @@ const SearchOutputPanel = ({ results, search }) => {
         </SearchContainer>
     )
 };
-
-const SearchFilters = () => {
-
-    const filters = ["Indicators", "Subtopics", "Indicators"];
-
-    return (
-        <StyledSearchFilters>
-            {filters.map(filter => <StyledSearchFilter>{filter}</StyledSearchFilter>)}
-        </StyledSearchFilters>
-    )
-}
 
 export default SearchOutputPanel;
