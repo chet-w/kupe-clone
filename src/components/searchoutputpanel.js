@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import SearchOutput from "./searchoutput";
-import { Empty, Tabs } from 'antd';
+import { Empty, Tabs, Badge } from 'antd';
 
 const { TabPane } = Tabs;
 
@@ -21,10 +21,12 @@ const SearchOutputPanel = ({ results, search }) => {
                 <>
                     <h4>Categories</h4>
                     <Tabs tabPosition={"left"} className={"search-filters"}>
-                        {filters.map(filter => {
+                        {filters.map((filter, i) => {
                             return (
-                                <TabPane tab={filter} key={filter}>
-                                    <SearchOutput results={results} search={search} type={filter}/> 
+                                <TabPane tab={
+                                    <>{filter} <Badge count={results[i].length}/></>
+                                } key={filter}>
+                                    <SearchOutput results={results} search={search} type={filter} />
                                 </TabPane>
                             )
                         })}

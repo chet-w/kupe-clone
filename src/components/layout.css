@@ -817,5 +817,9 @@ main {
   padding: 0;
 }
 
+.ant-badge-count {
+  background: #f79520;
+}
+
 
 

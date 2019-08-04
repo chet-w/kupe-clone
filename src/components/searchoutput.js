@@ -2,7 +2,7 @@ import React from 'react'
 import styled from "styled-components";
 import Highligher from "react-highlight-words";
 import { Icon } from 'antd';
-import { StaticQuery, graphql } from 'gatsby';
+import {dePath } from "../lib/helpers";
 
 const SearchResult = styled.div`
     margin: 10px 0;
@@ -32,10 +32,9 @@ const SearchOutput = ({ results, search, type }) => {
     return (
         type === "Indicators" ?
             <IndicatorOutput results={results[0]} search={search} /> :
-            <SubtopicOutput results={results[1]} search={search} />
-        // type === "Subtopic" ?
-        //     <SubtopicOutput results={results} search={search} /> :
-        //     <TopicOutput results={results} search={search} />
+        type === "Subtopics" ?
+            <SubtopicOutput results={results[1]} search={search} /> :
+            <TopicOutput results={results[2]} search={search} />
 
     )
 }
@@ -71,48 +70,62 @@ const IndicatorOutput = ({ results, search }) => (
 );
 
 const SubtopicOutput = ({ results, search }) => {
-
-
     return (
         <div>
             <h4>Found {results.length} subtopics for "{search}"</h4>
-            {/* {results.map(result => (
+            {results.map(result => (
                 <SearchResult>
                     <Title>
                         <Highligher
                             highlightClassName="search-match"
                             searchWords={[search]}
                             autoEscape={true}
-                            textToHighlight={result.shortDescription}
+                            textToHighlight={result.name}
                         />
                     </Title>
                     <Trace>
-                        {result.topic}
+                        {dePath(result.path.substring(0, result.path.indexOf("/")))}
                     </Trace>
                     <div>
                         <Highligher
                             highlightClassName="search-match"
                             searchWords={[search]}
                             autoEscape={true}
-                            textToHighlight={getLongDescription(result.longDescription)}
+                            textToHighlight={result.description}
                         />
                     </div>
                 </SearchResult>
             ))
-            } */}
-            {/* {subtopicDetails.map(subtopic => (
+            }
+        </div>
+    )
+};
+
+const TopicOutput = ({ results, search }) => {
+    return (
+        <div>
+            <h4>Found {results.length} topics for "{search}"</h4>
+            {results.map(result => (
                 <SearchResult>
                     <Title>
                         <Highligher
                             highlightClassName="search-match"
                             searchWords={[search]}
                             autoEscape={true}
-                            textToHighlight={subtopic.name}
+                            textToHighlight={result.name}
                         />
                     </Title>
+                    <div>
+                        <Highligher
+                            highlightClassName="search-match"
+                            searchWords={[search]}
+                            autoEscape={true}
+                            textToHighlight={result.description}
+                        />
+                    </div>
                 </SearchResult>
-            ))} */}
-            subtopics
+            ))
+            }
         </div>
     )
 };

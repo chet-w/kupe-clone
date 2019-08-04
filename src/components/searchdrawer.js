@@ -141,7 +141,7 @@ const SearchDrawer = ({ isOpen, toggleIsOpen }) => {
                         <Icon type={"search"} />
                     </Button>
                     </SearchBar>
-                    {searchTextRef.current && <SearchOutputPanel results={searchResults} search={searchTextRef.current.input.value.replace("aori", "\u0101ori")} />} }
+                    {searchTextRef.current && <SearchOutputPanel results={searchResults} search={searchTextRef.current.input.value.replace("aori", "\u0101ori")} />}
                 </SearchBody>
             </Container>
         </Drawer>
