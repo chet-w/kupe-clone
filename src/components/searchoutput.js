@@ -2,7 +2,8 @@ import React from 'react'
 import styled from "styled-components";
 import Highligher from "react-highlight-words";
 import { Icon } from 'antd';
-import {dePath } from "../lib/helpers";
+import {dePath, toPath } from "../lib/helpers";
+import { Link } from 'gatsby';
 
 const SearchResult = styled.div`
     margin: 10px 0;
@@ -45,23 +46,17 @@ const IndicatorOutput = ({ results, search }) => (
         {results.map(result => (
             <SearchResult>
                 <Title>
-                    <Highligher
-                        highlightClassName="search-match"
-                        searchWords={[search]}
-                        autoEscape={true}
-                        textToHighlight={result.shortDescription}
-                    />
+                    <Link to={`${toPath(result.topic)}/${toPath(result.subtopic)}/${toPath(result.shortDescription)}`}>
+                        <a>
+                            {result.shortDescription}
+                        </a>
+                    </Link>
                 </Title>
                 <Trace>
                     {result.topic} <Icon type={"right"} /> {result.subtopic}
                 </Trace>
                 <div>
-                    <Highligher
-                        highlightClassName="search-match"
-                        searchWords={[search]}
-                        autoEscape={true}
-                        textToHighlight={getLongDescription(result.longDescription)}
-                    />
+                    {getLongDescription(result.longDescription)}
                 </div>
             </SearchResult>
         ))
@@ -76,23 +71,17 @@ const SubtopicOutput = ({ results, search }) => {
             {results.map(result => (
                 <SearchResult>
                     <Title>
-                        <Highligher
-                            highlightClassName="search-match"
-                            searchWords={[search]}
-                            autoEscape={true}
-                            textToHighlight={result.name}
-                        />
+                        <Link to={result.path}>
+                            <a>
+                                {result.name}
+                            </a>
+                        </Link>
                     </Title>
                     <Trace>
                         {dePath(result.path.substring(0, result.path.indexOf("/")))}
                     </Trace>
                     <div>
-                        <Highligher
-                            highlightClassName="search-match"
-                            searchWords={[search]}
-                            autoEscape={true}
-                            textToHighlight={result.description}
-                        />
+                        {result.description}
                     </div>
                 </SearchResult>
             ))
@@ -108,20 +97,14 @@ const TopicOutput = ({ results, search }) => {
             {results.map(result => (
                 <SearchResult>
                     <Title>
-                        <Highligher
-                            highlightClassName="search-match"
-                            searchWords={[search]}
-                            autoEscape={true}
-                            textToHighlight={result.name}
-                        />
+                        <Link to={toPath(result.name)}>
+                            <a>
+                                {result.name}
+                            </a>
+                        </Link>
                     </Title>
                     <div>
-                        <Highligher
-                            highlightClassName="search-match"
-                            searchWords={[search]}
-                            autoEscape={true}
-                            textToHighlight={result.description}
-                        />
+                        {result.description}
                     </div>
                 </SearchResult>
             ))

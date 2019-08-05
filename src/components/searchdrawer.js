@@ -38,10 +38,13 @@ const SearchBar = styled.div`
 
 const SearchDrawer = ({ isOpen, toggleIsOpen }) => {
 
-    // const [searchText, setSearchText] = useState("");
+    const [searchText, setSearchText] = useState("");
     const [searchResults, setSearchResults] = useState([]);
-
     const searchTextRef = useRef(null);
+
+    const handleInputChange = event => {
+        setSearchText(event.target.value);
+    }; 
 
     const handleSearchButton = () => {
         
@@ -71,7 +74,7 @@ const SearchDrawer = ({ isOpen, toggleIsOpen }) => {
     };
 
     const handleEnterPress = event => {
-        if(event.key === "Enter") {
+        if(event.key === "Enter" && searchText.trim() !== "") {
             handleSearchButton();
         }
     };
@@ -133,11 +136,12 @@ const SearchDrawer = ({ isOpen, toggleIsOpen }) => {
                         className="search-input"
                         placeholder="What are you looking for?"
                         ref={searchTextRef}
+                        onChange={e => handleInputChange(e)}
                         allowClear
                         autoFocus
                         onKeyPress={e => handleEnterPress(e)}
                         />
-                    <Button type={"primary"} onClick={() => handleSearchButton()}>
+                    <Button type={"primary"} onClick={() => handleSearchButton()} disabled={searchText === ""}>
                         <Icon type={"search"} />
                     </Button>
                     </SearchBar>
