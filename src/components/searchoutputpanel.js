@@ -17,7 +17,7 @@ const SearchOutputPanel = ({ results, search }) => {
 
     return (
         <SearchContainer>
-            {results.length > 0 ? (
+            {results.length > 0 && (
                 <>
                     <h4>Categories</h4>
                     <Tabs tabPosition={"left"} className={"search-filters"}>
@@ -32,7 +32,7 @@ const SearchOutputPanel = ({ results, search }) => {
                         })}
                     </Tabs>
                 </>
-            ) : <Empty />}
+            )}
         </SearchContainer>
     )
 };
