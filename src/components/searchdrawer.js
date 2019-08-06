@@ -114,42 +114,7 @@ const SearchDrawer = ({ isOpen, toggleIsOpen }) => {
 
 
     return (
-        <Drawer
-            title={(
-                <Container justify="space-between">
-                    <SearchHeading>Search Kupe</SearchHeading>
-                    <Button onClick={e => toggleIsOpen(!isOpen)}>Close</Button>
-                </Container>
-            )}
-            placement="top"
-            visible={isOpen}
-            closable={false}
-            maskClosable={true}
-            onClose={e => toggleIsOpen(!isOpen)}
-            keyboard={true}
-            className="search-drawer"
-        >
-            <Container>
-                <SearchBody>
-                    <SearchBar>
-                    <Input
-                        className="search-input"
-                        placeholder="What are you looking for?"
-                        ref={searchTextRef}
-                        onChange={e => handleInputChange(e)}
-                        allowClear
-                        autoFocus
-                        onKeyPress={e => handleEnterPress(e)}
-                        />
-                    <Button type={"primary"} onClick={() => handleSearchButton()} disabled={searchText === ""}>
-                        <Icon type={"search"} />
-                    </Button>
-                    </SearchBar>
-                    {searchTextRef.current && <SearchOutputPanel results={searchResults} search={searchTextRef.current.input.value.replace("aori", "\u0101ori")} />}
-                </SearchBody>
-            </Container>
-        </Drawer>
-
+        <div>hello</div>
     )
 }
 
