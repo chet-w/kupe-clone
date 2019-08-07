@@ -821,5 +821,38 @@ main {
   background: #f79520;
 }
 
+.search-bar {
+  position: relative;
+  position: relative;
+  margin-right: 40px;
+}
+
+.search-bar input {
+  border: none;
+  position: relative;
+  border-bottom: solid 2px #02a7c9;
+  border-radius: 0;
+}
+
+
+.search-bar input:focus, 
+.search-bar input:active,
+.search-bar input:hover {
+  border: none;
+  box-shadow: none;
+  border-bottom: solid 2px #02a7c9;
+  border-radius: 0;
+}  
+
+.ant-btn-primary {
+  background: linear-gradient(to right, #02a7c9, #0080a4);
+  transition: all 0.5s ease;
+}
+
+.search-bar .ant-btn-primary {
+  background: linear-gradient(to right, #02a7c9, #0080a4);
+  z-index: 4;
+}
+
 
 

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import styled, { keyframes } from "styled-components";
-import { Icon } from 'antd';
+import { Input, Icon, Button } from 'antd';
+
+const { Search } = Input;
 
 const SearchPanelExpand = keyframes`
     from { width: 0; opacity: 0 }
@@ -44,7 +46,15 @@ const SearchPanel = ({ toggleOpen }) => {
 
     return (
         <StyledPanel animation={shouldFadeOut}>
-            Search Kupe
+            <Search
+                placeholder="Enter some text to search Kupe"
+                prefix={<Icon type="search"/>}
+                enterButton={<Button type="primary" loading>Search</Button>}
+                size="large"
+                onSearch={value => console.log(value)}
+                className="search-bar"
+                
+            />
             <button onClick={() => handleClose()}><Icon type={"close"} /></button>
         </StyledPanel>
     )
