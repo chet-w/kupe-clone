@@ -36,19 +36,12 @@ const SearchBar = styled.div`
 `;
 
 
-const SearchDrawer = ({ isOpen, toggleIsOpen }) => {
+const SearchDrawer = ({ isOpen, toggleIsOpen, searchText }) => {
 
-    const [searchText, setSearchText] = useState("");
     const [searchResults, setSearchResults] = useState([]);
-    const searchTextRef = useRef(null);
-
-    const handleInputChange = event => {
-        setSearchText(event.target.value);
-    }; 
 
     const handleSearchButton = () => {
-        
-        const matchTerm = new RegExp(searchTextRef.current.input.value.replace("aori", "\u0101ori"), "i");
+        const matchTerm = new RegExp(searchText.replace("aori", "\u0101ori"), "i");
         const indResults = indicatorDescriptions.filter(node => {
             return node.shortDescription.match(matchTerm) ||
             node.longDescription.match(matchTerm) ||
@@ -73,11 +66,6 @@ const SearchDrawer = ({ isOpen, toggleIsOpen }) => {
         setSearchResults([indResults, subtopicResults, topicResults]);
     };
 
-    const handleEnterPress = event => {
-        if(event.key === "Enter" && searchText.trim() !== "") {
-            handleSearchButton();
-        }
-    };
 
     const allSearchables = useStaticQuery(graphql`
         query allSearchables {
@@ -114,7 +102,28 @@ const SearchDrawer = ({ isOpen, toggleIsOpen }) => {
 
 
     return (
-        <div>hello</div>
+        <Drawer
+            title={(
+                <Container justify="space-between">
+                    <SearchHeading>Search Kupe</SearchHeading>
+                    <Button onClick={e => toggleIsOpen(!isOpen)}>Close</Button>
+                </Container>
+            )}
+            placement="top"
+            visible={isOpen}
+            closable={false}
+            maskClosable={true}
+            onClose={e => toggleIsOpen(!isOpen)}
+            keyboard={true}
+            className="search-drawer"
+        >
+            <Container>
+                <SearchBody>
+                   <SearchOutputPanel results={searchResults} search={searchText.replace("aori", "\u0101ori")} />
+                </SearchBody>
+            </Container>
+        </Drawer>
+
     )
 }
 

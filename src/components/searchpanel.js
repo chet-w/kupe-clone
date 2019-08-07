@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled, { keyframes } from "styled-components";
 import { Input, Icon, Button } from 'antd';
+import SearchDrawer from './searchdrawer';
 
 const { Search } = Input;
 
@@ -42,21 +43,40 @@ const SearchPanel = ({ toggleOpen }) => {
         setTimeout(() => toggleOpen(false), 500);
     };
 
+    const handleSearch = searchText => {
+        setIsSearchLoading(true);
+        setTimeout(() => {
+            setShowResults(true)
+            setIsSearchLoading(false)
+        }, 1200);
+    };
+
     const [shouldFadeOut, setShouldFadeOut] = useState(false);
+    const [isSearchLoading, setIsSearchLoading] = useState(false);
+    const [showResults, setShowResults] = useState(false);
 
     return (
-        <StyledPanel animation={shouldFadeOut}>
-            <Search
-                placeholder="Enter some text to search Kupe"
-                prefix={<Icon type="search"/>}
-                enterButton={<Button type="primary" loading>Search</Button>}
-                size="large"
-                onSearch={value => console.log(value)}
-                className="search-bar"
-                
-            />
-            <button onClick={() => handleClose()}><Icon type={"close"} /></button>
-        </StyledPanel>
+        <>
+            <StyledPanel animation={shouldFadeOut}>
+                <Search
+                    placeholder="Enter some text to search Kupe"
+                    prefix={<Icon type="search"/>}
+                    enterButton={<Button type="primary" loading={isSearchLoading}>{ isSearchLoading ? "Searching" : "Search"}</Button>}
+                    size="large"
+                    onSearch={value => handleSearch()}
+                    className="search-bar"
+                    autoFocus
+                />
+                <button onClick={() => handleClose()}><Icon type={"close"} /></button>
+            </StyledPanel>
+            { showResults &&
+             <SearchDrawer
+              toggleIsOpen={setShowResults.bind(this)}
+              isOpen={showResults}
+              searchText={"Alcohol"}
+             />
+            }
+        </>
     )
 }
 
