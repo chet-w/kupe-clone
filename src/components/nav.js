@@ -4,7 +4,7 @@ import Container from './ui/container';
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import { Popover, Affix, Icon } from 'antd';
 import { toPath } from '../lib/helpers';
-import SearchDrawer from "./searchdrawer"
+import SearchPanel from "./searchpanel";
 
 const StyledNav = styled.nav`
     display: flex;
@@ -165,10 +165,9 @@ const Nav = ({ page }) => {
                     <Search onClick={() => toggleSearchOpen(!isSearchOpen)} isOpen={isSearchOpen}>
                        <Icon type="search" />
                     </Search>
-                    <SearchDrawer
-                     isOpen={isSearchOpen}
-                     toggleIsOpen={toggleSearchOpen.bind(this)}
-                    />
+                    { isSearchOpen && <SearchPanel 
+                        toggleOpen={toggleSearchOpen.bind(this)}
+                    /> }
                     <div  className="nav-header-links">
                         <Icon type="menu"/>
                     </div>

@@ -36,19 +36,12 @@ const SearchBar = styled.div`
 `;
 
 
-const SearchDrawer = ({ isOpen, toggleIsOpen }) => {
+const SearchDrawer = ({ isOpen, toggleIsOpen, searchText }) => {
 
-    const [searchText, setSearchText] = useState("");
     const [searchResults, setSearchResults] = useState([]);
-    const searchTextRef = useRef(null);
-
-    const handleInputChange = event => {
-        setSearchText(event.target.value);
-    }; 
 
     const handleSearchButton = () => {
-        
-        const matchTerm = new RegExp(searchTextRef.current.input.value.replace("aori", "\u0101ori"), "i");
+        const matchTerm = new RegExp(searchText.replace("aori", "\u0101ori"), "i");
         const indResults = indicatorDescriptions.filter(node => {
             return node.shortDescription.match(matchTerm) ||
             node.longDescription.match(matchTerm) ||
@@ -73,11 +66,6 @@ const SearchDrawer = ({ isOpen, toggleIsOpen }) => {
         setSearchResults([indResults, subtopicResults, topicResults]);
     };
 
-    const handleEnterPress = event => {
-        if(event.key === "Enter" && searchText.trim() !== "") {
-            handleSearchButton();
-        }
-    };
 
     const allSearchables = useStaticQuery(graphql`
         query allSearchables {
@@ -131,21 +119,7 @@ const SearchDrawer = ({ isOpen, toggleIsOpen }) => {
         >
             <Container>
                 <SearchBody>
-                    <SearchBar>
-                    <Input
-                        className="search-input"
-                        placeholder="What are you looking for?"
-                        ref={searchTextRef}
-                        onChange={e => handleInputChange(e)}
-                        allowClear
-                        autoFocus
-                        onKeyPress={e => handleEnterPress(e)}
-                        />
-                    <Button type={"primary"} onClick={() => handleSearchButton()} disabled={searchText === ""}>
-                        <Icon type={"search"} />
-                    </Button>
-                    </SearchBar>
-                    {searchTextRef.current && <SearchOutputPanel results={searchResults} search={searchTextRef.current.input.value.replace("aori", "\u0101ori")} />}
+                   <SearchOutputPanel results={searchResults} search={searchText.replace("aori", "\u0101ori")} />
                 </SearchBody>
             </Container>
         </Drawer>

@@ -10,6 +10,7 @@ const StyledContainer = styled.div`
     flex-direction: ${props => props.direction};
     flex-wrap: ${props => props.wrap};
     padding: ${props => props.padding};
+    position: relative;
 `;
 
 const Container = ({ justify = "flex-start", align = "flex-start", direction="row", wrap="nowrap", padding="0", children }) => {
