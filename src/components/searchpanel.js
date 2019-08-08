@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled, { keyframes } from "styled-components";
-import { Input, Icon, Button } from 'antd';
+import { Input, Icon, Button, Modal } from 'antd';
 import SearchDrawer from './searchdrawer';
 
 const { Search } = Input;
@@ -60,8 +60,8 @@ const SearchPanel = ({ toggleOpen }) => {
             <StyledPanel animation={shouldFadeOut}>
                 <Search
                     placeholder="Enter some text to search Kupe"
-                    prefix={<Icon type="search"/>}
-                    enterButton={<Button type="primary" loading={isSearchLoading}>{ isSearchLoading ? "Searching" : "Search"}</Button>}
+                    prefix={<Icon type="search" />}
+                    enterButton={<Button type="primary" loading={isSearchLoading}>{isSearchLoading ? "Searching" : "Search"}</Button>}
                     size="large"
                     onSearch={value => handleSearch()}
                     className="search-bar"
@@ -69,13 +69,20 @@ const SearchPanel = ({ toggleOpen }) => {
                 />
                 <button onClick={() => handleClose()}><Icon type={"close"} /></button>
             </StyledPanel>
-            { showResults &&
-             <SearchDrawer
-              toggleIsOpen={setShowResults.bind(this)}
-              isOpen={showResults}
-              searchText={"Alcohol"}
-             />
-            }
+            <Modal
+                title="Search results"
+                visible={showResults}
+                onOk={e => setShowResults(false)}
+                onCancel={e => setShowResults(false)}
+                className="search-results-modal"
+            >
+                <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in quam a dolor aliquet facilisis. Vivamus at nulla lacus. Nam et feugiat arcu. Quisque egestas id urna a porta. Vestibulum mollis tortor ac justo fringilla accumsan. Aliquam bibendum elit non ornare vestibulum. Sed quis dapibus nisl. Aenean tincidunt ornare risus accumsan vestibulum. Sed blandit tempus erat vel efficitur. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+    
+    Donec nec metus magna. Nunc vel tristique odio. Nunc eu arcu sed lectus pharetra porta. Nulla eget augue eu ante maximus luctus. Phasellus at tellus consectetur, volutpat felis id, pellentesque velit. Fusce in enim eu enim venenatis rhoncus. Pellentesque eget gravida augue. Suspendisse ac mollis ante. Morbi in lorem cursus, ornare purus at, sodales ex.
+                </p>
+
+            </Modal>
         </>
     )
 }

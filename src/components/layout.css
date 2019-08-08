@@ -854,5 +854,21 @@ main {
   z-index: 4;
 }
 
+.search-results-modal.zoom-enter.zoom-enter-active,
+.search-results-modal.zoom-appear.zoom-appear-active {
+  animation-name: antMoveUpIn;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+}
 
+.search-results-modal.zoom-leave.zoom-leave-active {
+  animation-name: antMoveUpOut;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+}
+
+.ant-modal {
+  max-width: 1000px;
+  width: 100% !important;
+}
 
