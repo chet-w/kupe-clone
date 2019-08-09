@@ -46,25 +46,27 @@ const SearchPanel = ({ toggleOpen }) => {
 
     const handleSearch = searchText => {
         setIsSearchLoading(true);
-        const matchTerm = new RegExp(searchText.replace("aori", "\u0101ori"), "i");
-        const indResults = indicatorDescriptions.filter(node => {
-            return node.shortDescription.match(matchTerm) ||
+        setTimeout(() => {
+            const matchTerm = new RegExp(searchText.replace("aori", "\u0101ori"), "i");
+            const indResults = indicatorDescriptions.filter(node => {
+                return node.shortDescription.match(matchTerm) ||
                 node.longDescription.match(matchTerm) ||
                 node.topic.match(matchTerm) ||
                 node.subtopic.match(matchTerm);
         });
         const subtopicResults = subtopicDescriptions.filter(node => {
             return node.name.match(matchTerm) ||
-                node.description.match(matchTerm) ||
-                node.path.match(matchTerm);
+            node.description.match(matchTerm) ||
+            node.path.match(matchTerm);
         });
         const topicResults = topicDescriptions.filter(node => {
             return node.name.match(matchTerm) ||
                 node.description.match(matchTerm)
-        });
-        setResults([indResults, subtopicResults, topicResults]);
-        setShowResults(true)
-        setIsSearchLoading(false)
+            });
+            setResults([indResults, subtopicResults, topicResults]);
+            setShowResults(true)
+            setIsSearchLoading(false)
+        }, 1200);
     };
 
     

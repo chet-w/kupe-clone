@@ -23,6 +23,7 @@ const SearchModal = ({ isOpen, toggleOpen, searchText, results }) => {
             onOk={e => toggleOpen(false)}
             onCancel={e => toggleOpen(false)}
             className="search-results-modal"
+            style={{ top: 20 }}
         >
             {results.length > 0 && (
                 <>
