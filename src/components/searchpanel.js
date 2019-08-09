@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import styled, { keyframes } from "styled-components";
 import { Input, Icon, Button, Modal } from 'antd';
-import SearchDrawer from './searchdrawer';
+import { useStaticQuery, graphql } from 'gatsby';
+import SearchModal from './searchmodal';
 
 const { Search } = Input;
 
@@ -45,15 +46,65 @@ const SearchPanel = ({ toggleOpen }) => {
 
     const handleSearch = searchText => {
         setIsSearchLoading(true);
-        setTimeout(() => {
-            setShowResults(true)
-            setIsSearchLoading(false)
-        }, 1200);
+        const matchTerm = new RegExp(searchText.replace("aori", "\u0101ori"), "i");
+        const indResults = indicatorDescriptions.filter(node => {
+            return node.shortDescription.match(matchTerm) ||
+                node.longDescription.match(matchTerm) ||
+                node.topic.match(matchTerm) ||
+                node.subtopic.match(matchTerm);
+        });
+        const subtopicResults = subtopicDescriptions.filter(node => {
+            return node.name.match(matchTerm) ||
+                node.description.match(matchTerm) ||
+                node.path.match(matchTerm);
+        });
+        const topicResults = topicDescriptions.filter(node => {
+            return node.name.match(matchTerm) ||
+                node.description.match(matchTerm)
+        });
+        setResults([indResults, subtopicResults, topicResults]);
+        setShowResults(true)
+        setIsSearchLoading(false)
     };
+
+    
+    const allSearchables = useStaticQuery(graphql`
+        query allSearchables {
+            allIndicatorDescriptionsJson {
+                nodes {
+                indicator
+                topic
+                subtopic
+                shortDescription
+                longDescription
+                }
+            }
+            allSubtopicDescriptionsJson {
+                nodes {
+                name
+                description
+                path
+                }
+            }
+            allTopicDescriptionsJson {
+                nodes {
+                name
+                description
+                }
+            }
+
+        }
+    `);
+
+    const indicatorDescriptions = allSearchables.allIndicatorDescriptionsJson.nodes;
+    const subtopicDescriptions = allSearchables.allSubtopicDescriptionsJson.nodes;
+    const topicDescriptions = allSearchables.allTopicDescriptionsJson.nodes;
 
     const [shouldFadeOut, setShouldFadeOut] = useState(false);
     const [isSearchLoading, setIsSearchLoading] = useState(false);
     const [showResults, setShowResults] = useState(false);
+    const [results, setResults] = useState([])
+    const searchTextRef = useRef(null);
 
     return (
         <>
@@ -63,26 +114,19 @@ const SearchPanel = ({ toggleOpen }) => {
                     prefix={<Icon type="search" />}
                     enterButton={<Button type="primary" loading={isSearchLoading}>{isSearchLoading ? "Searching" : "Search"}</Button>}
                     size="large"
-                    onSearch={value => handleSearch()}
+                    onSearch={value => handleSearch(value)}
                     className="search-bar"
                     autoFocus
+                    ref={searchTextRef}
                 />
                 <button onClick={() => handleClose()}><Icon type={"close"} /></button>
             </StyledPanel>
-            <Modal
-                title="Search results"
-                visible={showResults}
-                onOk={e => setShowResults(false)}
-                onCancel={e => setShowResults(false)}
-                className="search-results-modal"
-            >
-                <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in quam a dolor aliquet facilisis. Vivamus at nulla lacus. Nam et feugiat arcu. Quisque egestas id urna a porta. Vestibulum mollis tortor ac justo fringilla accumsan. Aliquam bibendum elit non ornare vestibulum. Sed quis dapibus nisl. Aenean tincidunt ornare risus accumsan vestibulum. Sed blandit tempus erat vel efficitur. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-    
-    Donec nec metus magna. Nunc vel tristique odio. Nunc eu arcu sed lectus pharetra porta. Nulla eget augue eu ante maximus luctus. Phasellus at tellus consectetur, volutpat felis id, pellentesque velit. Fusce in enim eu enim venenatis rhoncus. Pellentesque eget gravida augue. Suspendisse ac mollis ante. Morbi in lorem cursus, ornare purus at, sodales ex.
-                </p>
-
-            </Modal>
+            <SearchModal
+             isOpen={showResults}
+             toggleOpen={setShowResults.bind(this)}
+             searchText={searchTextRef.current !== null ? searchTextRef.current.input.state.value : ""}
+             results={results}
+            />
         </>
     )
 }
