@@ -13,6 +13,10 @@ const SearchResult = styled.div`
 
 const Title = styled.div`
     font-weight: bold;
+
+    & a {
+        color: #0080a4;
+    }
 `;
 
 const Trace = styled.div`
