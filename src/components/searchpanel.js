@@ -63,12 +63,26 @@ const SearchPanel = ({ toggleOpen }) => {
             return node.name.match(matchTerm) ||
                 node.description.match(matchTerm)
             });
+            addToSearchHistory(searchText);
             setResults([indResults, subtopicResults, topicResults]);
             setShowResults(true)
             setIsSearchLoading(false)
         }, 1200);
     };
 
+    const addToSearchHistory = searchText => {
+        let history = localStorage.getItem("searchHistory");
+        if(!history) {
+            console.log("new histry")
+            history = [];
+        } else {
+            console.log("old hist")
+            history = JSON.parse(history);
+        }
+        history.push(searchText);
+        const withNewValue = JSON.stringify(history);
+        localStorage.setItem("searchHistory", withNewValue);
+    };
     
     const allSearchables = useStaticQuery(graphql`
         query allSearchables {

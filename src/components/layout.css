@@ -897,3 +897,8 @@ main {
   height: 90%;
 }
 
+.ant-input-search-button {
+  opacity: 0;
+  animation: antFadeIn 0.8s ease forwards;
+}
+
