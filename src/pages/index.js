@@ -4,12 +4,14 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo";
 import Hero from "../components/hero";
+import SplashExplore from "../components/splashexplore";
 import TopicCards from "../components/topiccards";
 
 const IndexPage = ({ data }) => (
-  <Layout page="index">
+  <Layout>
     <SEO title="Home" />
     <Hero />
+    <SplashExplore />
     <TopicCards topics={data.allTopicDescriptionsJson.edges}/>
   </Layout>
 );

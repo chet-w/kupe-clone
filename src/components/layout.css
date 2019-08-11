@@ -849,6 +849,18 @@ main {
   transition: all 0.5s ease;
 }
 
+.ant-btn-primary:hover {
+  background: linear-gradient(to right, #02a7c9, #0080a4);
+}
+
+.ant-btn-ghost {
+  padding: 10px 15px;
+  color: white;
+  height: auto;
+}
+
+
+
 .search-bar .ant-btn-primary {
   background: linear-gradient(to right, #02a7c9, #0080a4);
   z-index: 4;
