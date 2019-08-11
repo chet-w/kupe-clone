@@ -6,6 +6,7 @@
 }
 body {
   font-family: 'Adelle Sans' !important;
+  scroll-behavior: smooth;
   /* width: 100% !important; */
 }
 
@@ -14,6 +15,7 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   overflow-y: auto !important;
+  scroll-behavior: smooth;
 }
 
 
@@ -914,3 +916,14 @@ main {
   animation: antFadeIn 0.8s ease forwards;
 }
 
+.main-filters {
+  width: 100%;
+}
+
+.ant-form-item-control-wrapper {
+  width: 100%;
+}
+
+.filter-item {
+  width: 28%;
+}

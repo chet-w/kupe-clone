@@ -4,7 +4,7 @@ import { Form, Icon, Input, Button } from 'antd';
 // const { Option } =  Select;
 
 
-const MainFilters = ({ form }) => {
+const MainFilters = ({ form, formID }) => {
 
     const { getFieldDecorator, getFieldsError, getFieldError, isFieldTouched } = form;
 
@@ -13,31 +13,28 @@ const MainFilters = ({ form }) => {
     const passwordError = isFieldTouched('password') && getFieldError('password');
 
     return (
-        <Form layout="inline" onSubmit={() => console.log("submitted!")}>
-          <Form.Item validateStatus={usernameError ? 'error' : ''} help={usernameError || ''}>
-            {getFieldDecorator('username', {
-              rules: [{ required: true, message: 'Please input your username!' }],
-            })(
+        <Form className="main-filters" layout="inline" onSubmit={() => console.log("submitted!")} id={formID || null}>
+          <Form.Item className="filter-item">
               <Input
-                prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
-                placeholder="Username"
+                prefix={"1. "}
+                placeholder="Choose a topic"
               />,
-            )}
           </Form.Item>
-          <Form.Item validateStatus={passwordError ? 'error' : ''} help={passwordError || ''}>
-            {getFieldDecorator('password', {
-              rules: [{ required: true, message: 'Please input your Password!' }],
-            })(
+          <Form.Item className="filter-item">
               <Input
-                prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
-                type="password"
-                placeholder="Password"
+                prefix={"2. "}
+                placeholder="Choose a subtopic"
+              />
+          </Form.Item>
+          <Form.Item className="filter-item">
+              <Input
+                prefix={"3. "}
+                placeholder="Choose an indicator"
               />,
-            )}
           </Form.Item>
           <Form.Item>
             <Button type="primary" htmlType="submit">
-              Log in
+              Explore
             </Button>
           </Form.Item>
         </Form>

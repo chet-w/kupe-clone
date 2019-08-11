@@ -18,7 +18,7 @@ const SplashExplore = () => {
         <StyledSplashExplore>
             <Container direction={"column"}>
                 <PageHeading text={"Explore Kupe"} style={{ marginTop: 0 }} />
-                <MainFilters />
+                <MainFilters formID={"explore"}/>
             </Container>
         </StyledSplashExplore>
     )

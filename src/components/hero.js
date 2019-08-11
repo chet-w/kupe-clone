@@ -11,6 +11,9 @@ const StyledHero = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
     /* opacity: 0; */
     color: ${props => props.theme.white};
     /* animation: antFadeIn 0.8s 1.8s ease forwards; */
@@ -58,7 +61,9 @@ const Hero = () => (
                 <a href="https://kupe.hpa.org.nz" target="_blank" rel="noopener noreferrer">
                     <Button type="ghost">See the original</Button>
                 </a>
-                <Button type="primary">Start exploring</Button>
+                <a href="#explore">
+                    <Button type="primary">Start exploring</Button>
+                </a>
             </HeroButtons>
         </Container>
     </StyledHero>
