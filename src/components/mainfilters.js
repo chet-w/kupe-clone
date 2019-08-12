@@ -42,8 +42,16 @@ const MainFilters = ({ form, formID }) => {
         setTopicValue(value);
     };
 
+    const handleSubtopicChange = value => {
+        setSubtopicValue(value);
+    };
+
     const isSubtopicFieldDisabled = () => {
-        return !topics.includes(topicValue);
+        return !topics.includes(topics.find(topic => new RegExp(topic, "i").test(topicValue)));
+    }
+
+    const isIndicatorFieldDisabled = () => {
+        return true;
     }
 
     return (
@@ -57,17 +65,20 @@ const MainFilters = ({ form, formID }) => {
               />
           </Form.Item>
           <Form.Item className="filter-item">
-              <Input
-                prefix={"2. "}
+              <AutoComplete
+                dataSource={Array.from(new Set(subtopics.filter(sub => sub.topic === topicValue).map(sub => sub.subtopic))).sort()}
                 placeholder="Choose a subtopic"
+                onChange={e => handleSubtopicChange(e)}
                 disabled={isSubtopicFieldDisabled()}
+                filterOption={(inputValue, option) => option.props.children.match(new RegExp(inputValue, "i"))}
               />
           </Form.Item>
           <Form.Item className="filter-item">
               <Input
                 prefix={"3. "}
                 placeholder="Choose an indicator"
-              />,
+                disabled={isIndicatorFieldDisabled()}
+              />
           </Form.Item>
           <Form.Item>
             <Button type="primary" htmlType="submit">
