@@ -17,4 +17,4 @@ The Kupe Clone is a Reacy project built with Gatsby based on the Kupe Data Explo
 *  Static assets - Built on Gatsby, each site is statically generated which makes page loads significantly faster. 
 
 ## Live Demo
-See it live [here](https://tender-bohr-397344.netlify.com).
+See it live [here](https://kupe-clone.netlify.com).
