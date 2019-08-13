@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import Container from './ui/container';
 import FooterBody from "./footerbody";
+import { device } from "../lib/device";
 
 
 const StyledFooter = styled.footer`
@@ -13,6 +14,7 @@ const FooterContent = styled.div`
     display: flex;
     justify-content: center;
     padding: 30px 0;
+
 `;
 
 const StyledFooterBorder = styled.div`
@@ -32,7 +34,7 @@ const footer = props => {
         <StyledFooter>
             <FooterBorder />
             <FooterContent>
-                <Container>
+                <Container direction={window.innerWidth <= 376 ? "column": "row"}>
                     <FooterBody />
                 </Container>
             </FooterContent>

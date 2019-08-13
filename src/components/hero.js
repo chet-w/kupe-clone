@@ -20,7 +20,7 @@ const StyledHero = styled.div`
     /* animation: antFadeIn 0.8s 1.8s ease forwards; */
 
     @media ${device.mobileM} {
-        padding: 20px;
+        padding: 60px 20px;
         height: auto;
     }
 
@@ -69,27 +69,27 @@ const HeroButtons = styled.div`
 `;
 
 const Hero = () => (
-    <StyledHero>
-        <Container direction="column">
-            <SplashHeading>The Kupe Clone</SplashHeading>
-            <p>This app is a clone of the Health Promotion Agency's Kupe Data Explorer.</p>
-            <p>The original app was made by Epi-interactive using the R Shiny web framework,
-                while this clone is a remake made using the React static site framework Gatsby.
+        <StyledHero>
+                <Container direction="column">
+                    <SplashHeading>The Kupe Clone</SplashHeading>
+                    <p>This app is a clone of the Health Promotion Agency's Kupe Data Explorer.</p>
+                    <p>The original app was made by Epi-interactive using the R Shiny web framework,
+                        while this clone is a remake made using the React static site framework Gatsby.
             </p>
-            <p>Just like the original app you can browse through a set of topics from the Health
-                and Lifestyles Survey, a survey to understand New Zealanders' views and exerpiences
-                regarding various topics.
+                    <p>Just like the original app you can browse through a set of topics from the Health
+                        and Lifestyles Survey, a survey to understand New Zealanders' views and exerpiences
+                        regarding various topics.
             </p>
-            <HeroButtons>
-                <a href="http://kupe.hpa.org.nz" target="_blank" rel="noopener noreferrer">
-                    <Button type="ghost">See the original</Button>
-                </a>
-                <a href="#explore">
-                    <Button type="primary">Start exploring</Button>
-                </a>
-            </HeroButtons>
-        </Container>
-    </StyledHero>
+                    <HeroButtons>
+                        <a href="http://kupe.hpa.org.nz" target="_blank" rel="noopener noreferrer">
+                            <Button type="ghost">See the original</Button>
+                        </a>
+                        <a href="#explore">
+                            <Button type="primary">Start exploring</Button>
+                        </a>
+                    </HeroButtons>
+                </Container>
+        </StyledHero>
 )
 
 export default Hero

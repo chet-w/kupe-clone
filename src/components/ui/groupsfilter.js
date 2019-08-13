@@ -1,6 +1,7 @@
 import React from 'react';
 import { Select } from 'antd';
 import styled from "styled-components";
+import { device } from "../../lib/device";
 
 const StyledLabel = styled.label`
     font-weight: bold;
@@ -10,6 +11,11 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     margin: 20px 0;
+
+    @media ${device.mobileM} {
+        width: 100%;
+    } 
+    
 `;
 
 const { Option } = Select;
@@ -23,7 +29,7 @@ const GroupsFilter = ({ groups, setNewGroup }) => {
     return (
         <Wrapper>
         <StyledLabel>Show:</StyledLabel>
-        <Select defaultValue="Total" style={{width: "150px"}} onChange={e => handleChange(e)}>
+        <Select className="groups-filter" defaultValue="Total" onChange={e => handleChange(e)}>
             {groups.map(group => <Option value={group}>{group}</Option>)}
         </Select>
         </Wrapper>

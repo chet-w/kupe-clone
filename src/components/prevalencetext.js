@@ -2,10 +2,14 @@ import React from 'react';
 import styled from "styled-components";
 
 import PageSubheading from "./ui/pagesubheading";
+import { device } from "../lib/device";
 
 const Wrapper = styled.div`
     width: 50%;
 
+    @media ${device.mobileM} {
+            width: 100%;
+        } 
 `;
 
 const PrevalenceText = () => {

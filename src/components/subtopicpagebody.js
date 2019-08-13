@@ -9,6 +9,7 @@ import Datatable from "./ui/datatable";
 import GroupsFilter from "./ui/groupsfilter";
 import SourceText from "./ui/source";
 import Notes from "./ui/notes";
+import { device } from "../lib/device";
 
 
 const StyledPrelude = styled.div`
@@ -17,6 +18,10 @@ const StyledPrelude = styled.div`
     & p {
         margin-bottom: 10px;
     }
+
+    @media ${device.mobileM} {
+        width: 100%;
+    } 
 `;
 
 

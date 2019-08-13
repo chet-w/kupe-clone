@@ -6,9 +6,14 @@ import Breadcrumb from "./breadcrumb";
 import TopicHeading from "./topicheading";
 import SubtopiCard from "./subtopiccard";
 import { toPath } from '../lib/helpers';
+import { device } from "../lib/device";
 
 const StyledPrelude = styled.div`
     width: 50%;
+
+    @media ${device.mobileM} {
+        width: 100%;
+    }
 
     & p {
         margin-bottom: 10px;
@@ -22,6 +27,10 @@ const StyledSubtopicCards = styled.div`
     width: 100%;
     margin: 15px;
 
+    @media ${device.mobileM} {
+        margin: 0;
+    }
+
     &  a {
         margin: 15px;
         box-shadow: ${props => props.theme.shadow};
@@ -30,6 +39,11 @@ const StyledSubtopicCards = styled.div`
         &:hover {
             box-shadow: ${props => props.theme.shadowHover}; 
         }
+
+        @media ${device.mobileM} {
+            margin: 15px 0;
+            width: 100%;
+        }   
     }
 `;
 

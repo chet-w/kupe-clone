@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import { device } from "../lib/device";
 
 const FooterLink = styled.button`
     background: transparent;
@@ -15,6 +16,10 @@ const FooterLink = styled.button`
     &.last {
         border: none;
     }
+
+    @media ${device.mobileM} {
+        font-size: 16px;
+    }
 `;
 
 const FooterSection = styled.div`
@@ -24,6 +29,14 @@ const FooterSection = styled.div`
 
     &.last {
         align-items: flex-end;
+    }
+
+    @media ${device.mobileM} {
+        width: 100%;
+
+        &.last {
+            align-items: flex-start;
+        }
     }
 `;
 
@@ -40,6 +53,10 @@ const CreativeCommonsBody = styled.div`
 const FooterImage = styled.img`
     margin: 20px 0;
     width: 150px;
+
+    @media ${device.mobileM} {
+        width: 170px;
+    }
 `;
 
 const FooterNotes = styled.div`
@@ -48,6 +65,14 @@ const FooterNotes = styled.div`
 
     & p {
         margin: 0;
+    }
+
+    @media ${device.mobileM} {
+        font-size: 16px;
+
+        & p {
+            font-size: 16px;
+        }
     }
 `;
 
