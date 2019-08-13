@@ -3,6 +3,7 @@ import styled from "styled-components";
 import splash from "../images/splash.jpg"
 import Container from './ui/container';
 import { Button } from 'antd';
+import { device } from "../lib/device";
 
 const StyledHero = styled.div`
     background: url(${splash});
@@ -18,11 +19,22 @@ const StyledHero = styled.div`
     color: ${props => props.theme.white};
     /* animation: antFadeIn 0.8s 1.8s ease forwards; */
 
+    @media ${device.mobileM} {
+        padding: 20px;
+        height: auto;
+    }
+
     & p {
         font-size: 14px;
         max-width: 60%;
         margin-bottom: 10px;
         line-height: 20px;
+
+        @media ${device.mobileM} {
+            font-size: 18px;
+            max-width: 100%;
+            line-height: 24px;
+        }
     }
 `;
 
@@ -34,6 +46,11 @@ const HeroButtons = styled.div`
     display: flex;
     margin-top: 20px;
 
+    @media ${device.mobileM} {
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+
     & .ant-btn-primary {
         padding: 10px 15px;
         color: white;
@@ -42,6 +59,12 @@ const HeroButtons = styled.div`
 
     & button {
         margin-right: 20px;
+
+        @media ${device.mobileM} {
+            font-size: 18px;
+            width: 100%;
+            margin: 0 0 20px 0;
+        }
     }
 `;
 

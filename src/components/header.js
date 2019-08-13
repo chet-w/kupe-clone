@@ -3,6 +3,7 @@ import styled from "styled-components";
 import React from "react"
 
 import Container from "./ui/container";
+import { device } from "../lib/device";
 import { Link } from "gatsby";
 
 const StyledHeader = styled.header`
@@ -15,15 +16,19 @@ const StyledHeader = styled.header`
 
 const KupeLogo = styled.img`
   width: 200px;
-animation: ${props => props.shouldAnimate ? `antMoveUpIn 0.8s ease forwards` : `none` };
+animation: ${props => props.shouldAnimate ? `antMoveUpIn 0.8s ease forwards` : `none`};
 `;
 
 const StyledHeaderLinks = styled.div`
   display: flex;
   width: 300px;
-  opacity: ${props => props.shouldAnimate ? 0 : 1 };
+  opacity: ${props => props.shouldAnimate ? 0 : 1};
   justify-content: space-between;
-  animation: ${props => props.shouldAnimate ? `antMoveUpIn 0.8s ease 0.6s forwards` : `none` };
+  animation: ${props => props.shouldAnimate ? `antMoveUpIn 0.8s ease 0.6s forwards` : `none`};
+
+  @media ${device.mobileM} {
+      display: none;
+  }
 `;
 
 const HeaderLink = styled.div`
@@ -35,7 +40,7 @@ const Header = ({ siteTitle, page }) => (
   <StyledHeader>
     <Container align="center" justify="space-between">
       <Link to={"/"}>
-        <KupeLogo src={require("../images/logos/kupe.svg")} shouldAnimate={page === "index"}/>
+        <KupeLogo src={require("../images/logos/kupe.svg")} shouldAnimate={page === "index"} />
       </Link>
       <HeaderLinks shouldAnimate={page === "index"} />
     </Container>

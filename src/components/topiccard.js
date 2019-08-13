@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import { toPath } from "../lib/helpers";
+import { device } from "../lib/device";
 
 const StyledTopicCard = styled.div`
     width: 300px;
@@ -29,6 +30,11 @@ const CardBody = styled.div`
     font-size: 14px;
     line-height: 18px;
     margin-top: 10px;
+
+    @media ${device.mobileM} {
+        font-size: 18px;
+        line-height: 24px;
+    }
 `;
 
 const TopicCard = ({ topic }) => {

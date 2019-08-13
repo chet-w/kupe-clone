@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import { device } from "../../lib/device";
 
 const StyledContainer = styled.div`
     max-width: 1000px;
@@ -11,6 +12,14 @@ const StyledContainer = styled.div`
     flex-wrap: ${props => props.wrap};
     padding: ${props => props.padding};
     position: relative;
+
+
+    @media ${device.mobileM} {
+        max-width: 330px;
+    }
+
+    
+
 `;
 
 const Container = ({ justify = "flex-start", align = "flex-start", direction="row", wrap="nowrap", padding="0", children }) => {

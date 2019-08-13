@@ -3,6 +3,7 @@ import styled from "styled-components";
 import MainFilters from "./mainfilters";
 import Container from './ui/container';
 import PageHeading from "./ui/pageheading";
+import { device } from "../lib/device";
 
 const StyledSplashExplore = styled.div`
     width: 100%;
@@ -12,6 +13,10 @@ const StyledSplashExplore = styled.div`
     border-top: solid 2px ${props => props.theme.lightGrey};
     border-bottom: solid 2px ${props => props.theme.lightGrey};
     position: relative;
+
+    @media ${device.mobileM} {
+        padding: 20px 0 60px 0;
+    }
 `;
 
 const Or = styled.div`
@@ -29,6 +34,7 @@ const Or = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
 `;
 
 const InvisibleAnchor = styled.div`

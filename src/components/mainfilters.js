@@ -4,7 +4,7 @@ import { useStaticQuery, graphql, Link } from "gatsby";
 import { Form, Select, Input, Button, AutoComplete } from 'antd';
 import { toPath } from '../lib/helpers';
 
-const { Option } = Select;
+
 
 const MainFilters = ({ form, formID }) => {
 
@@ -82,7 +82,6 @@ const MainFilters = ({ form, formID }) => {
             <Form.Item className="filter-item">
                 <AutoComplete
                     dataSource={topics}
-                    autoFocus
                     placeholder="First choose a topic"
                     onChange={e => handleTopicChange(e)}
                     filterOption={(inputValue, option) => option.props.children.match(new RegExp(inputValue, "i"))}
@@ -106,7 +105,7 @@ const MainFilters = ({ form, formID }) => {
                     filterOption={(inputValue, option) => option.props.children.match(new RegExp(inputValue, "i"))}
                 />
             </Form.Item>
-            <Form.Item>
+            <Form.Item className="explore-button">
                 <Link to={`${toPath(topicValue)}/${toPath(subtopicValue)}/${toPath(indicatorValue)}`}>
                     <a>
                         <Button

@@ -137,7 +137,7 @@ const Nav = ({ page }) => {
 
 
     return (
-        <Affix>
+        <Affix className="sticky-megamenu">
             <StyledNav shouldAnimate={page === "index"}>
                 <Container justify="space-between">
                     <Link to="/" className="kupe-logo">

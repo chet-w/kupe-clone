@@ -7,7 +7,7 @@ import TopicCard from "./topiccard";
 
 import Fade from "react-reveal/Fade";
 
-import { toPath } from "../lib/helpers"
+import { device } from "../lib/device";
 
 const CardsContainer = styled.div`
     display: flex;
@@ -30,6 +30,11 @@ const CardsContainer = styled.div`
 const BrowseTopics = styled.h2`
     width: 100%;
     margin: 30px 0 20px 0;
+
+    @media ${device.mobileM} {
+        margin: 50px 0 20px 0;
+        height: auto;
+    }
 `;
 
 
