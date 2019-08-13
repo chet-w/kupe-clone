@@ -46,12 +46,34 @@ const MainFilters = ({ form, formID }) => {
         setSubtopicValue(value);
     };
 
-    const isSubtopicFieldDisabled = () => {
-        return !topics.includes(topics.find(topic => new RegExp(topic, "i").test(topicValue)));
+    const handleIndicatorChange = value => {
+        setIndicatorValue(value);
     }
 
+    const isSubtopicFieldDisabled = () => {
+        return !topics.includes(topics.find(topic => new RegExp(topic, "i").test(topicValue)));
+    };
+
     const isIndicatorFieldDisabled = () => {
-        return true;
+        const currentSubtopics = Array.from(new Set(subtopics
+        .filter(subtopic => subtopic.topic === topicValue)
+        .map(subtopic => subtopic.subtopic)
+        ));
+
+        return !currentSubtopics
+        .includes(currentSubtopics
+            .find(subtopic => new RegExp(subtopic, "i").test(subtopicValue)));
+    };
+
+    const isExploreButtonDisabled = () => {
+        const currentIndicators = indicators
+        .filter(ind => ind.topic === topicValue &&
+             ind.subtopic === subtopicValue)
+        .map(ind => ind.indicator);
+
+        return !currentIndicators
+        .includes(currentIndicators
+            .find(ind => new RegExp(ind.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), "i").test(indicatorValue)));
     }
 
     return (
@@ -74,14 +96,19 @@ const MainFilters = ({ form, formID }) => {
               />
           </Form.Item>
           <Form.Item className="filter-item">
-              <Input
-                prefix={"3. "}
+              <AutoComplete
+                dataSource={indicators.filter(ind => ind.topic === topicValue && ind.subtopic === subtopicValue).map(ind => ind.indicator)}
                 placeholder="Choose an indicator"
+                onChange={e => handleIndicatorChange(e)}
                 disabled={isIndicatorFieldDisabled()}
+                filterOption={(inputValue, option) => option.props.children.match(new RegExp(inputValue, "i"))}
               />
           </Form.Item>
           <Form.Item>
-            <Button type="primary" htmlType="submit">
+            <Button
+             type="primary"
+             htmlType="submit"
+             disabled={isExploreButtonDisabled()}>
               Explore
             </Button>
           </Form.Item>
