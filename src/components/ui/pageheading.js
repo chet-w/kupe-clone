@@ -5,9 +5,9 @@ const StyledHeading = styled.h2`
     margin: 20px 0;
 `;
 
-const PageHeading = ({ text }) => {
+const PageHeading = ({ text, style }) => {
     return (
-        <StyledHeading>{text}</StyledHeading>
+        <StyledHeading style={style}>{text}</StyledHeading>
     )
 }
 

@@ -12,9 +12,9 @@ import { toPath } from "../lib/helpers"
 const CardsContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
-    margin: 15px 0;
     opacity: 0;
     animation: antMoveDownIn 0.8s ease 2.4s forwards;
+    margin-bottom: 30px;
 
     & .react-reveal {
         margin: 15px;
@@ -27,12 +27,17 @@ const CardsContainer = styled.div`
     }
 `;
 
+const BrowseTopics = styled.h2`
+    width: 100%;
+    margin: 30px 0 20px 0;
+`;
+
 
 const TopicCards = ({ topics }) => {
 
     const getDelay = index => {
         let delay = 0;
-        if(index % 3 === 0) {
+        if (index % 3 === 0) {
             delay = 100;
         } else if (index % 3 === 1) {
             delay = 200;
@@ -43,19 +48,24 @@ const TopicCards = ({ topics }) => {
     }
 
     return (
-        <Container justify="center">
-            <CardsContainer>
-                {topics.map((topic, index) => {
-                    return (
-                        <Fade bottom delay={getDelay(index)}>
-                            <Link key={topic} to={`/${topic.node.path}`}>
-                                <TopicCard topic={topic.node}/>
-                            </Link>
-                        </Fade>
-                    )
-                })}
-            </CardsContainer>
-        </Container>
+        <>
+            <Container>
+                <BrowseTopics>Browse topics</BrowseTopics>
+            </Container>
+            <Container justify="center">
+                <CardsContainer>
+                    {topics.map((topic, index) => {
+                        return (
+                            <Fade bottom delay={getDelay(index)}>
+                                <Link key={topic} to={`/${topic.node.path}`}>
+                                    <TopicCard topic={topic.node} />
+                                </Link>
+                            </Fade>
+                        )
+                    })}
+                </CardsContainer>
+            </Container>
+        </>
     )
 }
 
