@@ -82,7 +82,8 @@ const MainFilters = ({ form, formID }) => {
             <Form.Item className="filter-item">
                 <AutoComplete
                     dataSource={topics}
-                    placeholder="Choose a topic"
+                    autoFocus
+                    placeholder="First choose a topic"
                     onChange={e => handleTopicChange(e)}
                     filterOption={(inputValue, option) => option.props.children.match(new RegExp(inputValue, "i"))}
                 />
@@ -90,7 +91,7 @@ const MainFilters = ({ form, formID }) => {
             <Form.Item className="filter-item">
                 <AutoComplete
                     dataSource={Array.from(new Set(subtopics.filter(sub => sub.topic === topicValue).map(sub => sub.subtopic))).sort()}
-                    placeholder="Choose a subtopic"
+                    placeholder="...then a subtopic"
                     onChange={e => handleSubtopicChange(e)}
                     disabled={isSubtopicFieldDisabled()}
                     filterOption={(inputValue, option) => option.props.children.match(new RegExp(inputValue, "i"))}
@@ -99,7 +100,7 @@ const MainFilters = ({ form, formID }) => {
             <Form.Item className="filter-item">
                 <AutoComplete
                     dataSource={indicators.filter(ind => ind.topic === topicValue && ind.subtopic === subtopicValue).map(ind => ind.indicator)}
-                    placeholder="Choose an indicator"
+                    placeholder="...finally, choose an indicator"
                     onChange={e => handleIndicatorChange(e)}
                     disabled={isIndicatorFieldDisabled()}
                     filterOption={(inputValue, option) => option.props.children.match(new RegExp(inputValue, "i"))}

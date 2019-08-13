@@ -11,6 +11,7 @@ const StyledSplashExplore = styled.div`
     justify-content: center;
     border-top: solid 2px ${props => props.theme.lightGrey};
     border-bottom: solid 2px ${props => props.theme.lightGrey};
+    position: relative;
 `;
 
 const Or = styled.div`
@@ -30,12 +31,18 @@ const Or = styled.div`
     justify-content: center;
 `;
 
+const InvisibleAnchor = styled.div`
+    position: absolute;
+    top: -80px;
+`;
+
 const SplashExplore = () => {
     return (
         <StyledSplashExplore>
+            <InvisibleAnchor id="explore"></InvisibleAnchor>
             <Container direction={"column"}>
                 <PageHeading text={"Explore Kupe"} style={{ marginTop: 0 }} />
-                <MainFilters formID={"explore"}/>
+                <MainFilters/>
                 <Or>
                     OR
                 </Or>
