@@ -34,7 +34,7 @@ const footer = props => {
         <StyledFooter>
             <FooterBorder />
             <FooterContent>
-                <Container direction={window.innerWidth <= 376 ? "column": "row"}>
+                <Container>
                     <FooterBody />
                 </Container>
             </FooterContent>
