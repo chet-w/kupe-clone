@@ -32,7 +32,7 @@ module.exports = {
         background_color: `#02a7c9`,
         theme_color: `#02a7c9`,
         display: `minimal-ui`,
-        icon: `src/images/kupe_tile.svg`, // This path is relative to the root of the site.
+        icon: `src/images/logos/kupe_tile.svg`, // This path is relative to the root of the site.
       },
     },
     {
