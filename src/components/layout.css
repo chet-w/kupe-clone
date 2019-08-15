@@ -7,7 +7,7 @@
 body {
   font-family: 'Adelle Sans' !important;
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   /* width: 100% !important; */
 }
 
