@@ -20,7 +20,7 @@ The Kupe Clone is a Reacy project built with Gatsby based on the Kupe Data Explo
 *  Search - Search for a key term to filter through Topics, Subtopics, and Indicators at anywhere in the app.
 *  Animations - Animations have been added wherever possible (but hopefully not exhaustively)
 *  Static assets - Built on Gatsby, each site is statically generated which makes page loads significantly faster. 
-*  PWA - You can install Kupe now to your phone, tablet, or computer for easy access and even access it's data offline.
+*  Progressive Web App features - You can install Kupe now to your phone, tablet, or computer for easy access and even access it's data offline.
 
 ## Live Demo
 See it live [here](https://kupe-clone.netlify.com).
