@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, { useEffect } from "react"
 import PropTypes from "prop-types"
 import { BackTop } from "antd";
 import { useStaticQuery, graphql } from "gatsby"
@@ -47,14 +47,16 @@ const Layout = ({ children, page }) => {
         }
       }
     }
-  `)
+  `);
+
+
 
   return (
     <>
       <ThemeProvider theme={theme}>
         <>
-          <Header siteTitle={data.site.siteMetadata.title} page={page}/>
-          <Nav page={page}/>
+          <Header siteTitle={data.site.siteMetadata.title} page={page} />
+          <Nav page={page} />
           <main>{children}</main>
           <BackTop />
           <Footer />

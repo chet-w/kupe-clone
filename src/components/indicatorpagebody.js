@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from "styled-components";
 import { Tabs } from 'antd';
 
@@ -13,14 +13,26 @@ import PrevalenceTab from "./prevalencetab";
 import ComparisonsTab from "./comparisonstab";
 import TimeseriesTab from "./timeseriestab";
 import { ethnicities } from '../lib/config';
+import { device } from "../lib/device";
 
 const { TabPane } = Tabs;
 
 const Wrapper = styled.div`
     width: 60%;
+
+    @media ${device.mobileM} {
+            width: 100%;
+        } 
+    
 `;
 
 const IndicatorPageBody = ({ topic, subtopic, indicator, allPrevData, allCompData, allTimeData, indId }) => {
+
+    const [viewPortWidth, setViewportWidth] = useState(0);
+
+    useEffect(() => {
+      setViewportWidth(window.innerWidth);
+    });
 
     // Available years
     const years = allPrevData
@@ -51,7 +63,7 @@ const IndicatorPageBody = ({ topic, subtopic, indicator, allPrevData, allCompDat
                 <PageHeading text={indicator} />
                 <IndicatorDescription indicator={indId}/>
             </Wrapper>
-            <Tabs defaultActiveKey="1">
+            <Tabs defaultActiveKey="1" tabPosition={viewPortWidth < 376 ? "bottom" : "top"}>
                 <TabPane tab="Overview" key="1">
                     <OverviewTab
                      indicator={indicator}
