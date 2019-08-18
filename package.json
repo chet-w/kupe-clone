@@ -24,6 +24,7 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-highlight-words": "^0.16.0",
+    "react-media": "^1.9.2",
     "react-pose": "^4.0.8",
     "react-rellax": "^1.0.3",
     "react-reveal": "^1.2.2",

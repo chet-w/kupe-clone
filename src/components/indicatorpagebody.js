@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from "styled-components";
 import { Tabs } from 'antd';
+import Media from "react-media";
 
 import Container from "./ui/container";
 import Breadcrumb from "./breadcrumb";
@@ -28,11 +29,6 @@ const Wrapper = styled.div`
 
 const IndicatorPageBody = ({ topic, subtopic, indicator, allPrevData, allCompData, allTimeData, indId }) => {
 
-    const [viewPortWidth, setViewportWidth] = useState(0);
-
-    useEffect(() => {
-      setViewportWidth(window.innerWidth);
-    });
 
     // Available years
     const years = allPrevData
@@ -50,10 +46,16 @@ const IndicatorPageBody = ({ topic, subtopic, indicator, allPrevData, allCompDat
         .filter(record => record.group === "Total");
     // Age and sex card data
     const ageSexData = allPrevData
-         .filter(record => record.group.match(/\d\d-\d\d|\d\d\+/) && record.year === latestYear);
+        .filter(record => record.group.match(/\d\d-\d\d|\d\d\+/) && record.year === latestYear);
     // Ethnicity card data
     const ethnicityData = allPrevData
         .filter(record => ethnicities.includes(record.group) && record.year === latestYear);
+
+    const tabs = (
+        <>
+            
+        </>
+    );
 
     return (
         <Container direction="column" padding="20px 0">
@@ -61,28 +63,54 @@ const IndicatorPageBody = ({ topic, subtopic, indicator, allPrevData, allCompDat
             <Wrapper>
                 <TopicHeading topic={topic} />
                 <PageHeading text={indicator} />
-                <IndicatorDescription indicator={indId}/>
+                <IndicatorDescription indicator={indId} />
             </Wrapper>
-            <Tabs defaultActiveKey="1" tabPosition={viewPortWidth < 376 ? "bottom" : "top"}>
-                <TabPane tab="Overview" key="1">
-                    <OverviewTab
-                     indicator={indicator}
-                     overviewData={overviewCardData}
-                     timeseriesData={timeseriesData}
-                     ageSexData={ageSexData}
-                     ethnicityData={ethnicityData}
-                    />
-                </TabPane>
-                <TabPane tab="Prevalence / Mean" key="2">
-                    <PrevalenceTab data={allPrevData} years={years}/>
-                 </TabPane>
-                <TabPane tab="Subgroups comparison" key="3">
-                    <ComparisonsTab data={allCompData} latestYear={latestYear}/>
-                </TabPane>
-                <TabPane tab="Changes over time" key="4">
-                    <TimeseriesTab data={allTimeData} latestYear={latestYear} years={years}/>
-                </TabPane>
-            </Tabs>
+            <Media query="(max-width: 768px)">
+                {matches => 
+                    matches ? 
+                    <Tabs defaultActiveKey="1" tabPosition={"bottom"}>
+                        <TabPane tab="Overview" key="1">
+                            <OverviewTab
+                                indicator={indicator}
+                                overviewData={overviewCardData}
+                                timeseriesData={timeseriesData}
+                                ageSexData={ageSexData}
+                                ethnicityData={ethnicityData}
+                            />
+                        </TabPane>
+                        <TabPane tab="Prevalence / Mean" key="2">
+                            <PrevalenceTab data={allPrevData} years={years} />
+                        </TabPane>
+                        <TabPane tab="Subgroups comparison" key="3">
+                            <ComparisonsTab data={allCompData} latestYear={latestYear} />
+                        </TabPane>
+                        <TabPane tab="Changes over time" key="4">
+                            <TimeseriesTab data={allTimeData} latestYear={latestYear} years={years} />
+                        </TabPane>
+                    </Tabs>
+                    : <Tabs defaultActiveKey="1" tabPosition={"top"}>
+                        <TabPane tab="Overview" key="1">
+                            <OverviewTab
+                                indicator={indicator}
+                                overviewData={overviewCardData}
+                                timeseriesData={timeseriesData}
+                                ageSexData={ageSexData}
+                                ethnicityData={ethnicityData}
+                            />
+                        </TabPane>
+                        <TabPane tab="Prevalence / Mean" key="2">
+                            <PrevalenceTab data={allPrevData} years={years} />
+                        </TabPane>
+                        <TabPane tab="Subgroups comparison" key="3">
+                            <ComparisonsTab data={allCompData} latestYear={latestYear} />
+                        </TabPane>
+                        <TabPane tab="Changes over time" key="4">
+                            <TimeseriesTab data={allTimeData} latestYear={latestYear} years={years} />
+                        </TabPane>
+                    </Tabs>
+                }
+            </Media>
+            
         </Container>
     )
 }

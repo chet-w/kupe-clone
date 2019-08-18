@@ -1036,4 +1036,12 @@ main {
     overflow-x: auto; 
   }
 
+  /* Tabsets */
+  .ant-tabs-bottom-bar {
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    background: white;
+  }
+
 }
