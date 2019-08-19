@@ -65,8 +65,6 @@ const IndicatorDescription = ({ indicator }) => {
 
     const data = res.filter(desc => desc.indicator === indicator)[0];
 
-    console.log(data);
-
     const getLongDescription = () => {
         return {
             __html: data.longDescription
@@ -96,7 +94,6 @@ const Question = ({ question }) => {
 
     const getAnswerText = () => {
         let answerText = question.answers.join(" / ");
-        console.log(answerText);
         if(answerText === "Yes / No") {
             return "Yes/No";
         } 

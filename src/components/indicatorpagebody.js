@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
+import ReactDOM from "react-dom";
 import styled from "styled-components";
 import { Tabs } from 'antd';
-import Media from "react-media";
+import { StickyContainer, Sticky } from "react-sticky";
+import useWindowScrollPosition from '@rehooks/window-scroll-position';
 
 import Container from "./ui/container";
 import Breadcrumb from "./breadcrumb";
@@ -29,6 +31,22 @@ const Wrapper = styled.div`
 
 const IndicatorPageBody = ({ topic, subtopic, indicator, allPrevData, allCompData, allTimeData, indId }) => {
 
+    const tabRef = useRef(null);
+
+    let position = useWindowScrollPosition();
+    
+    useEffect(() => {
+        // const { y } = position;
+        const tabs = ReactDOM.findDOMNode(tabRef.current);
+        const tabPosition = tabs.getBoundingClientRect().top;
+        // console.log(tabPosition)
+        // if(tabPosition <= 0) {
+        //     tabs.style.position = "fixed";
+        //     tabs.style.top = 0;
+        // } else {
+        //     tabs.style.position = "relative";
+        // }
+    })
 
     // Available years
     const years = allPrevData
@@ -51,11 +69,7 @@ const IndicatorPageBody = ({ topic, subtopic, indicator, allPrevData, allCompDat
     const ethnicityData = allPrevData
         .filter(record => ethnicities.includes(record.group) && record.year === latestYear);
 
-    const tabs = (
-        <>
-            
-        </>
-    );
+
 
     return (
         <Container direction="column" padding="20px 0">
@@ -65,54 +79,36 @@ const IndicatorPageBody = ({ topic, subtopic, indicator, allPrevData, allCompDat
                 <PageHeading text={indicator} />
                 <IndicatorDescription indicator={indId} />
             </Wrapper>
-            <Media query="(max-width: 768px)">
-                {matches => 
-                    matches ? 
-                    <Tabs defaultActiveKey="1" tabPosition={"bottom"}>
-                        <TabPane tab="Overview" key="1">
-                            <OverviewTab
-                                indicator={indicator}
-                                overviewData={overviewCardData}
-                                timeseriesData={timeseriesData}
-                                ageSexData={ageSexData}
-                                ethnicityData={ethnicityData}
-                            />
-                        </TabPane>
-                        <TabPane tab="Prevalence / Mean" key="2">
-                            <PrevalenceTab data={allPrevData} years={years} />
-                        </TabPane>
-                        <TabPane tab="Subgroups comparison" key="3">
-                            <ComparisonsTab data={allCompData} latestYear={latestYear} />
-                        </TabPane>
-                        <TabPane tab="Changes over time" key="4">
-                            <TimeseriesTab data={allTimeData} latestYear={latestYear} years={years} />
-                        </TabPane>
-                    </Tabs>
-                    : <Tabs defaultActiveKey="1" tabPosition={"top"}>
-                        <TabPane tab="Overview" key="1">
-                            <OverviewTab
-                                indicator={indicator}
-                                overviewData={overviewCardData}
-                                timeseriesData={timeseriesData}
-                                ageSexData={ageSexData}
-                                ethnicityData={ethnicityData}
-                            />
-                        </TabPane>
-                        <TabPane tab="Prevalence / Mean" key="2">
-                            <PrevalenceTab data={allPrevData} years={years} />
-                        </TabPane>
-                        <TabPane tab="Subgroups comparison" key="3">
-                            <ComparisonsTab data={allCompData} latestYear={latestYear} />
-                        </TabPane>
-                        <TabPane tab="Changes over time" key="4">
-                            <TimeseriesTab data={allTimeData} latestYear={latestYear} years={years} />
-                        </TabPane>
-                    </Tabs>
-                }
-            </Media>
-            
+            <Tabs defaultActiveKey="1" tabPosition={"top"} ref={tabRef}>
+                <TabPane tab="Overview" key="1">
+                    <OverviewTab
+                        indicator={indicator}
+                        overviewData={overviewCardData}
+                        timeseriesData={timeseriesData}
+                        ageSexData={ageSexData}
+                        ethnicityData={ethnicityData}
+                    />
+                </TabPane>
+                <TabPane tab="Prevalence / Mean" key="2">
+                    <PrevalenceTab data={allPrevData} years={years} />
+                </TabPane>
+                <TabPane tab="Subgroups comparison" key="3">
+                    <ComparisonsTab data={allCompData} latestYear={latestYear} />
+                </TabPane>
+                <TabPane tab="Changes over time" key="4">
+                    <TimeseriesTab data={allTimeData} latestYear={latestYear} years={years} />
+                </TabPane>
+            </Tabs>
         </Container>
     )
-}
+};
+
+const StickyTabBar = (props, DefaultTabBar) => (
+    <Sticky bottomOffset={80}>
+        {({ style }) => (
+            <DefaultTabBar {...props} style={{ ...style, zIndex: 1, background: '#fff' }} />
+        )}
+    </Sticky>
+);
 
 export default IndicatorPageBody

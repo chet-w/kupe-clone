@@ -32,7 +32,6 @@ const SubtopicPage = ({ data, location }) => {
         })[0].node.description;
     } catch (e) {
         subtopicDescription = "Failed";
-        console.log(subtopic);
     }
 
 

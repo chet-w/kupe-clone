@@ -31,9 +31,6 @@ const getLongDescription = withHTML => {
 }
 
 const SearchOutput = ({ results, search, type }) => {
-
-    console.log(results[0]);
-
     return (
         type === "Indicators" ?
             <IndicatorOutput results={results[0]} search={search} /> :

@@ -73,10 +73,8 @@ const SearchPanel = ({ toggleOpen }) => {
     const addToSearchHistory = searchText => {
         let history = localStorage.getItem("searchHistory");
         if(!history) {
-            console.log("new histry")
             history = [];
         } else {
-            console.log("old hist")
             history = JSON.parse(history);
         }
         history.push(searchText);

@@ -1037,11 +1037,7 @@ main {
   }
 
   /* Tabsets */
-  .ant-tabs-bottom-bar {
-    position: fixed;
-    bottom: 10px;
-    left: 0;
-    background: white;
+  .ant-tabs-nav-wrap {
+    margin: 0
   }
-
 }
