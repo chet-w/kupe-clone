@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useStaticQuery, graphql, Link } from "gatsby";
 
-import { Form, Select, Input, Button, AutoComplete } from 'antd';
+import { Form, Button, AutoComplete } from 'antd';
 import { toPath } from '../lib/helpers';
 
 
@@ -107,15 +107,13 @@ const MainFilters = ({ form, formID }) => {
             </Form.Item>
             <Form.Item className="explore-button">
                 <Link to={`${toPath(topicValue)}/${toPath(subtopicValue)}/${toPath(indicatorValue)}`}>
-                    <a>
-                        <Button
-                        type="primary"
-                        htmlType="submit"
-                        disabled={isExploreButtonDisabled()}
-                        >
-                        Explore
-                        </Button>
-                    </a>
+                    <Button
+                    type="primary"
+                    htmlType="submit"
+                    disabled={isExploreButtonDisabled()}
+                    >
+                    Explore
+                    </Button>
                 </Link>
             </Form.Item>
         </Form>

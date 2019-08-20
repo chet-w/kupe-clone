@@ -2,7 +2,6 @@ import React from 'react';
 import styled from "styled-components";
 import Container from './ui/container';
 import FooterBody from "./footerbody";
-import { device } from "../lib/device";
 
 
 const StyledFooter = styled.footer`

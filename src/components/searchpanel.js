@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import styled, { keyframes } from "styled-components";
-import { Input, Icon, Button, Modal } from 'antd';
+import { Input, Icon, Button } from 'antd';
 import { useStaticQuery, graphql } from 'gatsby';
 import SearchModal from './searchmodal';
 

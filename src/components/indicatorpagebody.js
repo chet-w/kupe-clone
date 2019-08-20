@@ -1,9 +1,6 @@
-import React, { useRef, useEffect } from 'react';
-import ReactDOM from "react-dom";
+import React from 'react';
 import styled from "styled-components";
 import { Tabs } from 'antd';
-import { StickyContainer, Sticky } from "react-sticky";
-import useWindowScrollPosition from '@rehooks/window-scroll-position';
 
 import Container from "./ui/container";
 import Breadcrumb from "./breadcrumb";

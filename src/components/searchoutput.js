@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from "styled-components";
-import Highligher from "react-highlight-words";
 import { Icon } from 'antd';
 import {dePath, toPath } from "../lib/helpers";
 import { Link } from 'gatsby';
@@ -48,9 +47,7 @@ const IndicatorOutput = ({ results, search }) => (
             <SearchResult>
                 <Title>
                     <Link to={`${toPath(result.topic)}/${toPath(result.subtopic)}/${toPath(result.shortDescription)}`}>
-                        <a>
-                            {result.shortDescription}
-                        </a>
+                        {result.shortDescription}
                     </Link>
                 </Title>
                 <Trace>
@@ -73,9 +70,7 @@ const SubtopicOutput = ({ results, search }) => {
                 <SearchResult>
                     <Title>
                         <Link to={result.path}>
-                            <a>
-                                {result.name}
-                            </a>
+                            {result.name}
                         </Link>
                     </Title>
                     <Trace>
@@ -99,9 +94,7 @@ const TopicOutput = ({ results, search }) => {
                 <SearchResult>
                     <Title>
                         <Link to={toPath(result.name)}>
-                            <a>
-                                {result.name}
-                            </a>
+                            {result.name}
                         </Link>
                     </Title>
                     <div>

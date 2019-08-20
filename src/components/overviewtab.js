@@ -42,9 +42,9 @@ const OverviewTab = ({ indicator, overviewData, timeseriesData, ageSexData, ethn
         <>
             <PageSubeading text={`${overviewData.year} Health and Lifestyles Survey`} />
             <Wrapper>
-                {/* <StyledOverviewCard>
+                <StyledOverviewCard>
                     <OverviewCard data={overviewData}/>
-                </StyledOverviewCard> */}
+                </StyledOverviewCard>
                 <StyledOverviewCard>
                     <TimeseriesCard data={timeseriesData}/>
                 </StyledOverviewCard>

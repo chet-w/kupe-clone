@@ -42,8 +42,8 @@ const PrevalenceDatatable = ({ data, groups, year }) => {
                     key: `${group}CI`
                 });
             }
-
         }
+        return true;
     });
 
     return (

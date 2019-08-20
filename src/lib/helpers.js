@@ -8,7 +8,7 @@ const totalPopulation = require("./config").totalPopulation;
 const toPath = string => {
     const lowered = string.toLowerCase();
     let res = lowered.replace(/ /g, "-");
-    res = res.replace(/\"/g, "");
+    res = res.replace(/"/g, "");
     if (res.includes("\u0101")) {
         res = res.replace(/\u0101/g, "a");
     }
@@ -24,7 +24,7 @@ const dePath = path => {
     if (res.includes("aori")) {
         res = res.replace("aori", "\u0101ori");
     }
-    res = res.replace(/   /g, " - ")
+    res = res.replace(/ {3}/g, " - ")
     return res;
 };
 
@@ -38,7 +38,7 @@ const organiseData = (data, comparisonYears) => {
     const ids = Array.from(new Set(data.map(record => record.indicator)));
 
     const records = ids.map((id, i) => {
-        const justOneInd = data.filter(record => record.indicator == id);
+        const justOneInd = data.filter(record => record.indicator === id);
         const years = justOneInd.map(record => record.year);
         let conciseRecord = {
             indicator: justOneInd[0].indicator,
@@ -47,6 +47,7 @@ const organiseData = (data, comparisonYears) => {
         };
         years.map(year => {
             conciseRecord[year] = Number.parseFloat(justOneInd.find(record => record.year === year).total).toFixed(1);
+            return null;
         });
         comparisonYears.map(year => {
             const strippedYear = year.replace(/\s/g, "");
@@ -60,6 +61,7 @@ const organiseData = (data, comparisonYears) => {
             } else {
                 conciseRecord[strippedYear] = `\u2248`;
             }
+            return null;
         });
 
         return conciseRecord;

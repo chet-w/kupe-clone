@@ -1,14 +1,10 @@
 import React from 'react';
-import styled from "styled-components";
-import { Table, Tag } from "antd";
+import { Table } from "antd";
 import { organiseTimeseriesData } from "../lib/helpers";
 import { prevLabels } from '../lib/config';
 
 const { Column, ColumnGroup } = Table;
 
-const SignificantGroup = styled.div`
-    position: relative;
-`;
 
 const TimeseriesDataTable = ({ data, latestYear, showPvalue }) => {
     const totalVal = data.filter(record => record.group === "Total")[0];
@@ -32,12 +28,12 @@ const TimeseriesDataTable = ({ data, latestYear, showPvalue }) => {
 
     const organised = organiseTimeseriesData(data);
 
-    const determineSignificance = group => {
-        const comparison = organised.find(record => record.group === group);
+    // const determineSignificance = group => {
+    //     const comparison = organised.find(record => record.group === group);
 
-        // TODO: determine significance and format accordingly
-        return true;
-    }
+    //     // TODO: determine significance and format accordingly
+    //     return true;
+    // }
 
     return (
         <Table dataSource={organised} pagination={false}>

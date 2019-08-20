@@ -1,13 +1,6 @@
 import React from 'react';
-import styled from "styled-components";
 import { Modal, Tabs, Badge } from "antd";
 import SearchOutput from "./searchoutput";
-
-const SearchContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-`;
 
 const { TabPane } = Tabs;
 
