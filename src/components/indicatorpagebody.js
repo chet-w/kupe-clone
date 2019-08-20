@@ -31,23 +31,6 @@ const Wrapper = styled.div`
 
 const IndicatorPageBody = ({ topic, subtopic, indicator, allPrevData, allCompData, allTimeData, indId }) => {
 
-    const tabRef = useRef(null);
-
-    let position = useWindowScrollPosition();
-    
-    useEffect(() => {
-        // const { y } = position;
-        const tabs = ReactDOM.findDOMNode(tabRef.current);
-        const tabPosition = tabs.getBoundingClientRect().top;
-        // console.log(tabPosition)
-        // if(tabPosition <= 0) {
-        //     tabs.style.position = "fixed";
-        //     tabs.style.top = 0;
-        // } else {
-        //     tabs.style.position = "relative";
-        // }
-    })
-
     // Available years
     const years = allPrevData
         .filter(record => record.group === "Total")
@@ -79,7 +62,7 @@ const IndicatorPageBody = ({ topic, subtopic, indicator, allPrevData, allCompDat
                 <PageHeading text={indicator} />
                 <IndicatorDescription indicator={indId} />
             </Wrapper>
-            <Tabs defaultActiveKey="1" tabPosition={"top"} ref={tabRef}>
+            <Tabs defaultActiveKey="1" tabPosition={"top"}>
                 <TabPane tab="Overview" key="1">
                     <OverviewTab
                         indicator={indicator}
@@ -102,13 +85,5 @@ const IndicatorPageBody = ({ topic, subtopic, indicator, allPrevData, allCompDat
         </Container>
     )
 };
-
-const StickyTabBar = (props, DefaultTabBar) => (
-    <Sticky bottomOffset={80}>
-        {({ style }) => (
-            <DefaultTabBar {...props} style={{ ...style, zIndex: 1, background: '#fff' }} />
-        )}
-    </Sticky>
-);
 
 export default IndicatorPageBody
