@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { Select, Switch } from "antd";
 import PageSubheading from './ui/pagesubheading';
 import PrevalenceDatatable from "./prevalencedatatable";
+import { device } from "../lib/device";
 
 const { Option } = Select;
 
@@ -10,6 +11,10 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
+
+    @media ${device.mobileM} {
+        flex-direction: column;
+    }
 `;
 
 const Checkboxes = styled.div`
@@ -69,7 +74,7 @@ const PrevalenceTab = ({ data, years }) => {
             <div>
                 <PageSubheading text={"Prevalence for selected indicator"} />
                 <p>This tables shows the percentage of the population affected.</p>
-                <Select defaultValue={currentYear} style={{ width: "150px" }} onChange={e => handleYearChange(e)}>
+                <Select defaultValue={currentYear} style={{ width: "100%" }} onChange={e => handleYearChange(e)}>
                     {years.map(year => <Option value={year}>{year}</Option>)}
                 </Select>
             </div>

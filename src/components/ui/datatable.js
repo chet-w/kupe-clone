@@ -37,7 +37,6 @@ const Datatable = ({ data, indicators, group, topic, subtopic }) => {
             const comparison = `${year} and ${latestYear}`;
             return comparison;
         }
-        return null;
     }).filter(record => record !== undefined);
 
     

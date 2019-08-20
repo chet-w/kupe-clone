@@ -2,9 +2,14 @@ import React from 'react';
 import styled from "styled-components";
 import PageSubheading from "./ui/pagesubheading";
 import ComparisonsDataTable from "./comparisondatatable";
+import { device } from "../lib/device";
 
 const Wrapper = styled.div`
     width: 60%;
+
+    @media ${device.mobileM} {
+        width: 100%;
+    }
 `;
 
 

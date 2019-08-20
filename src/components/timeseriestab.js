@@ -3,15 +3,24 @@ import styled from "styled-components";
 import { Switch } from "antd";
 import PageSubheading from "./ui/pagesubheading";
 import TimeseriesDataTable from "./timeseriesdatatable";
+import { device } from "../lib/device";
 
 const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
+
+    @media ${device.mobileM} {
+        flex-direction: column;
+    }
 `;
 
 const Prelude = styled.div`
     width: 60%;
+
+    @media ${device.mobileM} {
+       width: 100%;
+    }
 `;
 
 const Checkboxes = styled.div`
