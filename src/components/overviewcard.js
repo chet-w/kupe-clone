@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Bar } from "react-chartjs-2";
 import { numberWithCommas } from "../lib/helpers";
 import { totalPopulation } from "../lib/config";
+import { device } from "../lib/device";
 
 
 const Wrapper = styled.div`
@@ -26,12 +27,20 @@ const Annotation = styled.div`
 const Weak = styled.h5`
     font-size: 14px;
     margin: 0;
+
+    @media ${device.mobileM} {
+       font-size: 14px;
+    }
 `;
 
 const Strong = styled.h3`
     font-size: 40px;
     font-weight: bold;
     margin: 0;
+
+    @media ${device.mobileM} {
+       font-size: 25px;
+    }
 
 `;
 

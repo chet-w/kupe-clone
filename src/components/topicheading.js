@@ -1,10 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import { toPath } from "../lib/helpers";
+import { device } from "../lib/device";
 
 
 const Wrapper = styled.div`
     display: flex;
+
+    @media ${device.mobileM} {
+       max-height: 80px;
+    }
 `;
 
 const StyledTopicHeading = styled.h2`
