@@ -3,6 +3,8 @@ import styled from "styled-components";
 import React, { useState } from "react"
 
 import Container from "./ui/container";
+import FeedbackModal from "./feedbackmodal";
+import AboutModal from "./aboutmodal";
 import { device } from "../lib/device";
 import { Link } from "gatsby";
 import { Modal } from "antd";
@@ -61,9 +63,9 @@ const HeaderLinks = ({ shouldAnimate }) => {
 
   const handleModalClick = name => {
     if(name === "Feedback") {
-      setIsFeedbackOpen(true);
-    } else {
-      setIsAboutOpen(true);
+      setIsFeedbackOpen(!isFeedbackOpen);
+    } else if(name === "About"){
+      setIsAboutOpen(!isAboutOpen);
     }
   };
 
@@ -72,8 +74,20 @@ const HeaderLinks = ({ shouldAnimate }) => {
       {links.map(link => (
         <>
           <HeaderLink onClick={() => handleModalClick(link)} key={link}>{link}</HeaderLink>
-          <Modal visible={link === "Feedback" ? isFeedbackOpen : isAboutOpen}>
-            <p>content content content</p>
+          <Modal
+           visible={link === "Feedback" ? isFeedbackOpen : link === "About" ? isAboutOpen : false}
+           title={link}
+           style={{ top: 20 }}
+           onCancel={() => handleModalClick(link)}
+           >
+            {link === "Feedback" ?
+             <FeedbackModal
+              handleClose={handleModalClick.bind(this)}
+             /> : link === "About" ?
+             <AboutModal
+              handleClose={handleModalClick.bind(this)}
+             /> : ""
+             }
           </Modal>
         </>
       ))}
