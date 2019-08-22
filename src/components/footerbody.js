@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from "styled-components";
 import { device } from "../lib/device";
+import { Modal } from 'antd';
 
 const FooterLink = styled.button`
     background: transparent;
@@ -40,8 +41,10 @@ const FooterSection = styled.div`
     }
 `;
 
-const StyledFooterLinks = styled.div`
+const StyledFooterLinks = styled.button`
     display: flex;
+    background: none;
+    border: none;
     
 `;
 
@@ -98,9 +101,44 @@ const FooterBody = () => {
 const FooterLinks = () => {
     const links = ["Contact", "Privacy", "Terms of use"];
 
+    const [isContactOpen, setIsContactOpen] = useState(false);
+    const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
+    const [isTermsOpen, setIsTermsOpen] = useState(false);
+
+    const handleModalClick = name => {
+        if(name === "Contact") {
+            setIsContactOpen(!isContactOpen);
+        } else if(name === "Privacy") {
+            setIsPrivacyOpen(!isPrivacyOpen);
+        } else {
+            setIsTermsOpen(!isTermsOpen);
+        }
+    }
+
     return (
         <StyledFooterLinks>
-            {links.map((link, i) => <FooterLink key={link} className={i === links.length - 1 ? "last" : null}>{link}</FooterLink>)}
+            {links.map((link, i) => (
+            <>
+                <FooterLink
+                key={link}
+                className={i === links.length - 1 ? "last" : null}
+                onClick={() => handleModalClick(links)}
+                >
+                    {link}
+                </FooterLink>
+                <Modal
+                 visible={link === "Contact" ?
+                  isContactOpen :
+                  link === "Privacy" ? 
+                  isPrivacyOpen : 
+                  isTermsOpen}
+                 title={link}
+                 onCancel={() => handleModalClick(link)}
+                >
+                    <p>Footer content</p>
+                </Modal>
+            </>     
+            ))}
         </StyledFooterLinks>
     )
 };
