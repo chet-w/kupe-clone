@@ -1,10 +1,11 @@
 import PropTypes from "prop-types"
 import styled from "styled-components";
-import React from "react"
+import React, { useState } from "react"
 
 import Container from "./ui/container";
 import { device } from "../lib/device";
 import { Link } from "gatsby";
+import { Modal } from "antd";
 
 const StyledHeader = styled.header`
   background: ${props => props.theme.white};
@@ -31,9 +32,12 @@ const StyledHeaderLinks = styled.div`
   }
 `;
 
-const HeaderLink = styled.div`
+const HeaderLink = styled.button`
   color: ${props => props.theme.darkGrey};
   font-size: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
 `;
 
 const Header = ({ siteTitle, page }) => (
@@ -52,9 +56,27 @@ const HeaderLinks = ({ shouldAnimate }) => {
   const links = ["Feedback", "About", "Method"];
   const homeLink = { text: "hpa.org.nz", href: "https://www.hpa.org.nz" };
 
+  const [isFeedbackOpen, setIsFeedbackOpen] = useState(false);
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
+
+  const handleModalClick = name => {
+    if(name === "Feedback") {
+      setIsFeedbackOpen(true);
+    } else {
+      setIsAboutOpen(true);
+    }
+  };
+
   return (
     <StyledHeaderLinks shouldAnimate={shouldAnimate}>
-      {links.map(link => <HeaderLink key={link}>{link}</HeaderLink>)}
+      {links.map(link => (
+        <>
+          <HeaderLink onClick={() => handleModalClick(link)} key={link}>{link}</HeaderLink>
+          <Modal visible={link === "Feedback" ? isFeedbackOpen : isAboutOpen}>
+            <p>content content content</p>
+          </Modal>
+        </>
+      ))}
       <HeaderLink>
         {homeLink.text}
       </HeaderLink>

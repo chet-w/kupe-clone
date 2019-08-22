@@ -8,7 +8,7 @@ const Wrapper = styled.div`
     display: flex;
 
     @media ${device.mobileM} {
-       max-height: 80px;
+        max-height: 160px;
     }
 `;
 
