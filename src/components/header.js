@@ -8,6 +8,7 @@ import AboutModal from "./aboutmodal";
 import { device } from "../lib/device";
 import { Link } from "gatsby";
 import { Modal } from "antd";
+import PageHeading from "./ui/pageheading";
 
 const StyledHeader = styled.header`
   background: ${props => props.theme.white};
@@ -76,7 +77,7 @@ const HeaderLinks = ({ shouldAnimate }) => {
           <HeaderLink onClick={() => handleModalClick(link)} key={link}>{link}</HeaderLink>
           <Modal
            visible={link === "Feedback" ? isFeedbackOpen : link === "About" ? isAboutOpen : false}
-           title={link}
+           title={<PageHeading text={link}/>}
            style={{ top: 20 }}
            onCancel={() => handleModalClick(link)}
            >

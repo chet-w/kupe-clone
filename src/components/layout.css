@@ -7,7 +7,6 @@
 body {
   font-family: 'Adelle Sans' !important;
   padding: 0 !important;
-  overflow: auto !important;
   /* scroll-behavior: smooth; */
   /* overflow-x: hidden; */
   /* width: 100% !important; */
@@ -720,6 +719,12 @@ main {
   display: block;
   animation: antMoveRightIn 0.3s ease forwards;
   color: #02a7c9;
+}
+
+.sticky-megamenu {
+  position: sticky;
+  top: 0;
+  z-index: 5;
 }
 
 .ant-tabs {
