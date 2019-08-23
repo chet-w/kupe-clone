@@ -10,6 +10,14 @@ const TabSection = styled.div`
     & h4 {
         margin: 0 0 10px 0;
     } 
+
+    & p {
+        margin: 0 0 5px 0;
+    }
+
+    & ul {
+        margin-left: 1.45rem;
+    }
 `;
 
 const AboutModal = () => (
@@ -94,8 +102,11 @@ const CloneTab = () => (
             </ul>
         </TabSection>
         <TabSection>
-            <h4>THE TECH</h4>
-            <p>Though I've worked with Shiny for a while myself, my main interest is </p>
+            <h4>DEVELOPMENT</h4>
+            <p>Though I've worked with Shiny for a while myself, my main interest is JavaScript so I chose React for this project, more specifically, Gatsby. 
+                Gatsby offered great performance, simple routing, and an intuative way to interact with the data by using GraphQL. The user interface design is based 
+                mainly on the original app while also incorperating elements to improvement the look of things with my prefered UI library <a href="https://ant.design" target="_blank" rel="noopener noreferrer">ant design</a>.</p>
+            <p>Built out as a static site, the project is hosted on Netlify and delivered across their CDN to ensure it's delivered quickly to users.</p>
         </TabSection>
     </>
 )
