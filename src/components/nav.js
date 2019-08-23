@@ -137,7 +137,7 @@ const Nav = ({ page }) => {
 
 
     return (
-        <Affix className="sticky-megamenu">
+        <div className="sticky-megamenu">
             <StyledNav shouldAnimate={page === "index"}>
                 <Container justify="space-between">
                     <Link to="/" className="kupe-logo">
@@ -173,7 +173,7 @@ const Nav = ({ page }) => {
                     </div>
                 </Container>
             </StyledNav>
-        </Affix>
+        </div>
     )
 };
 

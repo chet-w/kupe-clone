@@ -6,7 +6,9 @@
 }
 body {
   font-family: 'Adelle Sans' !important;
-  scroll-behavior: smooth;
+  padding: 0 !important;
+  overflow: auto !important;
+  /* scroll-behavior: smooth; */
   /* overflow-x: hidden; */
   /* width: 100% !important; */
 }
@@ -16,7 +18,7 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   overflow-y: auto !important;
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
 }
 
 

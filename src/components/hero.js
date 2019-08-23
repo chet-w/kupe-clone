@@ -84,9 +84,7 @@ const Hero = () => (
                         <a href="http://kupe.hpa.org.nz" target="_blank" rel="noopener noreferrer">
                             <Button type="ghost">See the original</Button>
                         </a>
-                        <a href="#explore">
                             <Button type="primary">Start exploring</Button>
-                        </a>
                     </HeroButtons>
                 </Container>
         </StyledHero>
