@@ -148,7 +148,18 @@ const organiseTimeseriesData = data => {
     const ordered = data.sort(function(a, b) {
         return prevGroups.indexOf(a.group) - prevGroups.indexOf(b.group);
     });
-    return ordered;
+    
+    const formatted = ordered.map(row => addDashes(row));
+    return formatted;
+};
+
+const addDashes = row => {
+    Object.keys(row).forEach(value => {
+        if(row[value] === "NA" || row[value] === "NaN") {
+            row[value] = "-"
+        }	
+    });
+    return row;
 }
 
 
