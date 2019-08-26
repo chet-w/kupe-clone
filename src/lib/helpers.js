@@ -138,7 +138,7 @@ const organiseComparisonsData = data => {
     const ordered = reduced.sort(function(a, b){  
         return subgroupGroups.indexOf(a.comparison) - subgroupGroups.indexOf(b.comparison);
     });
-
+    
     return ordered;
 };
 

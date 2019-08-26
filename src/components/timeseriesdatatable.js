@@ -26,6 +26,7 @@ const TimeseriesDataTable = ({ data, latestYear, showPvalue }) => {
         }
     }).filter(comp => comp.colComparison.includes(`and ${latestYear}`));
 
+    console.log(data);
     const organised = organiseTimeseriesData(data);
 
     // const determineSignificance = group => {
@@ -51,7 +52,15 @@ const TimeseriesDataTable = ({ data, latestYear, showPvalue }) => {
             </ColumnGroup>
             {showPvalue && <ColumnGroup title="Statistical difference between years (p value)">
                 {comparisonYears.map(comp => (
-                    <Column title={comp.colComparison} key={comp.dataComparison} dataIndex={comp.dataComparison} />
+                    <Column title={comp.colComparison} key={comp.dataComparison} dataIndex={comp.dataComparison} render={
+                        years => {
+                            let returnValue = years;
+                            if(years < 0.05) {
+                                returnValue = <strong>{years}</strong>
+                            }
+                            return returnValue;
+                        } 
+                    }/>
                 ))}
             </ColumnGroup>}
         </Table>
