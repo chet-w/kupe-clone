@@ -144,6 +144,17 @@ const organiseComparisonsData = data => {
 
 const organiseTimeseriesData = data => {
 
+    data.map(row => {
+        Object.keys(row).forEach(key => {
+            if(key.includes("p_value")) {
+                row[key] =  Number.parseFloat(row[key]).toFixed(3).substring(1);
+            } else if(key.includes("percent")){
+                row[key] =  Number.parseFloat(row[key]).toFixed(1);
+            }	
+        })
+    });
+
+
     prevLabels.map(label => data.push({ group: label }));
     const ordered = data.sort(function(a, b) {
         return prevGroups.indexOf(a.group) - prevGroups.indexOf(b.group);
