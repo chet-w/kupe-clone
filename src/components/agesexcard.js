@@ -20,13 +20,13 @@ const AgeSexCard = ({ data }) => {
         const withGradient = chartData;
         const ctx = canvas.getContext("2d");
         // Male Gradient
-        const male = ctx.createLinearGradient(0, 300, 0, 0);
-        male.addColorStop(0, '#80CED7');
-        male.addColorStop(1, '#007EA7');
+        const male = ctx.createLinearGradient(0, 800, 0, 0);
+        male.addColorStop(0, '#024bc9');
+        male.addColorStop(1, '#02a7c9');
         // Female Gradient
         const female = ctx.createLinearGradient(0, 300, 0, 0);
-        female.addColorStop(0, '#20A4F3');
-        female.addColorStop(1, '#182B3A');
+        female.addColorStop(0, '#00497a');
+        female.addColorStop(1, '#0080a4');
 
         withGradient.datasets[0].backgroundColor = [male,male,male,male,male,male];
         withGradient.datasets[1].backgroundColor = [female,female,female,female,female,female];

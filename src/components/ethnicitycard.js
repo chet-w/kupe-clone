@@ -34,9 +34,8 @@ const EthnicityCard = ({ data }) => {
         const ctx = canvas.getContext("2d");
         // Gradient
         const gradient = ctx.createLinearGradient(0, 300, 0, 0);
-        gradient.addColorStop(0, '#20A4F3');
-        gradient.addColorStop(1, '#182B3A');
-        
+        gradient.addColorStop(0, '#00497a');
+        gradient.addColorStop(1, '#0080a4');
 
         withGradient.datasets[0].backgroundColor = [gradient,gradient,gradient,gradient,gradient,gradient];
         return withGradient;

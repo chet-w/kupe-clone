@@ -68,7 +68,6 @@ const TimeseriesDataTable = ({ data, latestYear, showPvalue }) => {
                         years => {
                             let returnValue = years;
                             if (years < 0.05) {
-                                // returnValue = <Badge dot><strong>{years}</strong></Badge>
                                 returnValue = (
                                     <SignificantGroup>
                                         <strong>{years}</strong>
