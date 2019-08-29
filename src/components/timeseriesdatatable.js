@@ -1,9 +1,21 @@
 import React from 'react';
-import { Table } from "antd";
+import styled from "styled-components";
+import { Table, Tag } from "antd";
 import { organiseTimeseriesData } from "../lib/helpers";
 import { prevLabels } from '../lib/config';
 
 const { Column, ColumnGroup } = Table;
+
+const SignificantGroup = styled.div`
+    position: relative;
+
+    & .ant-tag.tag-significant {
+        position: absolute;
+        left: 25%;
+        text-align: center;
+        right: auto;
+    }
+`;
 
 
 const TimeseriesDataTable = ({ data, latestYear, showPvalue }) => {
@@ -12,7 +24,7 @@ const TimeseriesDataTable = ({ data, latestYear, showPvalue }) => {
     const years = yearsCols.map(year => {
         return {
             dataYear: year,
-            colYear: Number.parseInt(`20${year.substring(year.indexOf("_")+1)}`)
+            colYear: Number.parseInt(`20${year.substring(year.indexOf("_") + 1)}`)
         }
     });
 
@@ -40,11 +52,11 @@ const TimeseriesDataTable = ({ data, latestYear, showPvalue }) => {
         <Table dataSource={organised} pagination={false}>
             <Column title="Population group" width="35%" dataIndex="group" key="group" render={group => {
                 let res = group;
-                if(prevLabels.includes(group)) {
+                if (prevLabels.includes(group)) {
                     res = <strong>{group}</strong>
                 }
                 return res;
-            }}/>
+            }} />
             <ColumnGroup title="Unadjusted prevalence">
                 {years.map(year => (
                     <Column title={year.colYear} key={year.dataYear} dataIndex={year.dataYear} />
@@ -55,12 +67,18 @@ const TimeseriesDataTable = ({ data, latestYear, showPvalue }) => {
                     <Column title={comp.colComparison} key={comp.dataComparison} dataIndex={comp.dataComparison} render={
                         years => {
                             let returnValue = years;
-                            if(years < 0.05) {
-                                returnValue = <strong>{years}</strong>
+                            if (years < 0.05) {
+                                // returnValue = <Badge dot><strong>{years}</strong></Badge>
+                                returnValue = (
+                                    <SignificantGroup>
+                                        <strong>{years}</strong>
+                                        <Tag className="tag-significant" color="blue">Significant</Tag>
+                                    </SignificantGroup>
+                                )
                             }
                             return returnValue;
-                        } 
-                    }/>
+                        }
+                    } />
                 ))}
             </ColumnGroup>}
         </Table>
