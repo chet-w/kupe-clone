@@ -154,8 +154,11 @@ const organiseTimeseriesData = data => {
         })
     });
 
-
-    prevLabels.map(label => data.push({ group: label }));
+    prevLabels.map(label => {
+        if(data.filter(value => value.group === label).length < 1){
+            data.push({ group: label })
+        }
+    });
     const ordered = data.sort(function(a, b) {
         return prevGroups.indexOf(a.group) - prevGroups.indexOf(b.group);
     });

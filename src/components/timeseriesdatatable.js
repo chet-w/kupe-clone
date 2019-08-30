@@ -41,16 +41,9 @@ const TimeseriesDataTable = ({ data, latestYear, showPvalue }) => {
     console.log(data);
     const organised = organiseTimeseriesData(data);
 
-    // const determineSignificance = group => {
-    //     const comparison = organised.find(record => record.group === group);
-
-    //     // TODO: determine significance and format accordingly
-    //     return true;
-    // }
-
     return (
         <Table dataSource={organised} pagination={false}>
-            <Column title="Population group" width="35%" dataIndex="group" key="group" render={group => {
+            <Column title="Population group" width="25%" dataIndex="group" key="group" render={group => {
                 let res = group;
                 if (prevLabels.includes(group)) {
                     res = <strong>{group}</strong>
