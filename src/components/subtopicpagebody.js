@@ -9,6 +9,7 @@ import Datatable from "./ui/datatable";
 import GroupsFilter from "./ui/groupsfilter";
 import SourceText from "./ui/source";
 import Notes from "./ui/notes";
+import ShareArea from "./sharearea";
 import { device } from "../lib/device";
 
 
@@ -36,7 +37,10 @@ const SubtopicPageBody = ({topic, subtopic, description, indicators, indicatorDa
     return (
         <Container direction="column" padding="20px 0">
             <Breadcrumb items={[topic, subtopic]} />
-            <TopicHeading topic={topic} />
+            <Container justify="space-between" align="center">
+                <TopicHeading topic={topic} />
+                <ShareArea />
+            </Container>
             <PageHeading text={subtopic}/>
             <SubtopicPrelude description={description}/>
             <PrevalenceText />
