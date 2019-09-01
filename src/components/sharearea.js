@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import { Icon, message } from "antd";
+import { Icon, message, notification } from "antd";
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 const Container = styled.div`
@@ -51,9 +51,26 @@ const ShareArea = props => {
         maxCount: 1
     });
 
+    notification.config({
+        duration: 3
+    });
+
     const handleShare = () => {
         message.success("Copied a link to this page to your clipboard!");
-    }
+    };
+
+    const handlePrint = () => {
+        notification.open({
+            message: 'Generating report',
+            description: (
+                <p>Generating a report for Alcohol > Alcohol attitudes.<br/>
+                This could take few seconds.</p>
+            ),
+            onClick: () => {
+              console.log('Notification Clicked!');
+            },
+          });
+    };
 
     return (
         <Container>
@@ -64,13 +81,13 @@ const ShareArea = props => {
                     <li><button>Download the data (csv)</button></li>
                     <li>
                     <CopyToClipboard
-                        text={document ? document.location : ""}
+                        text={typeof document !== undefined ? document.location : ""}
                         onCopy={() => handleShare()}
                     >
                         <button>Share this page</button>
                     </CopyToClipboard>
                     </li>
-                    <li><button>Print a report</button></li>
+                    <li><button onClick={() => handlePrint()}>Print a report</button></li>
                 </ShareOptions>
             </StyledShareArea>
         </Container>
