@@ -72,16 +72,29 @@ const ShareArea = props => {
           });
     };
 
+    const handleCSV = () => {
+        notification.open({
+            message: 'Generating CSV download',
+            description: (
+                <p>Generating a CSV file for Alcohol > Alcohol attitudes.<br/>
+                This could take few seconds.</p>
+            ),
+            onClick: () => {
+              console.log('Notification Clicked!');
+            },
+          });
+    };
+
     return (
         <Container>
             <StyledShareArea>
                 <Icon type="share-alt" />
                 <ShareOptions>
                     <h5>Share</h5>
-                    <li><button>Download the data (csv)</button></li>
+                    <li><button onClick={() => handleCSV()}>Download the data (csv)</button></li>
                     <li>
                     <CopyToClipboard
-                        text={typeof document !== undefined ? document.location : ""}
+                        text={"https://kupe-clone.netlify.com"}
                         onCopy={() => handleShare()}
                     >
                         <button>Share this page</button>
