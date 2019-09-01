@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
-import { Icon } from "antd";
+import { Icon, message } from "antd";
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 const Container = styled.div`
     max-width: 300px;
@@ -28,18 +29,48 @@ const ShareOptions = styled.ul`
 
     & li {
         margin: 0;
+
+        & button {
+            margin: 0;
+            padding: 0;
+            border: none;
+            background: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover {
+                color: ${props => props.theme.lightBlue};
+            }
+        }
     }
 `
 
 const ShareArea = props => {
+
+    message.config({
+        maxCount: 1
+    });
+
+    const handleShare = () => {
+        message.success("Copied a link to this page to your clipboard!");
+    }
+
     return (
         <Container>
             <StyledShareArea>
                 <Icon type="share-alt" />
                 <ShareOptions>
                     <h5>Share</h5>
-                    <li>Download data (csv)</li>
-                    <li>Share this page</li>
+                    <li><button>Download the data (csv)</button></li>
+                    <li>
+                    <CopyToClipboard
+                        text={document ? document.location : ""}
+                        onCopy={() => handleShare()}
+                    >
+                        <button>Share this page</button>
+                    </CopyToClipboard>
+                    </li>
+                    <li><button>Print a report</button></li>
                 </ShareOptions>
             </StyledShareArea>
         </Container>
