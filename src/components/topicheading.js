@@ -25,8 +25,8 @@ const Icon = styled.img`
 const TopicHeading = ({ topic, isMainheading=false }) => {
     return (
         <Wrapper>
-            <Icon src={require(`../images/topic-icons/${toPath(topic)}.svg`)} />
-            <StyledTopicHeading isMainheading={isMainheading}>{topic}</StyledTopicHeading>
+            <Icon src={require(`../images/topic-icons/${toPath(topic)}.svg`)} id="topic-icon"/>
+            <StyledTopicHeading id="topic-heading" isMainheading={isMainheading}>{topic}</StyledTopicHeading>
         </Wrapper>
     )
 }

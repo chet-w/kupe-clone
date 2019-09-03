@@ -2,6 +2,8 @@ import React from 'react';
 import styled from "styled-components";
 import { Icon, message, notification } from "antd";
 import { CopyToClipboard } from 'react-copy-to-clipboard';
+import axios from "axios";
+import download from "downloadjs";
 
 const Container = styled.div`
     max-width: 300px;
@@ -59,7 +61,7 @@ const ShareArea = props => {
         message.success("Copied a link to this page to your clipboard!");
     };
 
-    const handlePrint = () => {
+    const handlePrint = async () => {
         notification.open({
             message: 'Generating report',
             description: (
@@ -70,6 +72,14 @@ const ShareArea = props => {
               console.log('Notification Clicked!');
             },
           });
+        await axios.post("http://localhost:5018/print", {
+            url: "https://kupe-clone.netlify.com/alcohol/alcohol-attitudes",
+            level: "subtopic"
+        });
+        const res = await axios.get("http://localhost:5018/download");
+
+        const content = res.headers['content-type'];
+           download(res.data, content);
     };
 
     const handleCSV = () => {
@@ -83,6 +93,7 @@ const ShareArea = props => {
               console.log('Notification Clicked!');
             },
           });
+          
     };
 
     return (

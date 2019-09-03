@@ -14,7 +14,7 @@ const Wrapper = styled.div`
 
 const PrevalenceText = () => {
     return (
-        <Wrapper>
+        <Wrapper id="prevalence-text">
             <PageSubheading text={"Prevalence for selected subtopic"}/>
             <p>This table gives the percentage of the population affected (that is, the unadjusted prevalence in the specified population). Click on an indicator to find out more about it.</p>
         </Wrapper>

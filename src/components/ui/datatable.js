@@ -86,11 +86,11 @@ const Datatable = ({ data, indicators, group, topic, subtopic }) => {
 
     return (
         <>
-            <Table dataSource={prevData} columns={tableColumns} pagination={false}/>
+            <Table id="prevalence-table" dataSource={prevData} columns={tableColumns} pagination={false}/>
             {meanData.length > 0 ? (
                 <>
                     <MeanText />
-                    <Table dataSource={meanData} columns={tableColumns} pagination={false}/>
+                    <Table id="mean-table" dataSource={meanData} columns={tableColumns} pagination={false}/>
                 </>
             ) : null }
             

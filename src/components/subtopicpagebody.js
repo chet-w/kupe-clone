@@ -41,7 +41,7 @@ const SubtopicPageBody = ({topic, subtopic, description, indicators, indicatorDa
                 <TopicHeading topic={topic} />
                 <ShareArea />
             </Container>
-            <PageHeading text={subtopic}/>
+            <PageHeading text={subtopic} id="subtopic-heading"/>
             <SubtopicPrelude description={description}/>
             <PrevalenceText />
             <GroupsFilter groups={filterGroups} setNewGroup={handleGroupChange.bind(this)}/>
@@ -54,7 +54,7 @@ const SubtopicPageBody = ({topic, subtopic, description, indicators, indicatorDa
 
 const SubtopicPrelude = ({ description }) => (
     <>
-        <StyledPrelude>
+        <StyledPrelude id="subtopic-description">
             <p>{description}</p>
         </StyledPrelude>
     </>
