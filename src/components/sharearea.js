@@ -76,10 +76,18 @@ const ShareArea = props => {
             url: "https://kupe-clone.netlify.com/alcohol/alcohol-attitudes",
             level: "subtopic"
         });
-        const res = await axios.get("http://localhost:5018/download");
-
+        const res = await axios({
+            url: 'http://localhost:5018/download',
+            method: 'GET',
+            responseType: 'blob',
+        });
         const content = res.headers['content-type'];
-           download(res.data, content);
+
+        download(res.data, "report.pdf", content);
+
+        //    download(res.data, content);
+        
+        console.log(res);
     };
 
     const handleCSV = () => {
