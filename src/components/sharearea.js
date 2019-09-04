@@ -75,15 +75,17 @@ const ShareArea = props => {
         await axios.post("http://localhost:5018/print", {
             url: "https://kupe-clone.netlify.com/alcohol/alcohol-attitudes",
             level: "subtopic"
-        });
+        }).catch(err => message.error("Kupe will need to be online before you can generate a report. Try again when you're back on a network connection."));;
         const res = await axios({
             url: 'http://localhost:5018/download',
             method: 'GET',
             responseType: 'blob',
-        });
-        message.success("Report download complete!");
-        const content = res.headers['content-type'];
-        download(res.data, "report.pdf", content);
+        })
+        if(res){
+            message.success("Report download complete!");
+            const content = res.headers['content-type'];
+            download(res.data, "report.pdf", content);
+        }
     };
 
     const handleCSV = () => {
