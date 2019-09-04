@@ -81,13 +81,9 @@ const ShareArea = props => {
             method: 'GET',
             responseType: 'blob',
         });
+        message.success("Report download complete!");
         const content = res.headers['content-type'];
-
         download(res.data, "report.pdf", content);
-
-        //    download(res.data, content);
-        
-        console.log(res);
     };
 
     const handleCSV = () => {
