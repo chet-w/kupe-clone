@@ -948,6 +948,55 @@ main {
   margin: 0;
 }
 
+.search-bar {
+  position: relative;
+  position: relative;
+  margin-right: 40px;
+}
+
+.search-bar input {
+  border: none;
+  position: relative;
+  border-bottom: solid 2px #02a7c9;
+  border-radius: 0;
+}
+
+
+.search-bar input:focus, 
+.search-bar input:active,
+.search-bar input:hover {
+  border: none;
+  box-shadow: none;
+  border-bottom: solid 2px #02a7c9;
+  border-radius: 0;
+}  
+
+.ant-input,
+.ant-select {
+  border: none;
+    position: relative;
+    border-bottom: solid 2px #02a7c9;
+    border-radius: 0 !important;
+    border-width: 2px !important;
+}
+
+.ant-input:focus, 
+.ant-input:active,
+.ant-input:hover,
+.ant-select:focus, 
+.ant-select:active,
+.ant-select:hover {
+  border: none;
+  box-shadow: none;
+  border-bottom: solid 2px #02a7c9;
+  border-radius: 0 !important;
+  border-width: 2px !important;
+}  
+
+.ant-select-selection {
+  border: none;
+}
+
 
 
 /* Media queries */
