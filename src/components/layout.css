@@ -971,8 +971,7 @@ main {
   border-radius: 0;
 }  
 
-.ant-input,
-.ant-select {
+.ant-input{
   border: none;
     position: relative;
     border-bottom: solid 2px #02a7c9;
@@ -982,10 +981,7 @@ main {
 
 .ant-input:focus, 
 .ant-input:active,
-.ant-input:hover,
-.ant-select:focus, 
-.ant-select:active,
-.ant-select:hover {
+.ant-input:hover {
   border: none;
   box-shadow: none;
   border-bottom: solid 2px #02a7c9;
@@ -995,6 +991,14 @@ main {
 
 .ant-select-selection {
   border: none;
+}
+
+li.ant-select-search.ant-select-search--inline {
+  border: none;
+}
+
+.ant-select-auto-complete.ant-select .ant-input[disabled] {
+  border-color: #e6d8d8;
 }
 
 

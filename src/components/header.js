@@ -41,6 +41,10 @@ const HeaderLink = styled.button`
   background: none;
   border: none;
   cursor: pointer;
+
+  & a {
+    color: ${props => props.theme.darkGrey};
+  }
 `;
 
 const Header = ({ siteTitle, page }) => (
@@ -74,7 +78,10 @@ const HeaderLinks = ({ shouldAnimate }) => {
     <StyledHeaderLinks shouldAnimate={shouldAnimate}>
       {links.map(link => (
         <>
+          { link === "Method" ? <Link to="/method"><HeaderLink>Method</HeaderLink></Link> :
           <HeaderLink onClick={() => handleModalClick(link)} key={link}>{link}</HeaderLink>
+          }
+          
           <Modal
            visible={link === "Feedback" ? isFeedbackOpen : link === "About" ? isAboutOpen : false}
            title={<PageHeading text={link}/>}
@@ -87,7 +94,8 @@ const HeaderLinks = ({ shouldAnimate }) => {
              /> : link === "About" ?
              <AboutModal
               handleClose={handleModalClick.bind(this)}
-             /> : ""
+             /> : 
+             ""
              }
           </Modal>
         </>
