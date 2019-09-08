@@ -1010,6 +1010,11 @@ li.ant-select-search.ant-select-search--inline {
   right: calc((100vw - 1000px) /2);
 }
 
+#method-page > div > div[class=""] {
+  position: absolute;
+  right: 8px;
+}
+
 
 
 /* Media queries */
