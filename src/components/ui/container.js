@@ -22,9 +22,9 @@ const StyledContainer = styled.div`
 
 `;
 
-const Container = ({ justify = "flex-start", align = "flex-start", direction="row", wrap="nowrap", padding="0", children }) => {
+const Container = ({ justify = "flex-start", align = "flex-start", direction="row", wrap="nowrap", padding="0", children, id }) => {
     return (
-        <StyledContainer justify={justify} align={align} direction={direction} wrap={wrap} padding={padding}>
+        <StyledContainer justify={justify} align={align} direction={direction} wrap={wrap} padding={padding} id={id}>
             {children}
         </StyledContainer>
     )

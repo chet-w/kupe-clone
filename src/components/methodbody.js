@@ -1,10 +1,14 @@
 import React from 'react';
+import { Anchor } from 'antd';
+
 import styled from "styled-components";
 import Container from './ui/container';
 import PageHeading from './ui/pageheading';
 import PageSubheading from './ui/pagesubheading';
 import Breadcrumb from "./breadcrumb";
 import MethodPopulationTable from "./methodpopulationtable";
+
+const { Link } = Anchor;
 
 const MethodSection = styled.section`
     margin-top: 20px;
@@ -33,7 +37,8 @@ const MethodContainer = styled.div`
 `;
 
 const MethodBody = () => (
-    <Container direction={"column"} padding={"20px 0"}>
+    <Container direction={"column"} padding={"20px 0"} id="method-page">
+        <ScrollSpy />
         <MethodContainer>
             <Breadcrumb items={["Method"]} />
             <PageHeading text={"Method"} style={{ marginBottom: 0 }} />
@@ -121,6 +126,18 @@ const MethodBodySection = ({ title, children }) => (
         <h3>{title}</h3>
         {children}
     </MethodSection>
+);
+
+const ScrollSpy = () => (
+    <Anchor className="scrollspy" offsetTop={80}>
+        <Link href="#components-anchor-demo-basic" title="Basic demo" />
+        <Link href="#components-anchor-demo-static" title="Static demo" />
+        <Link href="#components-anchor-demo-basic" title="Basic demo with Target" target="_blank" />
+        <Link href="#API" title="API">
+            <Link href="#Anchor-Props" title="Anchor Props" />
+            <Link href="#Link-Props" title="Link Props" />
+        </Link>
+    </Anchor>
 );
 
 export default MethodBody;

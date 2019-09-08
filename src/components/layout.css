@@ -1001,6 +1001,15 @@ li.ant-select-search.ant-select-search--inline {
   border-color: #e6d8d8;
 }
 
+.scrollspy {
+  position: absolute;
+  right: 0 !important;
+} 
+
+#method-page .ant-affix {
+  right: calc((100vw - 1000px) /2);
+}
+
 
 
 /* Media queries */

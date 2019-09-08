@@ -7,7 +7,7 @@ const MethodPage = () => {
     return (
         <Layout>
             <SEO title="Home" />
-            <MethodBody />
+            <MethodBody/>
         </Layout>
     )
 }
