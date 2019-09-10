@@ -1004,10 +1004,16 @@ li.ant-select-search.ant-select-search--inline {
 .scrollspy {
   position: absolute;
   right: 0 !important;
+  width: 200px;
+  font-size: 12px;
 } 
 
+/* .scrollspy .ant-anchor-link-title {
+  font-size: 12px;
+} */
+
 #method-page .ant-affix {
-  right: calc((100vw - 1000px) /2);
+  right: calc((100vw - 1016px) /2);
 }
 
 

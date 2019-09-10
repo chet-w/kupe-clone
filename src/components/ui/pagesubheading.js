@@ -5,9 +5,9 @@ const StyledSubheading = styled.h4`
     margin: 30px 0 10px 0;
 `;
 
-const PageSubheading = ({ text, style }) => {
+const PageSubheading = ({ text, style, id }) => {
     return (
-        <StyledSubheading style={style}>{text}</StyledSubheading>
+        <StyledSubheading id={id} style={style}>{text}</StyledSubheading>
     )
 }
 
