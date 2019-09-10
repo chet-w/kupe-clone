@@ -1013,7 +1013,7 @@ li.ant-select-search.ant-select-search--inline {
 } */
 
 #method-page .ant-affix {
-  right: calc((100vw - 1016px) /2);
+  right: calc((100vw - 1000px) /2);
 }
 
 #method-page > div > div[class=""] {
