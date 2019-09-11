@@ -171,7 +171,7 @@ const MethodBodySection = ({ title, children }) => (
 );
 
 const ScrollSpy = () => (
-    <Anchor className="scrollspy" offsetTop={80}>
+    <Anchor className="scrollspy" offsetTop={80} >
         <Link href="#overview-of-survey-design" title="Overview of survey design">
             <Link href="#when-did-the-survey-take-place" title="When did the survey take place?" />
             <Link href="#how-were-people-selected-for-the-survey" title="How were people selected for the survey?" />
