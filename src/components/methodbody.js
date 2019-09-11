@@ -7,6 +7,7 @@ import PageHeading from './ui/pageheading';
 import PageSubheading from './ui/pagesubheading';
 import Breadcrumb from "./breadcrumb";
 import MethodPopulationTable from "./methodpopulationtable";
+import { toPath } from '../lib/helpers';
 
 const { Link } = Anchor;
 
@@ -164,21 +165,13 @@ const MethodBody = () => (
 
 const MethodBodySection = ({ title, children }) => (
     <MethodSection>
-        <h3 id={title}>{title}</h3>
+        <h3 id={`${toPath(title)}`}>{title}</h3>
         {children}
     </MethodSection>
 );
 
 const ScrollSpy = () => (
     <Anchor className="scrollspy" offsetTop={80}>
-        {/* <Link href="#components-anchor-demo-basic" title="Basic demo" />
-        <Link href="#components-anchor-demo-static" title="Static demo" />
-        <Link href="#components-anchor-demo-basic" title="Basic demo with Target" target="_blank" />
-        <Link href="#API" title="API">
-            <Link href="#Anchor-Props" title="Anchor Props" />
-            <Link href="#Link-Props" title="Link Props" />
-        </Link> */}
-
         <Link href="#overview-of-survey-design" title="Overview of survey design">
             <Link href="#when-did-the-survey-take-place" title="When did the survey take place?" />
             <Link href="#how-were-people-selected-for-the-survey" title="How were people selected for the survey?" />
