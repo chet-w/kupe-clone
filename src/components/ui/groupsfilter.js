@@ -12,6 +12,13 @@ const Wrapper = styled.div`
     flex-direction: column;
     margin: 20px 0;
 
+    & .ant-select-selection {
+        border: none;
+        border-bottom: solid ${props => props.theme.lightBlue};
+        border-radius: 0;
+    }
+
+
     @media ${device.mobileM} {
         width: 100%;
     } 

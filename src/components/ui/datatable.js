@@ -8,6 +8,10 @@ import { toPath } from "../../lib/helpers"
 
 const Datatable = ({ data, indicators, group, topic, subtopic }) => {
 
+    group = group.replace("\u0101", "a");
+    console.log(group);
+
+    console.log(data);
     const tableData = data.filter(record => record.group === group);
     const withLabels = tableData.map(record => {
         const description = indicators.find(indicator => indicator.indicator === record.indicator).description;
