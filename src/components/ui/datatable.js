@@ -22,22 +22,12 @@ const Datatable = ({ data, indicators, group, topic, subtopic }) => {
     const meanInds = indicators.filter(indicator => indicator.measureType === "mean").map(indicator => indicator.indicator);
     const prevInds = indicators.filter(indicator => indicator.measureType === "%").map(indicator => indicator.indicator);
 
-    const timeTrendYears = Array.from(new Set(tableData.map(record => record.year)));
+    const timeTrendYears = [2012, 2014, 2016, 2018];
 
-    // Consider more dynamic solution
-    if(!timeTrendYears.includes(2012)) {
-        timeTrendYears.push(2012);
-        timeTrendYears.sort();
-    }
-    if(!timeTrendYears.includes(2014)) {
-        timeTrendYears.push(2014);
-        timeTrendYears.sort();
-    }
-
-    const latestYear = Math.max(...timeTrendYears);
+    const latestYear = Array.from(new Set(tableData.map(record => record.year))).sort().pop();
     
     const comparisonYears = timeTrendYears.map(year => {
-        if(year !== latestYear) {
+        if(year < latestYear) {
             const comparison = `${year} and ${latestYear}`;
             return comparison;
         }

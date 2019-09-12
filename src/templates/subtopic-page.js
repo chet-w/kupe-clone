@@ -37,11 +37,14 @@ const SubtopicPage = ({ data, location }) => {
 
     // Indicator data 
     const indicatorIDs = indicators.map(ind => ind.indicator);
-    const desiredGroups = ["Total", "Pacific", "Maori", "European/Other"];
+    const originalGroups = ["Total", "Māori", "Pacific", "Asian", "European/Other"];
 
     const indicatorData = data.allPrevalencesJson.nodes.filter(value => {
-        return indicatorIDs.includes(value.indicator) && desiredGroups.includes(value.group);
+        return indicatorIDs.includes(value.indicator) &&
+            originalGroups.map(group => group.replace("ā", "a")).includes(value.group);
     });
+
+    const desiredGroups = Array.from(new Set(indicatorData.map(record => record.group)));
 
     return (
         <Layout>
