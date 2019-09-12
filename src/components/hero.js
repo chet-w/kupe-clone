@@ -36,8 +36,7 @@ const StyledHero = styled.div`
 
 
     @media ${device.mobileM} {
-        padding: 60px 20px;
-        height: auto;
+        min-height: 100vh;
     }
 
     & p {

@@ -33,7 +33,7 @@ const footer = props => {
         <StyledFooter>
             <FooterBorder />
             <FooterContent>
-                <Container>
+                <Container className="footer-container">
                     <FooterBody />
                 </Container>
             </FooterContent>
