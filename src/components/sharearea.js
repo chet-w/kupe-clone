@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from "styled-components";
-import { Icon, message, notification } from "antd";
+import { Icon, message, notification, Button } from "antd";
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import axios from "axios";
 import download from "downloadjs";
+import Media from "react-media";
 import { toPath } from '../lib/helpers';
 
 const Container = styled.div`
@@ -101,9 +102,8 @@ const ShareArea = ({ topic="Alcohol", subtopic="Alcohol Attitudes", indicator=nu
           
     };
 
-    return (
-        <Container>
-            <StyledShareArea>
+    const defaultShare = (
+        <StyledShareArea>
                 <Icon type="share-alt" />
                 <ShareOptions>
                     <h5>Share</h5>
@@ -119,6 +119,19 @@ const ShareArea = ({ topic="Alcohol", subtopic="Alcohol Attitudes", indicator=nu
                     <li><button onClick={() => handlePrint()}>Print a report</button></li>
                 </ShareOptions>
             </StyledShareArea>
+    );
+
+    const mobileShare = (
+        <Button shape={"circle"} className="mobile-share-button">
+            <Icon type="share-alt" />
+        </Button>
+    )
+
+    return (
+        <Container>
+            <Media query="(max-width: 768px)">
+                {matches => matches ? mobileShare : defaultShare}
+            </Media>
         </Container>
     )
 }
