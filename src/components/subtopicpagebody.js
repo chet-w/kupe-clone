@@ -39,7 +39,7 @@ const SubtopicPageBody = ({topic, subtopic, description, indicators, indicatorDa
             <Breadcrumb items={[topic, subtopic]} />
             <Container justify="space-between" align="center">
                 <TopicHeading topic={topic} />
-                <ShareArea />
+                <ShareArea topic={topic} subtopic={subtopic}/>
             </Container>
             <PageHeading text={subtopic} id="subtopic-heading"/>
             <SubtopicPrelude description={description}/>

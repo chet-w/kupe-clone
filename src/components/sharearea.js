@@ -4,6 +4,7 @@ import { Icon, message, notification } from "antd";
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import axios from "axios";
 import download from "downloadjs";
+import { toPath } from '../lib/helpers';
 
 const Container = styled.div`
     max-width: 300px;
@@ -47,14 +48,10 @@ const ShareOptions = styled.ul`
     }
 `
 
-const ShareArea = props => {
+const ShareArea = ({ topic="Alcohol", subtopic="Alcohol Attitudes", indicator=null }) => {
 
     message.config({
         maxCount: 1
-    });
-
-    notification.config({
-        duration: 3
     });
 
     const handleShare = () => {
@@ -62,19 +59,21 @@ const ShareArea = props => {
     };
 
     const handlePrint = async () => {
-        notification.open({
-            message: 'Generating report',
-            description: (
-                <p>Generating a report for Alcohol > Alcohol attitudes.<br/>
-                This could take few seconds.</p>
-            ),
-            onClick: () => {
-              console.log('Notification Clicked!');
-            },
-          });
+        if(indicator) {
+            message.info(`Generating a report for ${topic} > ${subtopic} > ${indicator}. This could take a few seconds.`);
+        } else {
+            message.info(`Generating a report for ${topic} > ${subtopic}. This could take a few seconds.`);
+        }
+
         await axios.post("http://localhost:5018/print", {
-            url: "https://kupe-clone.netlify.com/alcohol/alcohol-attitudes",
-            level: "subtopic"
+            url: indicator ? `https://kupe-clone.netlify.com/${toPath(topic)}/${toPath(subtopic)}/${toPath(indicator)}`
+                : `https://kupe-clone.netlify.com/${toPath(topic)}/${toPath(subtopic)}`,
+            level: indicator ? "indicator" : "subtopic",
+            subject: {
+                topic,
+                subtopic,
+                indicator
+            }
         }).catch(err => message.error("Kupe will need to be online before you can generate a report. Try again when you're back on a network connection."));;
         const res = await axios({
             url: 'http://localhost:5018/download',
