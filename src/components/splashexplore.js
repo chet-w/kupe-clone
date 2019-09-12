@@ -13,6 +13,7 @@ const StyledSplashExplore = styled.div`
     border-top: solid 2px ${props => props.theme.lightGrey};
     border-bottom: solid 2px ${props => props.theme.lightGrey};
     position: relative;
+    background: ${props => props.theme.white};
 
     @media ${device.mobileM} {
         padding: 20px 0 60px 0;

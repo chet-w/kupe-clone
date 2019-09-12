@@ -4,9 +4,10 @@ import splash from "../images/splash.jpg"
 import Container from './ui/container';
 import { Button } from 'antd';
 import { device } from "../lib/device";
+import Rellax from "react-rellax";
 
 const StyledHero = styled.div`
-    background: url(${splash});
+    /* background: url(${splash}); */
     width: 100%;
     height: 400px;
     display: flex;
@@ -15,9 +16,24 @@ const StyledHero = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     height: 500px;
-    /* opacity: 0; */
+    position: relative;
     color: ${props => props.theme.white};
-    /* animation: antFadeIn 0.8s 1.8s ease forwards; */
+    overflow: hidden;
+
+    & #parallax-hero {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    & img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        max-width: 1000vw;
+        height: 125%;
+    }
+
 
     @media ${device.mobileM} {
         padding: 60px 20px;
@@ -70,16 +86,19 @@ const HeroButtons = styled.div`
 
 const Hero = () => (
         <StyledHero>
-                <Container direction="column">
+                <Rellax speed={1} id={"parallax-hero"}>
+                    <img src={splash} />
+                </Rellax>
+                <Container direction="column" style={{position: "absolute"}}>
                     <SplashHeading>The Kupe Clone</SplashHeading>
                     <p>This app is a clone of the Health Promotion Agency's Kupe Data Explorer.</p>
                     <p>The original app was made by Epi-interactive using the R Shiny web framework,
                         while this clone is a remake made using the React static site framework Gatsby.
-            </p>
+                    </p>
                     <p>Just like the original app you can browse through a set of topics from the Health
                         and Lifestyles Survey, a survey to understand New Zealanders' views and exerpiences
                         regarding various topics.
-            </p>
+                    </p>
                     <HeroButtons>
                         <a href="http://kupe.hpa.org.nz" target="_blank" rel="noopener noreferrer">
                             <Button type="ghost">See the original</Button>
