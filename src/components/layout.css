@@ -1117,6 +1117,10 @@ li.ant-select-search.ant-select-search--inline {
     /* font-size: 20px; */
   }
 
+  .mobile-share-drawer .ant-drawer-content-wrapper {
+    max-height: 30vh;
+  }
+
   /* Filters */
   .groups-filter {
     width: 100%;

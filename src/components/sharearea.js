@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from "styled-components";
-import { Icon, message, notification, Button } from "antd";
+import { Icon, message, notification, Button, Drawer } from "antd";
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import axios from "axios";
 import download from "downloadjs";
@@ -47,9 +47,37 @@ const ShareOptions = styled.ul`
             }
         }
     }
-`
+`;
+
+const ShareButtonsContainer = styled.div`
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    & button {
+        width: 60px;
+        height: 60px;
+
+        &  i {
+            font-size: 20px;
+        }
+    }
+`;
+
+const ButtonGroup = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`;
 
 const ShareArea = ({ topic="Alcohol", subtopic="Alcohol Attitudes", indicator=null }) => {
+
+
+    const [isMobileShareOpen, setMobileShare] = useState(false);
+
+    const toggleMobileShare = () => {
+        setMobileShare(!isMobileShareOpen);
+    };
 
     message.config({
         maxCount: 1
@@ -122,9 +150,34 @@ const ShareArea = ({ topic="Alcohol", subtopic="Alcohol Attitudes", indicator=nu
     );
 
     const mobileShare = (
-        <Button shape={"circle"} className="mobile-share-button">
-            <Icon type="share-alt" />
-        </Button>
+        <>
+            <Button shape={"circle"} className="mobile-share-button" onClick={() => toggleMobileShare()}>
+                <Icon type="share-alt" />
+            </Button>
+            <Drawer 
+             wrapClassName={"mobile-share-drawer"}
+             title={"Share"}
+             placement={"bottom"}
+             visible={isMobileShareOpen}
+             onClose={() => toggleMobileShare()}
+             closable
+            >
+                <ShareButtonsContainer>
+                    <ButtonGroup>
+                    <Button shape={"circle"}><Icon type="file-excel" /></Button>
+                    <label>Download data</label>
+                    </ButtonGroup>
+                    <ButtonGroup>
+                    <Button shape={"circle"}><Icon type="copy" /></Button>
+                    <label>Copy link</label>
+                    </ButtonGroup>
+                    <ButtonGroup>
+                    <Button shape={"circle"}><Icon type="download" /></Button>
+                    <label>Print report</label>
+                    </ButtonGroup>
+                </ShareButtonsContainer>
+            </Drawer>
+        </>
     )
 
     return (
