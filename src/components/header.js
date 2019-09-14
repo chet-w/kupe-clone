@@ -7,7 +7,7 @@ import FeedbackModal from "./feedbackmodal";
 import AboutModal from "./aboutmodal";
 import { device } from "../lib/device";
 import { Link } from "gatsby";
-import { Modal } from "antd";
+import { Modal, Icon } from "antd";
 import PageHeading from "./ui/pageheading";
 
 const StyledHeader = styled.header`
@@ -47,6 +47,26 @@ const HeaderLink = styled.button`
   }
 `;
 
+const StyledMobileMenu = styled.button`
+    display: none;
+    background: none;
+    border: none;
+    transition: all 0.3s ease;
+    
+    &:focus {
+      outline: none;
+    } 
+
+    @media ${device.mobileM} {
+      display: flex;
+    }
+
+    & i {
+      color: ${props => props.theme.lightBlue};
+      font-size: 25px;
+    }
+`;
+
 const Header = ({ siteTitle, page }) => (
   <StyledHeader>
     <Container align="center" justify="space-between">
@@ -54,6 +74,7 @@ const Header = ({ siteTitle, page }) => (
         <KupeLogo src={require("../images/logos/kupe.svg")} shouldAnimate={page === "index"} />
       </Link>
       <HeaderLinks shouldAnimate={page === "index"} />
+      <MobileMenu />
     </Container>
   </StyledHeader>
 );
@@ -67,9 +88,9 @@ const HeaderLinks = ({ shouldAnimate }) => {
   const [isAboutOpen, setIsAboutOpen] = useState(false);
 
   const handleModalClick = name => {
-    if(name === "Feedback") {
+    if (name === "Feedback") {
       setIsFeedbackOpen(!isFeedbackOpen);
-    } else if(name === "About"){
+    } else if (name === "About") {
       setIsAboutOpen(!isAboutOpen);
     }
   };
@@ -78,25 +99,25 @@ const HeaderLinks = ({ shouldAnimate }) => {
     <StyledHeaderLinks shouldAnimate={shouldAnimate}>
       {links.map(link => (
         <>
-          { link === "Method" ? <Link to="/method"><HeaderLink>Method</HeaderLink></Link> :
-          <HeaderLink onClick={() => handleModalClick(link)} key={link}>{link}</HeaderLink>
+          {link === "Method" ? <Link to="/method"><HeaderLink>Method</HeaderLink></Link> :
+            <HeaderLink onClick={() => handleModalClick(link)} key={link}>{link}</HeaderLink>
           }
-          
+
           <Modal
-           visible={link === "Feedback" ? isFeedbackOpen : link === "About" ? isAboutOpen : false}
-           title={<PageHeading text={link}/>}
-           style={{ top: 20 }}
-           onCancel={() => handleModalClick(link)}
-           >
+            visible={link === "Feedback" ? isFeedbackOpen : link === "About" ? isAboutOpen : false}
+            title={<PageHeading text={link} />}
+            style={{ top: 20 }}
+            onCancel={() => handleModalClick(link)}
+          >
             {link === "Feedback" ?
-             <FeedbackModal
-              handleClose={handleModalClick.bind(this)}
-             /> : link === "About" ?
-             <AboutModal
-              handleClose={handleModalClick.bind(this)}
-             /> : 
-             ""
-             }
+              <FeedbackModal
+                handleClose={handleModalClick.bind(this)}
+              /> : link === "About" ?
+                <AboutModal
+                  handleClose={handleModalClick.bind(this)}
+                /> :
+                ""
+            }
           </Modal>
         </>
       ))}
@@ -107,6 +128,23 @@ const HeaderLinks = ({ shouldAnimate }) => {
   )
 
 };
+
+const MobileMenu = () => {
+
+  const [isMenuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenuOpen = () => {
+    setMenuOpen(!isMenuOpen);
+  }
+
+  return (
+    <StyledMobileMenu
+      onClick={() => toggleMenuOpen()}
+      style={ isMenuOpen ? { transform: "rotate: 360deg"} : {transform: "rotate: 0deg" }}>
+      <Icon type={isMenuOpen ? "arrow-left" : "menu"} />
+    </StyledMobileMenu>
+  )
+}
 
 
 Header.propTypes = {
