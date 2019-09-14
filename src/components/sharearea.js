@@ -57,10 +57,26 @@ const ShareButtonsContainer = styled.div`
     & button {
         width: 60px;
         height: 60px;
+        border: none;
+        background: ${props => props.theme.blueGradient};
+
+        &:focus, &:active {
+            background: ${props => props.theme.blueGradient};
+
+            & i {
+                font-size: 20px;
+                color: white;
+            }
+        }
 
         &  i {
             font-size: 20px;
+            color: white;
         }
+    }
+
+    & label {
+        margin-top: 5px;
     }
 `;
 
@@ -117,17 +133,7 @@ const ShareArea = ({ topic="Alcohol", subtopic="Alcohol Attitudes", indicator=nu
     };
 
     const handleCSV = () => {
-        notification.open({
-            message: 'Generating CSV download',
-            description: (
-                <p>Generating a CSV file for Alcohol > Alcohol attitudes.<br/>
-                This could take few seconds.</p>
-            ),
-            onClick: () => {
-              console.log('Notification Clicked!');
-            },
-          });
-          
+        message.success("Downloading guy");
     };
 
     const defaultShare = (
@@ -164,21 +170,31 @@ const ShareArea = ({ topic="Alcohol", subtopic="Alcohol Attitudes", indicator=nu
             >
                 <ShareButtonsContainer>
                     <ButtonGroup>
-                    <Button shape={"circle"}><Icon type="file-excel" /></Button>
-                    <label>Download data</label>
+                        <Button onClick={() => { 
+                            handleCSV();
+                            toggleMobileShare();
+                        }} shape={"circle"}><Icon type="download" /></Button>
+
+                        <label>Download data</label>
                     </ButtonGroup>
                     <ButtonGroup>
-                    <Button shape={"circle"}><Icon type="copy" /></Button>
-                    <label>Copy link</label>
+                        <Button onClick={() => {
+                            handleShare();
+                            toggleMobileShare();
+                        }} shape={"circle"}><Icon type="copy" /></Button>
+                        <label>Copy link</label>
                     </ButtonGroup>
                     <ButtonGroup>
-                    <Button shape={"circle"}><Icon type="download" /></Button>
-                    <label>Print report</label>
+                        <Button onClick={() => {
+                            handlePrint();
+                            toggleMobileShare();
+                        }} shape={"circle"}><Icon type="file" /></Button>
+                        <label>Print report</label>
                     </ButtonGroup>
                 </ShareButtonsContainer>
             </Drawer>
         </>
-    )
+    );
 
     return (
         <Container>
