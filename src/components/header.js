@@ -7,8 +7,9 @@ import FeedbackModal from "./feedbackmodal";
 import AboutModal from "./aboutmodal";
 import { device } from "../lib/device";
 import { Link } from "gatsby";
-import { Modal, Icon } from "antd";
+import { Modal, Icon, Drawer } from "antd";
 import PageHeading from "./ui/pageheading";
+import MobileMenuBody from "./mobilemenubody";
 
 const StyledHeader = styled.header`
   background: ${props => props.theme.white};
@@ -79,9 +80,10 @@ const Header = ({ siteTitle, page }) => (
   </StyledHeader>
 );
 
+const links = ["Feedback", "About", "Method"];
+
 const HeaderLinks = ({ shouldAnimate }) => {
 
-  const links = ["Feedback", "About", "Method"];
   const homeLink = { text: "hpa.org.nz", href: "https://www.hpa.org.nz" };
 
   const [isFeedbackOpen, setIsFeedbackOpen] = useState(false);
@@ -138,11 +140,20 @@ const MobileMenu = () => {
   }
 
   return (
-    <StyledMobileMenu
-      onClick={() => toggleMenuOpen()}
-      style={ isMenuOpen ? { transform: "rotate: 360deg"} : {transform: "rotate: 0deg" }}>
-      <Icon type={isMenuOpen ? "arrow-left" : "menu"} />
-    </StyledMobileMenu>
+    <>
+      <StyledMobileMenu
+        onClick={() => toggleMenuOpen()}
+      >
+        <Icon type="menu" />
+      </StyledMobileMenu>
+      <Drawer
+       visible={isMenuOpen}
+       onClose={() =>toggleMenuOpen()}
+       wrapClassName="mobile-menu-drawer"
+      >
+        <MobileMenuBody links={links}/>
+      </Drawer>
+    </>
   )
 }
 
