@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import { Divider } from 'antd';
 
 const StyledMobileMenuBody = styled.div`
     display: flex;
@@ -10,18 +11,43 @@ const StyledMobileMenuBody = styled.div`
     justify-content: center;
 `;
 
-const MenuItem = styled.div`
-    display: flex;
-    padding: 20px;
+const MenuItem = styled.button`
+    text-align: right;
+    background: none;
+    border: none;
+
+    & h3 {
+        margin: 0;
+    }
+
+    & p {
+        font-size: 14px;
+    }
 `;
 
 const MobileMenuBody = ({ links }) => {
 
-    const allMenuOptions = ["Search", "Explore", ...links];
+    const allMenuOptions = ["Search", "Explore", "Feedback", "About", "Method", "hpa.org.nz"];
+    const subtitles = [
+        "Look for a specific Topic, Subtopic, or Indicator",
+        "Browse all Kupe's data points",
+        "Get in touch about Kupe",
+        "The story of Kupe",
+        "How we made it happen",
+        "More from HPA"
+    ];
 
     return (
         <StyledMobileMenuBody>
-            {allMenuOptions.map(option => <MenuItem><h3>{option}</h3></MenuItem>)}
+            {allMenuOptions.map((option, i) => (
+                <>
+                    <MenuItem>
+                        <h3>{option}</h3>
+                        <p>{subtitles[i]}</p>
+                    </MenuItem>
+                    {i === 1 || i === 4 ? <Divider />: ""}
+                </>
+            ))}
         </StyledMobileMenuBody>
     )
 }

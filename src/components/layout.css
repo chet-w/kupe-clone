@@ -1122,8 +1122,25 @@ li.ant-select-search.ant-select-search--inline {
     width: 100vw !important;
   }
 
+  .mobile-menu-drawer .ant-drawer-content {
+    background: none;
+  }
+
   .mobile-menu-drawer .ant-drawer-body {
     height: 100vh;
+    background: rgba(0, 128, 164, 0.9);
+    color: white;
+  }
+
+  .mobile-menu-drawer .ant-drawer-close {
+    top: 12px;
+    right: 12px;
+    color: #fff;
+    font-size: 25px;
+  }
+
+  .ant-divider-horizontal {
+    height: 3px;
   }
 
   /* Filters */
