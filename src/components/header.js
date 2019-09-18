@@ -151,7 +151,7 @@ const MobileMenu = () => {
        onClose={() =>toggleMenuOpen()}
        wrapClassName="mobile-menu-drawer"
       >
-        <MobileMenuBody links={links}/>
+        <MobileMenuBody toggleMenu={toggleMenuOpen.bind(this)}/>
       </Drawer>
     </>
   )

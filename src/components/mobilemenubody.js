@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import { Divider } from 'antd';
+import { Link } from 'gatsby';
 
 const StyledMobileMenuBody = styled.div`
     display: flex;
@@ -25,29 +26,42 @@ const MenuItem = styled.button`
     }
 `;
 
-const MobileMenuBody = ({ links }) => {
-
-    const allMenuOptions = ["Search", "Explore", "Feedback", "About", "Method", "hpa.org.nz"];
-    const subtitles = [
-        "Look for a specific Topic, Subtopic, or Indicator",
-        "Browse all Kupe's data points",
-        "Get in touch about Kupe",
-        "The story of Kupe",
-        "How we made it happen",
-        "More from HPA"
-    ];
+const MobileMenuBody = ({ toggleMenu }) => {
 
     return (
         <StyledMobileMenuBody>
-            {allMenuOptions.map((option, i) => (
-                <>
-                    <MenuItem>
-                        <h3>{option}</h3>
-                        <p>{subtitles[i]}</p>
-                    </MenuItem>
-                    {i === 1 || i === 4 ? <Divider />: ""}
-                </>
-            ))}
+            <MenuItem onClick={() => toggleMenu()}>
+                <h3>Search</h3>
+                <p>Look for a specific Topic, Subtopic, or Indicator</p>
+            </MenuItem>
+            <Link to={"/#explore"}>
+                <MenuItem onClick={() => toggleMenu()}>
+                    <h3>Explore</h3>
+                    <p>Browse all Kupe's data points</p>
+                </MenuItem>
+            </Link>
+            <Divider />
+            <MenuItem onClick={() => toggleMenu()}>
+                <h3>Feedback</h3>
+                <p>Get in touch about Kupe</p>
+            </MenuItem>
+            <MenuItem onClick={() => toggleMenu()}>
+                <h3>About</h3>
+                <p>The story of Kupe</p>
+            </MenuItem>
+            <Link to={"/method"}>
+                <MenuItem onClick={() => toggleMenu()}>
+                    <h3>Method</h3>
+                    <p>How we made it happen</p>
+                </MenuItem>
+            </Link>
+            <Divider />
+            <a href="http://kupe.hpa.org.nz/" target="_blank" rel="noopener noreferrer">
+                <MenuItem onClick={() => toggleMenu()}>
+                    <h3>hpa.org.nz</h3>
+                    <p>More from HPA</p>
+                </MenuItem>
+            </a>
         </StyledMobileMenuBody>
     )
 }
