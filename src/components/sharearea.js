@@ -110,7 +110,7 @@ const ShareArea = ({ topic="Alcohol", subtopic="Alcohol Attitudes", indicator=nu
             message.info(`Generating a report for ${topic} > ${subtopic}. This could take a few seconds.`);
         }
 
-        await axios.post("http://localhost:5018/print", {
+        await axios.post("http://165.22.53.167:5018/print", {
             url: indicator ? `https://kupe-clone.netlify.com/${toPath(topic)}/${toPath(subtopic)}/${toPath(indicator)}`
                 : `https://kupe-clone.netlify.com/${toPath(topic)}/${toPath(subtopic)}`,
             level: indicator ? "indicator" : "subtopic",
@@ -121,7 +121,7 @@ const ShareArea = ({ topic="Alcohol", subtopic="Alcohol Attitudes", indicator=nu
             }
         }).catch(err => message.error("Kupe will need to be online before you can generate a report. Try again when you're back on a network connection."));;
         const res = await axios({
-            url: 'http://localhost:5018/download',
+            url: 'http://165.22.53.167:5018/download',
             method: 'GET',
             responseType: 'blob',
         })
