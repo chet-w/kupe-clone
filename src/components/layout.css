@@ -1093,7 +1093,7 @@ li.ant-select-search.ant-select-search--inline {
   }
 
   /* Buttons */
-  .ant-btn-primary {
+  .ant-btn-primary, .ant-btn {
     padding: 10px 15px;
     font-size: 18px;
     width: 100%;
@@ -1137,6 +1137,42 @@ li.ant-select-search.ant-select-search--inline {
     right: 12px;
     color: #fff;
     font-size: 25px;
+  }
+
+  .ant-input-affix-wrapper.mobile-searchbar {
+    font-size: 24px;
+    background: none;
+    color: white;
+    border-bottom-color: #fff;
+    margin-bottom: 20px;
+  }
+
+  .mobile-searchbar .ant-input {
+    background: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    border-bottom: none;
+  }
+
+  .mobile-searchbar .ant-input-suffix button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .mobile-searchbar .ant-input::placeholder {
+    color: white;
+    font-weight: bold;
+  }
+
+  .ant-modal-footer button {
+    width: 100%;
+  }
+
+  .ant-modal-footer button + button {
+    margin: 0;
   }
 
   .ant-divider-horizontal {
