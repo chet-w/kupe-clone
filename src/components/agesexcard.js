@@ -1,4 +1,5 @@
 import React from 'react';
+import { getYAxisDetails } from "../lib/helpers";
 import { Bar } from "react-chartjs-2";
 
 const AgeSexCard = ({ data }) => {
@@ -33,7 +34,12 @@ const AgeSexCard = ({ data }) => {
         return withGradient;
     }
 
-    
+    const dataToDetermineYAxis = () => {
+        const values = data.map(record => {
+            return [record.total, record.male, record.female];
+        }).flat();
+        return values;
+    };
 
     return (
         <>
@@ -45,8 +51,8 @@ const AgeSexCard = ({ data }) => {
                     yAxes: [{
                         ticks: {
                             beginAtZero: true,
-                            max: 100,
-                            stepSize: 20
+                            max: getYAxisDetails(dataToDetermineYAxis()).maxY,
+                            stepSize: getYAxisDetails(dataToDetermineYAxis()).step
                         },
                         gridLines: {
                             display: true

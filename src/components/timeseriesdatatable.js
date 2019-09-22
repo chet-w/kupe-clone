@@ -38,7 +38,6 @@ const TimeseriesDataTable = ({ data, latestYear, showPvalue }) => {
         }
     }).filter(comp => comp.colComparison.includes(`and ${latestYear}`));
 
-    console.log(data);
     const organised = organiseTimeseriesData(data);
 
     return (

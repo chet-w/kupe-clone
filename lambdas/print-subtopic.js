@@ -4,8 +4,6 @@ const fs = require("fs");
 
 const generateReport = async (url, level, subject) => {
 
-    console.log(url, level, subject);
-
     const browser = await puppeteer.launch({
         defaultViewport: {
             height: 1080,
@@ -143,8 +141,6 @@ const generateSubtopicReport = async page => {
         format: 'A4',
         printBackground: true
     });
-
-    console.log("Done!")
 };
 
 const grabElementAsImage = async (selector, filename, page, padding = 0) => {
