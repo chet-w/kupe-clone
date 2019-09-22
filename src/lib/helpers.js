@@ -174,6 +174,26 @@ const addDashes = row => {
         }	
     });
     return row;
+};
+
+const getYAxisDetails = values => {
+    const maxTotal = Math.max(...values);
+    let maxY;
+    let step;
+    if(maxTotal <= 10) {
+        maxY = 10;
+        step = 2;
+    } else if(maxTotal <= 30) {
+        maxY = 30;
+        step = 10;
+    } else if (maxTotal <= 60) {
+        maxY = 60
+        step = 20;
+    } else {
+        maxY = 100
+        step = 20;
+    }
+    return {maxY, step};
 }
 
 
@@ -186,4 +206,5 @@ module.exports.organisePrevalenceData = organisePrevalenceData;
 module.exports.organiseComparisonsData = organiseComparisonsData;
 module.exports.organiseTimeseriesData = organiseTimeseriesData;
 module.exports.numberWithCommas = numberWithCommas;
+module.exports.getYAxisDetails = getYAxisDetails;
 

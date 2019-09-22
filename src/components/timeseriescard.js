@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components"
+import { getYAxisDetails } from "../lib/helpers";
 import { Scatter } from "react-chartjs-2";
 
 const Wrapper = styled.div`
@@ -35,27 +36,6 @@ const TimeseriesCard = ({ data }) => {
         }]
     };
 
-    const getYAxisDetails = () => {
-        const totals = data.map(record => record.total);
-        const maxTotal = Math.max(...totals);
-        let maxY;
-        let step;
-        if(maxTotal <= 10) {
-            maxY = 10;
-            step = 2;
-        } else if(maxTotal <= 30) {
-            maxY = 30;
-            step = 10;
-        } else if (maxTotal <= 60) {
-            maxY = 60
-            step = 20;
-        } else {
-            maxY = 100
-            step = 20;
-        }
-        return {maxY, step};
-    }
-
     return (
         <Wrapper>
             <h4>Time trends</h4>
@@ -79,8 +59,8 @@ const TimeseriesCard = ({ data }) => {
                         yAxes: [{
                             ticks: {
                                 beginAtZero: true,
-                                max: getYAxisDetails().maxY,
-                                stepSize: getYAxisDetails().step
+                                max: getYAxisDetails(data.map(record => record.total)).maxY,
+                                stepSize: getYAxisDetails(data.map(record => record.total)).step
                             },
                             gridLines: {
                                 display: true
