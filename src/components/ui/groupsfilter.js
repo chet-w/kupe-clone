@@ -21,6 +21,7 @@ const Wrapper = styled.div`
 
     @media ${device.mobileM} {
         width: 100%;
+        
     } 
     
 `;
@@ -36,7 +37,7 @@ const GroupsFilter = ({ groups, setNewGroup }) => {
     return (
         <Wrapper>
         <StyledLabel>Show:</StyledLabel>
-        <Select className="groups-filter" defaultValue="Total" onChange={e => handleChange(e)}>
+        <Select className="groups-filter" defaultValue="Total" onChange={e => handleChange(e)} >
             {groups.map(group => <Option value={group}>{group}</Option>)}
         </Select>
         </Wrapper>

@@ -873,6 +873,26 @@ main {
   height: auto;
 }
 
+.ant-collapse-header {
+  position: relative;
+}
+
+.ant-collapse-header[aria-expanded="false"]:after {
+  content: "More information";
+  right: 0;
+  position: absolute;
+  color: #02a7c9;
+}
+
+.ant-collapse-header[aria-expanded="true"]:after {
+  content: "Less information";
+  right: 0;
+  position: absolute;
+  color: #02a7c9;
+}
+
+
+
 
 
 .search-bar .ant-btn-primary {

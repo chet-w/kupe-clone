@@ -74,7 +74,7 @@ const PrevalenceTab = ({ data, years }) => {
             <div>
                 <PageSubheading text={"Prevalence for selected indicator"} />
                 <p>This tables shows the percentage of the population affected.</p>
-                <Select defaultValue={currentYear} style={{ width: "100%" }} onChange={e => handleYearChange(e)}>
+                <Select defaultValue={currentYear} style={{ width: "100%", borderBottom: "solid 2px #0080a4" }} onChange={e => handleYearChange(e)}>
                     {years.map(year => <Option value={year}>{year}</Option>)}
                 </Select>
             </div>

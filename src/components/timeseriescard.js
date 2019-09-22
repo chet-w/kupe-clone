@@ -62,7 +62,8 @@ const TimeseriesCard = ({ data }) => {
                             ticks: {
                                 beginAtZero: true,
                                 max: getYAxisDetails(data.map(record => record.total)).maxY,
-                                stepSize: getYAxisDetails(data.map(record => record.total)).step
+                                stepSize: getYAxisDetails(data.map(record => record.total)).step,
+                                
                             },
                             gridLines: {
                                 display: true
