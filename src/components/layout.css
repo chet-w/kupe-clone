@@ -1111,6 +1111,7 @@ li.ant-select-search.ant-select-search--inline {
     bottom: 100px;
     right: 20px;
     z-index: 5;
+    padding: 0;
   }
 
 

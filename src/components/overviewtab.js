@@ -36,14 +36,14 @@ const StyledOverviewCard = styled.div`
     } 
 `;
 
-const OverviewTab = ({ indicator, overviewData, timeseriesData, ageSexData, ethnicityData }) => {
+const OverviewTab = ({ indicator, overviewData, timeseriesData, ageSexData, ethnicityData, measureUnit, measureType, topic }) => {
 
     return (
         <>
             <PageSubeading text={`${overviewData.year} Health and Lifestyles Survey`} />
             <Wrapper>
                 <StyledOverviewCard>
-                    <OverviewCard data={overviewData}/>
+                    <OverviewCard data={overviewData} measureType={measureType} measureUnit={measureUnit} topic={topic}/>
                 </StyledOverviewCard>
                 <StyledOverviewCard>
                     <TimeseriesCard data={timeseriesData}/>

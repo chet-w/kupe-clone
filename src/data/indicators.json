@@ -45,7 +45,7 @@
    "topic": "Gambling",
    "shortDescription": "Average number of activities",
    "measureType" : "mean",
-   "measureUnit" : "activites"
+   "measureUnit" : "activities"
  },
  {
    "indicator": "ind_13",

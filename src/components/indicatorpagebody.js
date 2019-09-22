@@ -14,6 +14,7 @@ import ComparisonsTab from "./comparisonstab";
 import TimeseriesTab from "./timeseriestab";
 import { ethnicities } from '../lib/config';
 import { device } from "../lib/device";
+import { useStaticQuery } from 'gatsby';
 
 const { TabPane } = Tabs;
 
@@ -26,7 +27,7 @@ const Wrapper = styled.div`
     
 `;
 
-const IndicatorPageBody = ({ topic, subtopic, indicator, allPrevData, allCompData, allTimeData, indId }) => {
+const IndicatorPageBody = ({ topic, subtopic, indicator, allPrevData, allCompData, allTimeData, indId, measureUnit, measureType }) => {
 
     // Available years
     const years = allPrevData
@@ -49,7 +50,7 @@ const IndicatorPageBody = ({ topic, subtopic, indicator, allPrevData, allCompDat
     const ethnicityData = allPrevData
         .filter(record => ethnicities.includes(record.group) && record.year === latestYear);
 
-
+    
 
     return (
         <Container direction="column" padding="20px 0">
@@ -63,10 +64,13 @@ const IndicatorPageBody = ({ topic, subtopic, indicator, allPrevData, allCompDat
                 <TabPane tab="Overview" key="1">
                     <OverviewTab
                         indicator={indicator}
+                        topic={topic}
                         overviewData={overviewCardData}
                         timeseriesData={timeseriesData}
                         ageSexData={ageSexData}
                         ethnicityData={ethnicityData}
+                        measureType={measureType}
+                        measureUnit={measureUnit}
                     />
                 </TabPane>
                 <TabPane tab="Prevalence / Mean" key="2">

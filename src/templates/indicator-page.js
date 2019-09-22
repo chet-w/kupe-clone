@@ -19,6 +19,10 @@ const IndicatorPage = ({ data, location }) => {
     const allComparisons = data.allComparisonsJson.nodes;
     const allTimeseries = data.allTimeseriesJson.nodes;
 
+    // Whether the indicator is prevalence or mean
+    const { measureType } = data.allIndicatorsJson.nodes[0];
+    const { measureUnit } = data.allIndicatorsJson.nodes[0];
+
     return (
         <Layout>
             <SEO title="Home" />
@@ -30,6 +34,8 @@ const IndicatorPage = ({ data, location }) => {
                 allPrevData={allPrevalences}
                 allCompData={allComparisons}
                 allTimeData={allTimeseries}
+                measureUnit={measureUnit}
+                measureType={measureType}
             />
         </Layout>
     )
@@ -78,6 +84,13 @@ export const IndicatorQuery = graphql`
       p_value_18_12
       p_value_18_14
       p_value_18_16
+    }
+  }
+  allIndicatorsJson(filter: {indicator: {eq: $id}}) {
+    nodes {
+      measureType
+      measureUnit
+      indicator
     }
   }
 
