@@ -35,6 +35,27 @@ const TimeseriesCard = ({ data }) => {
         }]
     };
 
+    const getYAxisDetails = () => {
+        const totals = data.map(record => record.total);
+        const maxTotal = Math.max(...totals);
+        let maxY;
+        let step;
+        if(maxTotal <= 10) {
+            maxY = 10;
+            step = 2;
+        } else if(maxTotal <= 30) {
+            maxY = 30;
+            step = 10;
+        } else if (maxTotal <= 60) {
+            maxY = 60
+            step = 20;
+        } else {
+            maxY = 100
+            step = 20;
+        }
+        return {maxY, step};
+    }
+
     return (
         <Wrapper>
             <h4>Time trends</h4>
@@ -58,8 +79,8 @@ const TimeseriesCard = ({ data }) => {
                         yAxes: [{
                             ticks: {
                                 beginAtZero: true,
-                                max: 100,
-                                stepSize: 20
+                                max: getYAxisDetails().maxY,
+                                stepSize: getYAxisDetails().step
                             },
                             gridLines: {
                                 display: true
