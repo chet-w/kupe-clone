@@ -10,6 +10,9 @@ const ethnicities = ["Maori", "Asian", "Pacific", "European/Other"];
 const prevLabels = ["Age groups", "Ethnicities", "Neighbourhood deprivation", "Drinking status"]
 const prevGroups = ["Total", "Men", "Women", "Age groups", ...ageGroups, "Ethnicities",  ...ethnicities, "Neighbourhood deprivation", ...deprivation, "Drinking status", ...drinking];
 
+// Survey years
+const allYears = [2012, 2014, 2016, 2018];
+
 // Comparison groups
 const subgroupSex = ["Women vs men"];
 const subgroupMaori = ["Maori vs non-Maori", "Men: Maori vs non-Maori", "Women: Maori vs non-Maori"];
@@ -25,3 +28,4 @@ module.exports.prevGroups = prevGroups;
 module.exports.prevLabels = prevLabels;
 module.exports.subgroupGroups = subgroupGroups;
 module.exports.subgroupLabels = subgroupLabels;
+module.exports.allYears = allYears;

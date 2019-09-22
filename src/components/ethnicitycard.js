@@ -1,5 +1,6 @@
 import React from 'react';
 import { Bar } from "react-chartjs-2";
+import { getYAxisDetails } from '../lib/helpers';
 
 const EthnicityCard = ({ data }) => {
 
@@ -26,6 +27,9 @@ const EthnicityCard = ({ data }) => {
         if(record.group === "European/Other") {
             label = ["European/", "Other"];
         }
+        if(record.group === "Maori") {
+            label = "Māori";
+        }
         return label;
     }), ""]
 
@@ -51,8 +55,8 @@ const EthnicityCard = ({ data }) => {
                     yAxes: [{
                         ticks: {
                             beginAtZero: true,
-                            max: 100,
-                            stepSize: 20
+                            max: getYAxisDetails(data.map(record => record.total)).maxY,
+                            stepSize: getYAxisDetails(data.map(record => record.total)).step
                         },
                         gridLines: {
                             display: true

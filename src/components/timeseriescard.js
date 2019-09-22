@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components"
 import { getYAxisDetails } from "../lib/helpers";
 import { Scatter } from "react-chartjs-2";
+import { allYears } from '../lib/config';
 
 const Wrapper = styled.div`
     width: 100%;
@@ -23,7 +24,8 @@ const TimeseriesCard = ({ data }) => {
     const chartData = {
         labels: [""],
         datasets: [{
-            label: data.map(record => record.year),
+            // label: data.map(record => record.year),
+            label: allYears,
             data: [null, ...coords, null],
             backgroundColor: [
                 'rgb(247, 149, 32)',
@@ -69,7 +71,7 @@ const TimeseriesCard = ({ data }) => {
                         xAxes: [
                             {
                                 type: "category",
-                                labels: ["", ...data.map(record => record.year), ""],
+                                labels: ["", ...allYears, ""],
                                 gridLines: {
                                     display: false,
                                     lineWidth: 0,

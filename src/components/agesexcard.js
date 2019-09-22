@@ -72,7 +72,8 @@ const AgeSexCard = ({ data }) => {
                     ]
                 },
                 legend: {
-                    display: true
+                    display: true,
+                    position: "top"
                 }
                 
             }}
