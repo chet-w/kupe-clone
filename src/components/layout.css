@@ -1200,6 +1200,10 @@ li.ant-select-search.ant-select-search--inline {
     height: 3px;
   }
 
+  .scrollspy  {
+    display: none;
+  }
+
   /* Filters */
   .groups-filter {
     width: 100%;

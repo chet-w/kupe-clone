@@ -13,6 +13,8 @@ const { Link } = Anchor;
 
 const MethodSection = styled.section`
     margin-top: 20px;
+    max-width: 90vw;
+
 
     & h3 {
         margin: 0 0 10px 0;
@@ -171,7 +173,7 @@ const MethodBodySection = ({ title, children }) => (
 );
 
 const ScrollSpy = () => (
-    <Anchor className="scrollspy" offsetTop={80} >
+    <Anchor className="scrollspy" offsetTop={80} offsetBottom={100}>
         <Link href="#overview-of-survey-design" title="Overview of survey design">
             <Link href="#when-did-the-survey-take-place" title="When did the survey take place?" />
             <Link href="#how-were-people-selected-for-the-survey" title="How were people selected for the survey?" />

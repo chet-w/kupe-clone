@@ -31,6 +31,10 @@ const StyledHeaderLinks = styled.div`
   justify-content: space-between;
   animation: ${props => props.shouldAnimate ? `antMoveUpIn 0.8s ease 0.6s forwards` : `none`};
 
+  & a {
+    color: ${props => props.theme.grey};
+  }
+
   @media ${device.mobileM} {
       display: none;
   }
